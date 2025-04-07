@@ -51,7 +51,10 @@ makeArticle = function (article) {
                     margin_text = margin_text.replace('—', '');
 
                     const margin = document.createElement('td');
-                    margin.innerHTML = margin_text;
+                    const link = document.createElement('a');
+                    link.innerHTML = margin_text;
+                    link.href = article;
+                    margin.appendChild(link);
                     
                     entry.appendChild(margin);
                 })

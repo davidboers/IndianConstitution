@@ -1,0 +1,65 @@
+.art-holder {
+    width: 100%;
+    height: 500px;
+}
+
+#contents {
+    display: grid;
+}
+
+/* Text elements */
+
+th {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#part-header {
+    font-weight: normal;
+}
+
+.art {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.cl, .ex {
+    text-indent: 1%;
+}
+
+.scl {
+    text-indent: 2%;
+}
+
+.item {
+    text-indent: 3%;
+}
+
+#effective-date, .ex-hd {
+    font-style: italic;
+}
+
+/* Deleting and inserting */
+
+.del {
+    display: none;
+}
+
+.ins, .overruled {
+    display: inline;
+}
+
+.overruled {
+    font-style: italic;
+}
+
+.del.changes {
+    color: magenta;
+    text-decoration: line-through;
+    display: inline;
+}
+
+.ins.changes, .overruled.changes {
+    color: magenta;
+    background-color: #ff00ff22;
+}

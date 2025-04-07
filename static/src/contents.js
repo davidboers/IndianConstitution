@@ -66,25 +66,43 @@ makeArticle = function (article) {
 }
 
 articles = function (contents) {
+    const tbody = contents.querySelector('tbody');
     indexDirs('Error fetching articles:')
         .then(articles =>
             articles
+                .sort((a, b) => parseInt(normalizeDirName(a)) - parseInt(normalizeDirName(b)))
                 .map(makeArticle)
-                .map(a => contents.appendChild(a))
+                .map(a => tbody.appendChild(a))
         );
 }
 
 // Chapters and Parts
 
+normalizeDirName = function (path) {
+    const parts = path.split('/');
+    const parentDir = parts[parts.length - 2];
+    return parentDir.replace(/_/g, ' ');
+}
+
 mainTable = function (contents) {
     indexDirs('Error fetching parts:')
         .then(parts => {
             for (let part of parts) {
+                const details = document.createElement('details');
+                details.name = 'contents';
+
+                const summary = document.createElement('summary');
+                summary.innerHTML = normalizeDirName(part);
+
                 const part_div = document.createElement('object');
                 part_div.type = 'text/html';
                 part_div.data = `${part}contents.html`;
                 part_div.width = '100%';
-                contents.appendChild(part_div);
+                part_div.style.height = '50vh';
+
+                details.appendChild(summary);
+                details.appendChild(part_div);
+                contents.appendChild(details);
             }
         });
 }

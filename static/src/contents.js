@@ -53,7 +53,9 @@ makeArticle = function (article) {
                     const margin = document.createElement('td');
                     const link = document.createElement('a');
                     link.innerHTML = margin_text;
-                    link.href = article;
+                    link.onclick = () => {
+                        window.top.location.href = article;
+                    };
                     margin.appendChild(link);
                     
                     entry.appendChild(margin);
@@ -94,11 +96,11 @@ mainTable = function (contents) {
                 const summary = document.createElement('summary');
                 summary.innerHTML = normalizeDirName(part);
 
-                const part_div = document.createElement('object');
-                part_div.type = 'text/html';
-                part_div.data = `${part}contents.html`;
+                const part_div = document.createElement('iframe');
+                part_div.src = `${part}contents.html`;
                 part_div.width = '100%';
                 part_div.style.height = '50vh';
+                part_div.style.border = 'none'
 
                 details.appendChild(summary);
                 details.appendChild(part_div);

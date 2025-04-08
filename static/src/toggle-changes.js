@@ -12,7 +12,7 @@ window.onload = () => {
     });
     
     function showChanges() {
-        const classes = ['del', 'ins', 'overruled'];
+        const classes = ['del', 'ins', 'overruled', 'renum'];
         for (let cls of classes) {
             const elems = document.getElementsByClassName(cls);
             for (let i = 0; i < elems.length; i++) {

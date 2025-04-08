@@ -63,3 +63,7 @@ th {
     color: magenta;
     background-color: #ff00ff22;
 }
+
+li.changes.renum::marker {
+    color: magenta;
+}

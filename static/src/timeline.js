@@ -1,5 +1,5 @@
 
-const begin = new Date(1950, 1, 26);
+const begin = new Date(1949, 11, 26);
 const end = new Date();
 
 getFrac = function (date) {

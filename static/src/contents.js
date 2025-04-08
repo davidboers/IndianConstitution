@@ -30,7 +30,7 @@ makeArticle = function (article) {
     const entry = document.createElement('tr');
     const num_cell = document.createElement('td');
     const split_path = article.split('/');
-    const num = split_path[split_path.length-2] + '.';
+    const num = (split_path[split_path.length-2] + '.').replace('_', ' ');
     num_cell.innerHTML = num;
     num_cell.style = 'width: 50px;';
     entry.appendChild(num_cell);

@@ -1,0 +1,24 @@
+
+p#no-results {
+    font-style: italic;
+}
+
+div#hits {
+    display: grid;
+}
+
+div.hit {
+    display: block;
+    border-top: 2px solid cadetblue;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.excerpt-highlight {
+    background-color: yellow;
+}
+
+a.hit-link {
+    text-decoration: none;
+    display: block;
+}

@@ -14,8 +14,15 @@ th {
     text-transform: uppercase;
 }
 
-#part-header {
+th#part-header {
     font-weight: normal;
+}
+
+th.subheading {
+    font-weight: normal;
+    text-transform: none;
+    font-style: italic;
+    padding-top: 1em;
 }
 
 .art {

@@ -30,7 +30,9 @@ makeArticle = function (article) {
     const entry = document.createElement('tr');
     const num_cell = document.createElement('td');
     const split_path = article.split('/');
-    const num = (split_path[split_path.length-2] + '.').replace('_', ' ');
+    const dir = split_path[split_path.length-2];
+    entry.id = (isNaN(dir)) ? dir : 'a' + dir;
+    const num = (dir + '.').replace('_', ' ');
     num_cell.innerHTML = num;
     num_cell.style = 'width: 50px;';
     entry.appendChild(num_cell);
@@ -69,7 +71,7 @@ makeArticle = function (article) {
 
 articles = function (contents) {
     const tbody = contents.querySelector('tbody');
-    indexDirs('Error fetching articles:')
+    return indexDirs('Error fetching articles:')
         .then(articles =>
             articles
                 .sort((a, b) => parseInt(normalizeDirName(a)) - parseInt(normalizeDirName(b)))
@@ -107,4 +109,23 @@ mainTable = function (contents) {
                 contents.appendChild(details);
             }
         });
+}
+
+// Subheadings
+
+makeSubheadings = function (subheadings) {
+    for (let article in subheadings) {
+        let subheading = subheadings[article];
+        const article_row = document.getElementById(article);
+        if (article_row == null) {
+            continue;
+        }
+        const subheading_row = document.createElement('tr');
+        const subheading_th = document.createElement('th');
+        subheading_th.className = 'subheading';
+        subheading_th.colSpan = '2';
+        subheading_th.innerText = subheading;
+        subheading_row.appendChild(subheading_th)
+        article_row.parentNode.insertBefore(subheading_row, article_row);
+    }
 }

@@ -15,7 +15,16 @@
     </table>
     <script>
         const contents = document.getElementById('contents');
-        window.onload = () => articles(contents);
+        const subheadings = {
+            'a52': 'The President and Vice-President',
+            'a74': 'Council of Ministers',
+            'a76': 'The Attorney-General for India',
+            'a77': 'Conduct of Government Business'
+        }
+
+        window.onload = () => {
+            articles(contents).then(() => makeSubheadings(subheadings));
+        }
     </script>
 </body>
 </html>

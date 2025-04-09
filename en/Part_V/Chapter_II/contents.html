@@ -15,7 +15,20 @@
     </table>
     <script>
         const contents = document.getElementById('contents');
-        window.onload = () => articles(contents);
+        const subheadings = {
+            'a79': 'General',
+            'a89': 'Officers of Parliament',
+            'a99': 'Conduct of Business',
+            'a101': 'Disqualification of Members',
+            'a105': 'Powers, Privileges and Immunities of Parliament and its Members',
+            'a107': 'Legislative Procedure',
+            'a112': 'Procedure in Financial Matters',
+            'a118': 'Rules of Procedure'
+        }
+
+        window.onload = () => {
+            articles(contents).then(() => makeSubheadings(subheadings));
+        }
     </script>
 </body>
 </html>

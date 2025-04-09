@@ -23,16 +23,16 @@ th {
     font-weight: bold;
 }
 
-.cl, .ex {
-    text-indent: 1%;
+.cl, .ex, .scl, .item {
+    text-indent: 1em;
 }
 
 .scl {
-    text-indent: 2%;
+    margin-left: 1em;
 }
 
 .item {
-    text-indent: 3%;
+    margin-left: 2em;
 }
 
 #effective-date, .ex-hd {

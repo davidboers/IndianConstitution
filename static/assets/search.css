@@ -1,5 +1,5 @@
 
-p#no-results {
+p#no-results, p#loading {
     font-style: italic;
 }
 

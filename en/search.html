@@ -31,6 +31,7 @@
                     query = query.trim();
                     if (query.length > 0) {
                         document.getElementById('query').value = query;
+                        document.getElementById('hits').innerHTML = `<p id="loading">Loading...</p>`;
                         getArticleList().then(articles => searchArticles(articles, query));
                     } else {
                         localStorage.query = undefined;

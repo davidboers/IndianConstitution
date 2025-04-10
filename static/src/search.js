@@ -20,7 +20,7 @@ async function searchArticleVersion(path, query, articlePath) {
         .then(response => response.text())
         .then(html => {
             const doc = parseHTMLDoc(html);
-            const text = doc.querySelector('body').innerText;
+            const text = doc.querySelector('body').innerText.replace(/\s{2,}/g, ' ');
             let matches = [];
             let i = text.search(query);
             while (i != -1) {
@@ -81,9 +81,24 @@ function makeHitEntry(hit) {
     link.innerText = hit.path.split('/').map(seg => seg.replace('_', ' ')).filter(seg => seg.length > 0).join(' > ');
     entry.appendChild(link);
 
-    const excerpt = document.createElement('span');
-    excerpt.innerHTML = hit.text.split(query).join(`<span class='excerpt-highlight'>${hit.query}</span>`);
-    entry.appendChild(excerpt);
+    for (let match of hit.matches) {
+        let excerpt = document.createElement('p');
+        let text = hit.text;
+        let trail = 50;
+        if (text.length > trail * 2) {
+            let begin = Math.max(match - trail, 0);
+            let end = Math.min(match + query.length + trail, text.length);
+            text = text.substring(begin, end);
+            if (begin !== 0) {
+                text = '...' + text;
+            }
+            if (end !== text.length) {
+                text += '...';
+            }
+        }
+        excerpt.innerHTML = text.split(query).join(`<span class='excerpt-highlight'>${hit.query}</span>`);
+        entry.appendChild(excerpt);
+    }
 
     return entry;
 }

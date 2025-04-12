@@ -84,7 +84,7 @@ function makeHitEntry(hit) {
     for (let match of hit.matches) {
         let excerpt = document.createElement('p');
         let text = hit.text;
-        let trail = 50;
+        let trail = 100;
         if (text.length > trail * 2) {
             let begin = Math.max(match - trail, 0);
             let end = Math.min(match + query.length + trail, text.length);

@@ -69,11 +69,12 @@ makeArticle = function (article) {
     return entry;
 }
 
-articles = function (contents) {
+articles = function (contents, exclude = []) {
     const tbody = contents.querySelector('tbody');
     return indexDirs('Error fetching articles:')
         .then(articles =>
             articles
+                .filter(a => !exclude.includes(normalizeDirName(a)))
                 .sort((a, b) => parseInt(normalizeDirName(a)) - parseInt(normalizeDirName(b)))
                 .map(makeArticle)
                 .map(a => tbody.appendChild(a))
@@ -88,27 +89,29 @@ normalizeDirName = function (path) {
     return parentDir.replace(/_/g, ' ');
 }
 
+addPart = function (part) {
+    const details = document.createElement('details');
+    details.name = 'contents';
+
+    const summary = document.createElement('summary');
+    summary.innerHTML = normalizeDirName(part);
+
+    const part_div = document.createElement('iframe');
+    part_div.src = `${part}contents.html`;
+    part_div.width = '100%';
+    part_div.style.height = '50vh';
+    part_div.style.border = 'none'
+
+    details.appendChild(summary);
+    details.appendChild(part_div);
+    return details;
+}
+
 mainTable = function (contents) {
     indexDirs('Error fetching parts:')
-        .then(parts => {
-            for (let part of parts) {
-                const details = document.createElement('details');
-                details.name = 'contents';
-
-                const summary = document.createElement('summary');
-                summary.innerHTML = normalizeDirName(part);
-
-                const part_div = document.createElement('iframe');
-                part_div.src = `${part}contents.html`;
-                part_div.width = '100%';
-                part_div.style.height = '50vh';
-                part_div.style.border = 'none'
-
-                details.appendChild(summary);
-                details.appendChild(part_div);
-                contents.appendChild(details);
-            }
-        });
+        .then(parts => parts.map(part => {
+            contents.appendChild(addPart(part));
+        }));
 }
 
 // Subheadings

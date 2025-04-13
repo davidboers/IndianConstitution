@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../../static/assets/style.css">
-    <script src="../../../static/src/contents.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <script src="/static/src/contents.js"></script>
     <title>Table of Contents — Tenth Schedule — Constitution of India</title>
 </head>
 <body>
@@ -12,10 +12,19 @@
         <tr>
             <th colspan="2" id="part-num">Tenth Schedule</th>
         </tr>
+        <tr>
+            <th colspan="2" id="part-header">Provisions as to disqualification on grounds of defection</th>
+        </tr>
     </table>
+    <p><i>Note:</i> Parts A and B of the Tenth Schedule have been omitted by the Thirty-Sixth Amendment. Both parts, previously inserted by 
+        the Thirty-Fifth Amendment, dealt with transitional provisions relating to Sikkim's admission to the Union.</p>
     <script>
         const contents = document.getElementById('contents');
-        window.onload = () => mainTable(contents);
+        window.onload = () => {
+            articles(contents, ['Part A', 'Part B']);
+            contents.appendChild(addPart('Part_A/'));
+            contents.appendChild(addPart('Part_B/'));
+        }
     </script>
 </body>
 </html>

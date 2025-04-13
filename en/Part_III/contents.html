@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../static/assets/style.css">
-    <script src="../../static/src/contents.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <script src="/static/src/contents.js"></script>
     <title>Table of Contents — Part III — Constitution of India</title>
 </head>
 <body>
@@ -18,7 +18,20 @@
     </table>
     <script>
         const contents = document.getElementById('contents');
-        window.onload = () => articles(contents);
+        const subheadings = {
+            'a12': 'General',
+            'a14': 'Right to Equality',
+            'a19': 'Right to Freedom',
+            'a23': 'Right against Exploitation',
+            'a25': 'Right to Freedom of Religion',
+            'a29': 'Cultural and Educational Rights',
+            'a31A': 'Saving of Certain Laws',
+            'a32': 'Right to Constitutional Remedies'
+        }
+
+        window.onload = () => {
+            articles(contents).then(() => makeSubheadings(subheadings));
+        }
     </script>
 </body>
 </html>

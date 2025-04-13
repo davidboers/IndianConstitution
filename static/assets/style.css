@@ -74,3 +74,19 @@ th.subheading {
 li.changes.renum::marker {
     color: magenta;
 }
+
+/* Oaths */
+
+.oath-option {
+    display: inline-block;
+}
+
+.oath-swear {
+    white-space: nowrap;
+    text-decoration: underline;
+}
+
+.oath-affirm {
+    display: block;
+    text-align: center;
+}

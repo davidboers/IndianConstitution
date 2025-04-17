@@ -40,7 +40,6 @@ async function searchArticle(path, query) {
             return doc.querySelector('.art-holder').getAttribute('data');
         })
         .catch(error => console.error('Error finding current version of article:', error));
-    console.log(path);
     const resultsCurrent = await searchArticleVersion(path + currentVersion, query, path);
     if (resultsCurrent.matches.length > 0) {
         return resultsCurrent;

@@ -3,7 +3,15 @@ import json
 import re
 
 def find_references(html):
-    return re.findall(r'article [0-9A-Z]+', html, flags = re.IGNORECASE)
+    refs = re.findall(r'article [0-9A-Z]+', html, flags = re.IGNORECASE)
+
+    group_refs = re.findall(r'articles [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
+    for ref in group_refs:
+        numbers = re.findall(r'[0-9A-Z]+', ref, re.IGNORECASE)
+        for number in numbers:
+            refs.append('article ' + number)
+
+    return refs
 
 def reference_finder(path):
     pairs = []

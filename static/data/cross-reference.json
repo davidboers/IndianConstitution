@@ -41,6 +41,16 @@
     ],
     [
         {
+            "name": "7. Rights of citizenship of certain migrants to Pakistan.",
+            "path": "Part_II/7/"
+        },
+        {
+            "name": "5. Citizenship at the commencement of the Constitution.",
+            "path": "Part_II/5/"
+        }
+    ],
+    [
+        {
             "name": "8. Rights of citizenship of certain persons of Indian origin residing outside India.",
             "path": "Part_II/8/"
         },
@@ -401,6 +411,26 @@
     ],
     [
         {
+            "name": "107. Provisions as to introduction and passing of Bills.",
+            "path": "Part_V/Chapter_II/107/"
+        },
+        {
+            "name": "109. Special procedure in respect of Money Bills.",
+            "path": "Part_V/Chapter_II/109/"
+        }
+    ],
+    [
+        {
+            "name": "107. Provisions as to introduction and passing of Bills.",
+            "path": "Part_V/Chapter_II/107/"
+        },
+        {
+            "name": "117. Special provisions as to financial Bills.",
+            "path": "Part_V/Chapter_II/117/"
+        }
+    ],
+    [
+        {
             "name": "110. Definition of \"Money Bills\".",
             "path": "Part_V/Chapter_II/110/"
         },
@@ -431,12 +461,22 @@
     ],
     [
         {
+            "name": "114. Appropriation Bills.",
+            "path": "Part_V/Chapter_II/114/"
+        },
+        {
             "name": "115. Supplementary, additional or excess grants.",
             "path": "Part_V/Chapter_II/115/"
-        },
+        }
+    ],
+    [
         {
             "name": "114. Appropriation Bills.",
             "path": "Part_V/Chapter_II/114/"
+        },
+        {
+            "name": "116. Votes on account, votes of credit and exceptional grants.",
+            "path": "Part_V/Chapter_II/116/"
         }
     ],
     [
@@ -447,16 +487,6 @@
         {
             "name": "113. Procedure in Parliament with respect to estimates.",
             "path": "Part_V/Chapter_II/113/"
-        }
-    ],
-    [
-        {
-            "name": "116. Votes on account, votes of credit and exceptional grants.",
-            "path": "Part_V/Chapter_II/116/"
-        },
-        {
-            "name": "114. Appropriation Bills.",
-            "path": "Part_V/Chapter_II/114/"
         }
     ],
     [
@@ -481,12 +511,12 @@
     ],
     [
         {
-            "name": "82. Special provision as to representation of States in Part C and territories other than States.",
-            "path": "Part_V/Chapter_II/82/"
-        },
-        {
             "name": "81. Composition of the House of the People.",
             "path": "Part_V/Chapter_II/81/"
+        },
+        {
+            "name": "82. Special provision as to representation of States in Part C and territories other than States.",
+            "path": "Part_V/Chapter_II/82/"
         }
     ],
     [
@@ -667,6 +697,26 @@
         {
             "name": "132. Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases.",
             "path": "Part_V/Chapter_IV/132/"
+        }
+    ],
+    [
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        },
+        {
+            "name": "131A. Exclusive jurisdiction of the Supreme Court in regard to questions as to Constitutional validity of Central laws.",
+            "path": "Part_V/Chapter_IV/131A/"
+        }
+    ],
+    [
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        },
+        {
+            "name": "139A. Transfer of certain cases.",
+            "path": "Part_V/Chapter_IV/139A/"
         }
     ],
     [

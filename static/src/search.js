@@ -10,7 +10,7 @@ function parseHTMLDoc(html) {
 function getIndexedLinks(html) {
     const doc = parseHTMLDoc(html);
     const links = Array.from(doc.querySelectorAll('a'))
-        .filter(link => link.innerText != '../')
+        .filter(link => link.innerText != '../' && !link.innerText.includes('http-server'))
         .map(link => link.innerText);
     return links;
 }

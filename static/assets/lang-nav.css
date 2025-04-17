@@ -1,0 +1,19 @@
+#lang-nav {
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.lang {
+    display: inline-block;
+    background-color: cornflowerblue;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    color: white;
+    vertical-align: top;
+    padding: 0.5em;
+    margin: 0.1em;
+    border-radius: 1ch;
+    text-decoration: none;
+}

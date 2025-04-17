@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../static/assets/style.css">
-    <script src="../../static/src/contents.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
     <title>Table of Contents — Part IV — Constitution of India</title>
 </head>
 <body>
@@ -16,7 +15,8 @@
             <th colspan="2" id="part-header">Directive Principles of State Policy</th>
         </tr>
     </table>
-    <script>
+    <script type="module">
+        import { articles } from '/static/src/contents.js';
         const contents = document.getElementById('contents');
         window.onload = () => articles(contents);
     </script>

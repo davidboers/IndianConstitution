@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
-    <script src="/static/src/contents.js"></script>
     <title>Table of Contents — Part VI — Chapter II — Constitution of India</title>
 </head>
 <body>
@@ -13,7 +12,8 @@
             <th colspan="2" id="part-header">Chapter II.—The Executive</th>
         </tr>
     </table>
-    <script>
+    <script type="module">
+        import { articles, makeSubheadings } from '/static/src/contents.js';
         const contents = document.getElementById('contents');
         const subheadings = {
             'a153': 'The Governor',

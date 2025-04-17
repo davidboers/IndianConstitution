@@ -1,10 +1,7 @@
-parseHTMLDoc = function (html) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    return doc;
-}
 
-getIndexedLinks = function (html) {
+import { parseHTMLDoc } from './utils.js';
+
+function getIndexedLinks (html) {
     const doc = parseHTMLDoc(html);
     const links = Array.from(doc.querySelectorAll('a'))
         .filter(link => link.innerText != '../')
@@ -12,7 +9,7 @@ getIndexedLinks = function (html) {
     return links;
 }
 
-indexDirs = async function (errorPrefix) {
+async function indexDirs(errorPrefix) {
     return fetch('./')
         .then(response => response.text())
         .then(html => {
@@ -26,7 +23,7 @@ indexDirs = async function (errorPrefix) {
 
 // Articles
 
-makeArticle = function (article) {
+function makeArticle(article) {
     const entry = document.createElement('tr');
     const num_cell = document.createElement('td');
     const split_path = article.split('/');
@@ -70,7 +67,7 @@ makeArticle = function (article) {
     return entry;
 }
 
-articles = function (contents, exclude = []) {
+export async function articles(contents, exclude = []) {
     const tbody = contents.querySelector('tbody');
     return indexDirs('Error fetching articles:')
         .then(articles =>
@@ -84,13 +81,13 @@ articles = function (contents, exclude = []) {
 
 // Chapters and Parts
 
-normalizeDirName = function (path) {
+function normalizeDirName(path) {
     const parts = path.split('/');
     const parentDir = parts[parts.length - 2];
     return parentDir.replace(/_/g, ' ');
 }
 
-addPart = function (part) {
+export function addPart(part) {
     const details = document.createElement('details');
     details.name = 'contents';
 
@@ -108,7 +105,7 @@ addPart = function (part) {
     return details;
 }
 
-mainTable = function (contents) {
+export function mainTable(contents) {
     indexDirs('Error fetching parts:')
         .then(parts => parts.map(part => {
             contents.appendChild(addPart(part));
@@ -117,7 +114,7 @@ mainTable = function (contents) {
 
 // Subheadings
 
-makeSubheadings = function (subheadings) {
+export function makeSubheadings(subheadings) {
     for (let article in subheadings) {
         let subheading = subheadings[article];
         const article_row = document.getElementById(article);

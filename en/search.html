@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/assets/style.css">
-    <link rel="stylesheet" type="text/css" href="../static/assets/search.css">
-    <script src="../static/src/search.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/search.css">
     <title>Search — Constitution of India</title>
 </head>
 <body>
@@ -21,7 +20,8 @@
             <p id="no-results">No results found.</p>
         </div>
 
-        <script>
+        <script type="module">
+            import { getArticleList, searchArticles } from '/static/src/search.js';
             var search = window.location.search;
             if (search !== undefined) {
                 var query = search.substr(1).split('&')

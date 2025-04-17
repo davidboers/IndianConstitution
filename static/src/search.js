@@ -56,8 +56,7 @@ async function searchArticle(path, query) {
     return hits.pop();
 }
 
-async function searchArticles(paths, query) {
-    console.log(paths);
+export async function searchArticles(paths, query) {
     const hits = await Promise.all(paths.map(path => searchArticle(path, query)))
         .then(hits => hits.filter(hit => hit != null));
     const container = document.getElementById('hits');
@@ -66,11 +65,11 @@ async function searchArticles(paths, query) {
         return;
     }
     container.innerHTML = '';
-    hits.map(makeHitEntry)
+    hits.map(hit => makeHitEntry(hit, query))
         .forEach(hit => container.appendChild(hit));
 }
 
-function makeHitEntry(hit) {
+function makeHitEntry(hit, query) {
     const entry = document.createElement('div');
     entry.className = 'hit';
 
@@ -122,7 +121,7 @@ async function getArticleListRecursive(path, list) {
         .then(() => { return list });
 }
 
-function getArticleList() {
+export function getArticleList() {
     let list = [];
     return getArticleListRecursive('./', list);
 }

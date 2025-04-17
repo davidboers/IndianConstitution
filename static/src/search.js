@@ -1,11 +1,5 @@
 
-// Copied, find a way to put in a module.
-
-function parseHTMLDoc(html) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    return doc;
-}
+import { parseHTMLDoc } from './utils.js';
 
 function getIndexedLinks(html) {
     const doc = parseHTMLDoc(html);
@@ -121,7 +115,7 @@ async function getArticleListRecursive(path, list) {
         .then(() => { return list });
 }
 
-export function getArticleList() {
+export function getArticleList(root = './') {
     let list = [];
-    return getArticleListRecursive('./', list);
+    return getArticleListRecursive(root, list);
 }

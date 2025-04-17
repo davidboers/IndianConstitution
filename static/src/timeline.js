@@ -30,6 +30,7 @@ amendmentNumber = function (link) {
 
 window.onload = () => {
     const timeline = document.getElementById('timeline');
+    const coefficient = timeline.clientWidth / document.querySelector('body').clientWidth * 100;
 
     addAmendment = function (link) {
         fetch(link)
@@ -43,7 +44,7 @@ window.onload = () => {
                 const year = parseInt(effectiveDate.querySelector('#eff-year').innerHTML);
 
                 const date = new Date(year, month, day);
-                const frac = getFrac(date) * 100;
+                const frac = getFrac(date) * coefficient;
 
                 const selected = document.querySelector('.art-holder').getAttribute('data') === link;
                 const label = document.createElement('span');

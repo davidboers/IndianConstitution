@@ -1,9 +1,14 @@
 #timeline {
-    width: 100%;
     height: 50px;
 }
 
+#timeline, .art-holder {
+    width: 65%;
+    display: inline-block;
+}
+
 .timeline-axis {
+    width: 100%;
     height: 0;
     border: 2px solid gray;
 }

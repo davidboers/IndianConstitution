@@ -57,8 +57,8 @@ let parent_toc = document.querySelector('#contents-hidden');
 void async function () {
     const parent_nav = document.getElementById('parent-nav');
     if (parent_nav != undefined) {
-        let part_contents = await fetch('../../contents.html');
-        if (part_contents.status === 200) {
+        if (window.location.href.includes('Chapter')) {
+            let part_contents = await fetch('../../contents.html');
             let html = await(part_contents).text();
             let parent_text = getParentText(parser.parseFromString(html, 'text/html'));
             let link_elem = makeLinkListElem('../../contents.html', parent_text);

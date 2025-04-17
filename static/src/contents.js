@@ -32,6 +32,7 @@ makeArticle = function (article) {
     const split_path = article.split('/');
     const dir = split_path[split_path.length-2];
     entry.id = (isNaN(dir) && isNaN(dir.substr(0, dir.length - 1))) ? dir : 'a' + dir;
+    entry.title = article;
     const num = (dir + '.').replace('_', ' ');
     num_cell.innerHTML = num;
     num_cell.style = 'width: 50px;';

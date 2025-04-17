@@ -1,12 +1,742 @@
 [
     [
         {
-            "name": "55. Manner of election of President",
-            "path": "Part_V/Chapter_I/55/"
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, \n        incidental and consequential matters.",
+            "path": "Part_I/4/"
         },
         {
-            "name": "54. Election of President",
+            "name": "2. Admission or establishment of new States.",
+            "path": "Part_I/2/"
+        }
+    ],
+    [
+        {
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, \n        incidental and consequential matters.",
+            "path": "Part_I/4/"
+        },
+        {
+            "name": "3. Formation of new States and alteration of areas, boundaries or names of existing States.",
+            "path": "Part_I/3/"
+        }
+    ],
+    [
+        {
+            "name": "6. Rights of citizenship of certain persons who have migrated to India from Pakistan.",
+            "path": "Part_II/6/"
+        },
+        {
+            "name": "5. Citizenship at the commencement of the Constitution.",
+            "path": "Part_II/5/"
+        }
+    ],
+    [
+        {
+            "name": "7. Rights of citizenship of certain migrants to Pakistan.",
+            "path": "Part_II/7/"
+        },
+        {
+            "name": "6. Rights of citizenship of certain persons who have migrated to India from Pakistan.",
+            "path": "Part_II/6/"
+        }
+    ],
+    [
+        {
+            "name": "8. Rights of citizenship of certain persons of Indian origin residing outside India.",
+            "path": "Part_II/8/"
+        },
+        {
+            "name": "5. Citizenship at the commencement of the Constitution.",
+            "path": "Part_II/5/"
+        }
+    ],
+    [
+        {
+            "name": "9. Persons voluntarily acquiring citizenship of a foreign State not to be citizens.",
+            "path": "Part_II/9/"
+        },
+        {
+            "name": "5. Citizenship at the commencement of the Constitution.",
+            "path": "Part_II/5/"
+        }
+    ],
+    [
+        {
+            "name": "9. Persons voluntarily acquiring citizenship of a foreign State not to be citizens.",
+            "path": "Part_II/9/"
+        },
+        {
+            "name": "8. Rights of citizenship of certain persons of Indian origin residing outside India.",
+            "path": "Part_II/8/"
+        }
+    ],
+    [
+        {
+            "name": "15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.",
+            "path": "Part_III/15/"
+        },
+        {
+            "name": "29. Protection of interests of minorities.",
+            "path": "Part_III/29/"
+        }
+    ],
+    [
+        {
+            "name": "15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.",
+            "path": "Part_III/15/"
+        },
+        {
+            "name": "19. Protection of certain rights regarding freedom of speech, etc.",
+            "path": "Part_III/19/"
+        }
+    ],
+    [
+        {
+            "name": "15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.",
+            "path": "Part_III/15/"
+        },
+        {
+            "name": "30. Right of minorities to establish and administer educational institutions.",
+            "path": "Part_III/30/"
+        }
+    ],
+    [
+        {
+            "name": "15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.",
+            "path": "Part_III/15/"
+        },
+        {
+            "name": "16. Equality of opportunity in matters of public employment.",
+            "path": "Part_III/16/"
+        }
+    ],
+    [
+        {
+            "name": "31. Compulsory acquisition of property.",
+            "path": "Part_III/31/"
+        },
+        {
+            "name": "30. Right of minorities to establish and administer educational institutions.",
+            "path": "Part_III/30/"
+        }
+    ],
+    [
+        {
+            "name": "31. Compulsory acquisition of property.",
+            "path": "Part_III/31/"
+        },
+        {
+            "name": "19. Protection of certain rights regarding freedom of speech, etc.",
+            "path": "Part_III/19/"
+        }
+    ],
+    [
+        {
+            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
+            "path": "Part_III/31A/"
+        },
+        {
+            "name": "13. Laws inconsistent with or in derogation of the fundamental rights.",
+            "path": "Part_III/13/"
+        }
+    ],
+    [
+        {
+            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
+            "path": "Part_III/31A/"
+        },
+        {
+            "name": "14. Equality before law.",
+            "path": "Part_III/14/"
+        }
+    ],
+    [
+        {
+            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
+            "path": "Part_III/31A/"
+        },
+        {
+            "name": "19. Protection of certain rights regarding freedom of speech, etc.",
+            "path": "Part_III/19/"
+        }
+    ],
+    [
+        {
+            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
+            "path": "Part_III/31A/"
+        },
+        {
+            "name": "31. Compulsory acquisition of property.",
+            "path": "Part_III/31/"
+        }
+    ],
+    [
+        {
+            "name": "31B. Validation of certain Acts and Regulations.",
+            "path": "Part_III/31B/"
+        },
+        {
+            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
+            "path": "Part_III/31A/"
+        }
+    ],
+    [
+        {
+            "name": "31C. Saving of laws giving effect to certain directive principles.",
+            "path": "Part_III/31C/"
+        },
+        {
+            "name": "13. Laws inconsistent with or in derogation of the fundamental rights.",
+            "path": "Part_III/13/"
+        }
+    ],
+    [
+        {
+            "name": "31C. Saving of laws giving effect to certain directive principles.",
+            "path": "Part_III/31C/"
+        },
+        {
+            "name": "39. Certain principles of policy to be followed by the State.",
+            "path": "Part_IV/39/"
+        }
+    ],
+    [
+        {
+            "name": "31C. Saving of laws giving effect to certain directive principles.",
+            "path": "Part_III/31C/"
+        },
+        {
+            "name": "14. Equality before law.",
+            "path": "Part_III/14/"
+        }
+    ],
+    [
+        {
+            "name": "31C. Saving of laws giving effect to certain directive principles.",
+            "path": "Part_III/31C/"
+        },
+        {
+            "name": "19. Protection of certain rights regarding freedom of speech, etc.",
+            "path": "Part_III/19/"
+        }
+    ],
+    [
+        {
+            "name": "31C. Saving of laws giving effect to certain directive principles.",
+            "path": "Part_III/31C/"
+        },
+        {
+            "name": "31. Compulsory acquisition of property.",
+            "path": "Part_III/31/"
+        }
+    ],
+    [
+        {
+            "name": "31D. Saving of laws in respect of anti-national activities.",
+            "path": "Part_III/31D/"
+        },
+        {
+            "name": "13. Laws inconsistent with or in derogation of the fundamental rights.",
+            "path": "Part_III/13/"
+        }
+    ],
+    [
+        {
+            "name": "31D. Saving of laws in respect of anti-national activities.",
+            "path": "Part_III/31D/"
+        },
+        {
+            "name": "14. Equality before law.",
+            "path": "Part_III/14/"
+        }
+    ],
+    [
+        {
+            "name": "31D. Saving of laws in respect of anti-national activities.",
+            "path": "Part_III/31D/"
+        },
+        {
+            "name": "19. Protection of certain rights regarding freedom of speech, etc.",
+            "path": "Part_III/19/"
+        }
+    ],
+    [
+        {
+            "name": "31D. Saving of laws in respect of anti-national activities.",
+            "path": "Part_III/31D/"
+        },
+        {
+            "name": "31. Compulsory acquisition of property.",
+            "path": "Part_III/31/"
+        }
+    ],
+    [
+        {
+            "name": "32A. Constitutional validity of State laws not to be considered in proceedings under article 32.",
+            "path": "Part_III/32A/"
+        },
+        {
+            "name": "32. Remedies for enforcement of rights conferred by this Part.",
+            "path": "Part_III/32/"
+        }
+    ],
+    [
+        {
+            "name": "35. Legislation to give effect to the provisions of this Part.",
+            "path": "Part_III/35/"
+        },
+        {
+            "name": "16. Equality of opportunity in matters of public employment.",
+            "path": "Part_III/16/"
+        }
+    ],
+    [
+        {
+            "name": "35. Legislation to give effect to the provisions of this Part.",
+            "path": "Part_III/35/"
+        },
+        {
+            "name": "32. Remedies for enforcement of rights conferred by this Part.",
+            "path": "Part_III/32/"
+        }
+    ],
+    [
+        {
+            "name": "35. Legislation to give effect to the provisions of this Part.",
+            "path": "Part_III/35/"
+        },
+        {
+            "name": "34. Restriction on rights conferred by this Part while martial law is in force in any area.",
+            "path": "Part_III/34/"
+        }
+    ],
+    [
+        {
+            "name": "54. Election of President.",
             "path": "Part_V/Chapter_I/54/"
+        },
+        {
+            "name": "55. Manner of election of President.",
+            "path": "Part_V/Chapter_I/55/"
+        }
+    ],
+    [
+        {
+            "name": "56. Term of office of President.",
+            "path": "Part_V/Chapter_I/56/"
+        },
+        {
+            "name": "61. Procedure for impeachment of the President.",
+            "path": "Part_V/Chapter_I/61/"
+        }
+    ],
+    [
+        {
+            "name": "62. Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill \n        casual vacancy.",
+            "path": "Part_V/Chapter_I/62/"
+        },
+        {
+            "name": "56. Term of office of President.",
+            "path": "Part_V/Chapter_I/56/"
+        }
+    ],
+    [
+        {
+            "name": "64. The Vice-President to be <i>ex officio</i> Chairman of the Council of States.",
+            "path": "Part_V/Chapter_I/64/"
+        },
+        {
+            "name": "97. Salaries and allowances of the Chairman and Deputy Chairman and the Speaker and Deputy Speaker.",
+            "path": "Part_V/Chapter_II/97/"
+        }
+    ],
+    [
+        {
+            "name": "68. Time of holding election to fill vacancy in the office of VicePresident and the term of office of person elected to \n        fill casual vacancy.",
+            "path": "Part_V/Chapter_I/68/"
+        },
+        {
+            "name": "67. Term of office of Vice-President.",
+            "path": "Part_V/Chapter_I/67/"
+        }
+    ],
+    [
+        {
+            "name": "101. Vacation of seats.",
+            "path": "Part_V/Chapter_II/102/"
+        },
+        {
+            "name": "102. Disqualifications for membership.",
+            "path": "Part_V/Chapter_II/102/"
+        }
+    ],
+    [
+        {
+            "name": "103. Decision on questions as to disqualifications of members.",
+            "path": "Part_V/Chapter_II/103/"
+        },
+        {
+            "name": "102. Disqualifications for membership.",
+            "path": "Part_V/Chapter_II/102/"
+        }
+    ],
+    [
+        {
+            "name": "104. Penalty for sitting and voting before making oath or affirmation under article 99 or when not qualified or when \n        disqualified.",
+            "path": "Part_V/Chapter_II/104/"
+        },
+        {
+            "name": "99. Oath or affirmation of members.",
+            "path": "Part_V/Chapter_II/99/"
+        }
+    ],
+    [
+        {
+            "name": "107. Provisions as to introduction and passing of Bills.",
+            "path": "Part_V/Chapter_II/107/"
+        },
+        {
+            "name": "108. Joint sitting of both Houses in certain cases.",
+            "path": "Part_V/Chapter_II/108/"
+        }
+    ],
+    [
+        {
+            "name": "110. Definition of \"Money Bills\".",
+            "path": "Part_V/Chapter_II/110/"
+        },
+        {
+            "name": "109. Special procedure in respect of Money Bills.",
+            "path": "Part_V/Chapter_II/109/"
+        }
+    ],
+    [
+        {
+            "name": "110. Definition of \"Money Bills\".",
+            "path": "Part_V/Chapter_II/110/"
+        },
+        {
+            "name": "111. Assent to Bills.",
+            "path": "Part_V/Chapter_II/111/"
+        }
+    ],
+    [
+        {
+            "name": "114. Appropriation Bills.",
+            "path": "Part_V/Chapter_II/114/"
+        },
+        {
+            "name": "113. Procedure in Parliament with respect to estimates.",
+            "path": "Part_V/Chapter_II/113/"
+        }
+    ],
+    [
+        {
+            "name": "115. Supplementary, additional or excess grants.",
+            "path": "Part_V/Chapter_II/115/"
+        },
+        {
+            "name": "114. Appropriation Bills.",
+            "path": "Part_V/Chapter_II/114/"
+        }
+    ],
+    [
+        {
+            "name": "116. Votes on account, votes of credit and exceptional grants.",
+            "path": "Part_V/Chapter_II/116/"
+        },
+        {
+            "name": "113. Procedure in Parliament with respect to estimates.",
+            "path": "Part_V/Chapter_II/113/"
+        }
+    ],
+    [
+        {
+            "name": "116. Votes on account, votes of credit and exceptional grants.",
+            "path": "Part_V/Chapter_II/116/"
+        },
+        {
+            "name": "114. Appropriation Bills.",
+            "path": "Part_V/Chapter_II/114/"
+        }
+    ],
+    [
+        {
+            "name": "117. Special provisions as to financial Bills.",
+            "path": "Part_V/Chapter_II/117/"
+        },
+        {
+            "name": "110. Definition of \"Money Bills\".",
+            "path": "Part_V/Chapter_II/110/"
+        }
+    ],
+    [
+        {
+            "name": "119. Regulation by law of procedure in Parliament in relation to financial business.",
+            "path": "Part_V/Chapter_II/119/"
+        },
+        {
+            "name": "118. Rules of procedure.",
+            "path": "Part_V/Chapter_II/118/"
+        }
+    ],
+    [
+        {
+            "name": "82. Special provision as to representation of States in Part C and territories other than States.",
+            "path": "Part_V/Chapter_II/82/"
+        },
+        {
+            "name": "81. Composition of the House of the People.",
+            "path": "Part_V/Chapter_II/81/"
+        }
+    ],
+    [
+        {
+            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "path": "Part_V/Chapter_II/92/"
+        },
+        {
+            "name": "91. Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman.",
+            "path": "Part_V/Chapter_II/91/"
+        }
+    ],
+    [
+        {
+            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "path": "Part_V/Chapter_II/92/"
+        },
+        {
+            "name": "100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.",
+            "path": "Part_V/Chapter_II/101/"
+        }
+    ],
+    [
+        {
+            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "path": "Part_V/Chapter_II/96/"
+        },
+        {
+            "name": "95. Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker.",
+            "path": "Part_V/Chapter_II/95/"
+        }
+    ],
+    [
+        {
+            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "path": "Part_V/Chapter_II/96/"
+        },
+        {
+            "name": "100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.",
+            "path": "Part_V/Chapter_II/101/"
+        }
+    ],
+    [
+        {
+            "name": "124. Establishment and constitution of Supreme Court.",
+            "path": "Part_V/Chapter_IV/124/"
+        },
+        {
+            "name": "124A. National Judicial Appointments Commission.",
+            "path": "Part_V/Chapter_IV/124A/"
+        }
+    ],
+    [
+        {
+            "name": "133. Appellate jurisdiction of the Supreme Court in appeals from High Courts in regard to civil matters.",
+            "path": "Part_V/Chapter_IV/133/"
+        },
+        {
+            "name": "132. Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases.",
+            "path": "Part_V/Chapter_IV/132/"
+        }
+    ],
+    [
+        {
+            "name": "133. Appellate jurisdiction of the Supreme Court in appeals from High Courts in regard to civil matters.",
+            "path": "Part_V/Chapter_IV/133/"
+        },
+        {
+            "name": "134A. Certificate for appeal to the Supreme Court.",
+            "path": "Part_V/Chapter_IV/134A/"
+        }
+    ],
+    [
+        {
+            "name": "134. Appellate jurisdiction of the Supreme Court in regard to criminal matters.",
+            "path": "Part_V/Chapter_IV/134/"
+        },
+        {
+            "name": "134A. Certificate for appeal to the Supreme Court.",
+            "path": "Part_V/Chapter_IV/134A/"
+        }
+    ],
+    [
+        {
+            "name": "134. Appellate jurisdiction of the Supreme Court in regard to criminal matters.",
+            "path": "Part_V/Chapter_IV/134/"
+        },
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        }
+    ],
+    [
+        {
+            "name": "134A. Certificate for appeal to the Supreme Court.",
+            "path": "Part_V/Chapter_IV/134A/"
+        },
+        {
+            "name": "132. Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases.",
+            "path": "Part_V/Chapter_IV/132/"
+        }
+    ],
+    [
+        {
+            "name": "135. Jurisdiction and powers of the Federal Court under existing law to be exercisable by the Supreme Court.",
+            "path": "Part_V/Chapter_IV/135/"
+        },
+        {
+            "name": "133. Appellate jurisdiction of the Supreme Court in appeals from High Courts in regard to civil matters.",
+            "path": "Part_V/Chapter_IV/133/"
+        }
+    ],
+    [
+        {
+            "name": "135. Jurisdiction and powers of the Federal Court under existing law to be exercisable by the Supreme Court.",
+            "path": "Part_V/Chapter_IV/135/"
+        },
+        {
+            "name": "134. Appellate jurisdiction of the Supreme Court in regard to criminal matters.",
+            "path": "Part_V/Chapter_IV/134/"
+        }
+    ],
+    [
+        {
+            "name": "137. Review of judgment or orders by the Supreme Court.",
+            "path": "Part_V/Chapter_IV/137/"
+        },
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        }
+    ],
+    [
+        {
+            "name": "139. Conferment on the Supreme Court of powers to issue certain writs.",
+            "path": "Part_V/Chapter_IV/139/"
+        },
+        {
+            "name": "32. Remedies for enforcement of rights conferred by this Part.",
+            "path": "Part_III/32/"
+        }
+    ],
+    [
+        {
+            "name": "143. Enforcement of decrees and orders of the Supreme Court and orders as to discovery, etc.",
+            "path": "Part_V/Chapter_IV/143/"
+        },
+        {
+            "name": "131. Original jurisdiction of the Supreme Court.",
+            "path": "Part_V/Chapter_IV/131/"
+        }
+    ],
+    [
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        },
+        {
+            "name": "144A. Special provisions as to disposal of questions relating to constitutional validity of laws.",
+            "path": "Part_V/Chapter_IV/144A/"
+        }
+    ],
+    [
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        },
+        {
+            "name": "143. Enforcement of decrees and orders of the Supreme Court and orders as to discovery, etc.",
+            "path": "Part_V/Chapter_IV/143/"
+        }
+    ],
+    [
+        {
+            "name": "145. Rules of Court, etc.",
+            "path": "Part_V/Chapter_IV/145/"
+        },
+        {
+            "name": "132. Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases.",
+            "path": "Part_V/Chapter_IV/132/"
+        }
+    ],
+    [
+        {
+            "name": "2. Responsibilities of the Government of India.",
+            "path": "Schedules/Tenth_Schedule/Part_B/2/"
+        },
+        {
+            "name": "99. Oath or affirmation of members.",
+            "path": "Part_V/Chapter_II/99/"
+        }
+    ],
+    [
+        {
+            "name": "6. Decision on questions as to disqualification on ground of defection.",
+            "path": "Schedules/Tenth_Schedule/6/"
+        },
+        {
+            "name": "122. Courts not to inquire into proceedings of Parliament.",
+            "path": "Part_V/Chapter_II/122/"
+        }
+    ],
+    [
+        {
+            "name": "8. Rules.",
+            "path": "Schedules/Tenth_Schedule/8/"
+        },
+        {
+            "name": "105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.",
+            "path": "Part_V/Chapter_II/105/"
+        }
+    ],
+    [
+        {
+            "name": "4. Representation in Parliament.",
+            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+        },
+        {
+            "name": "84. Qualification for membership of Parliament.",
+            "path": "Part_V/Chapter_II/84/"
+        }
+    ],
+    [
+        {
+            "name": "4. Representation in Parliament.",
+            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+        },
+        {
+            "name": "101. Vacation of seats.",
+            "path": "Part_V/Chapter_II/102/"
+        }
+    ],
+    [
+        {
+            "name": "4. Representation in Parliament.",
+            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+        },
+        {
+            "name": "102. Disqualifications for membership.",
+            "path": "Part_V/Chapter_II/102/"
+        }
+    ],
+    [
+        {
+            "name": "4. Representation in Parliament.",
+            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+        },
+        {
+            "name": "103. Decision on questions as to disqualifications of members.",
+            "path": "Part_V/Chapter_II/103/"
         }
     ]
 ]

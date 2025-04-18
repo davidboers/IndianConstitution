@@ -15,7 +15,7 @@ async function indexDirs(errorPrefix) {
         .then(html => {
             const links = getIndexedLinks(html);
             const dirs = links
-                .filter(link => link.endsWith('/'));
+                .filter(link => link.endsWith('/') && !link.includes('Preamble'));
             return dirs;
         })
         .catch(error => console.error(errorPrefix, error));

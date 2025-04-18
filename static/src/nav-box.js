@@ -2,7 +2,7 @@ const parser = new DOMParser();
 const current_lang = document.querySelector('html').lang;
 
 document.querySelector('#nav').innerHTML += `
-    <object id="contents-hidden" type="text/html" data="../contents.html" hidden></object>
+    <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
         <a id="prev-art">Previous article</a> * <a href="/en/contents.html">Table of Contents</a> * <a id="next-art">Next article</a>
         <form action="/en/search.html" id="search-form"></form>
@@ -54,10 +54,15 @@ function makeLinkListElem(link, text) {
 }
 
 let parent_toc = document.querySelector('#contents-hidden');
+
+async function importParentContents() {
+    parent_toc.innerHTML = await(await fetch('../contents.html')).text();
+}
+
 void async function () {
     const parent_nav = document.getElementById('parent-nav');
     if (parent_nav != undefined) {
-        if (window.location.href.includes('Chapter')) {
+        if (location.href.includes('Chapter') || location.href.includes('Tenth_Schedule/Part_')) {
             let part_contents = await fetch('../../contents.html');
             let html = await(part_contents).text();
             let parent_text = getParentText(parser.parseFromString(html, 'text/html'));
@@ -65,7 +70,10 @@ void async function () {
             parent_nav.appendChild(link_elem);
         }
 
-        let parent_text = getParentText(parser.parseFromString(parent_toc.innerHTML, 'text/html'));
+        if (parent_toc.innerHTML.length === 0) {
+            await importParentContents();
+        }
+        let parent_text = getParentText(parent_toc);
         let link_elem = makeLinkListElem('../contents.html', parent_text);
         parent_nav.appendChild(link_elem);
     }
@@ -73,9 +81,11 @@ void async function () {
 
 // Previous/next articles
 
-parent_toc.onload = () => {
+void async function () {
+    if (parent_toc.innerHTML.length === 0) {
+        await importParentContents();
+    }
     let tr_entry = Array.from(parent_toc.querySelectorAll('tr')).find(tr => tr.title == window.location.href);
-    console.log(parent_toc);
     let prev_sibling = tr_entry.previousElementSibling;
     let next_sibling = tr_entry.nextElementSibling;
     while (prev_sibling !== null && prev_sibling.firstChild.className === 'subheading') {

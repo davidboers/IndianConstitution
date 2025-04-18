@@ -32,3 +32,7 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1464/1/197053.pdf): State of Himachal Pradesh Act, 1970.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1384/1/196227.pdf): State of Nagaland Act, 1962.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2000/1/200029.pdf): Uttar Pradesh Reorganisation Act, 2000.
+
+# Todo
+
+* Clarify renaming of United Provinces to Uttar Pradesh in Article 168

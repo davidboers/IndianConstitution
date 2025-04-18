@@ -21,6 +21,16 @@
     ],
     [
         {
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, \n        incidental and consequential matters.",
+            "path": "Part_I/4/"
+        },
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        }
+    ],
+    [
+        {
             "name": "6. Rights of citizenship of certain persons who have migrated to India from Pakistan.",
             "path": "Part_II/6/"
         },
@@ -77,6 +87,16 @@
         {
             "name": "8. Rights of citizenship of certain persons of Indian origin residing outside India.",
             "path": "Part_II/8/"
+        }
+    ],
+    [
+        {
+            "name": "13. Laws inconsistent with or in derogation of the fundamental rights.",
+            "path": "Part_III/13/"
+        },
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
         }
     ],
     [
@@ -727,6 +747,56 @@
         {
             "name": "168. Constitution of Legislatures in States.",
             "path": "Part_VI/Chapter_III/168/"
+        }
+    ],
+    [
+        {
+            "name": "169. Abolition or creation of Legislative Councils in States.",
+            "path": "Part_VI/Chapter_III/169/"
+        },
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        }
+    ],
+    [
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "54. Election of President.",
+            "path": "Part_V/Chapter_I/54/"
+        }
+    ],
+    [
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "55. Manner of election of President.",
+            "path": "Part_V/Chapter_I/55/"
+        }
+    ],
+    [
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "73. Extent of executive power of the Union.",
+            "path": "Part_V/Chapter_I/73/"
+        }
+    ],
+    [
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "162. Extent of executive power of State.",
+            "path": "Part_VI/Chapter_II/162/"
         }
     ],
     [

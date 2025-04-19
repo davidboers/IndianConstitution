@@ -22,5 +22,595 @@
             "name": "List III—Concurrent List.",
             "path": "Schedules/Seventh_Schedule/List_III/"
         }
+    ],
+    [
+        {
+            "name": "52. The President of India",
+            "path": "Part_V/Chapter_I/52/"
+        },
+        {
+            "name": "153. Governors of States.",
+            "path": "Part_VI/Chapter_II/153/"
+        }
+    ],
+    [
+        {
+            "name": "53. Executive power of the Union.",
+            "path": "Part_V/Chapter_I/53/"
+        },
+        {
+            "name": "154. Executive power of State.",
+            "path": "Part_VI/Chapter_II/154/"
+        }
+    ],
+    [
+        {
+            "name": "54. Election of President.",
+            "path": "Part_V/Chapter_I/54/"
+        },
+        {
+            "name": "155. Appointment of Governor.",
+            "path": "Part_VI/Chapter_II/155/"
+        }
+    ],
+    [
+        {
+            "name": "56. Term of office of President.",
+            "path": "Part_V/Chapter_I/56/"
+        },
+        {
+            "name": "156. Term of office of Governor.",
+            "path": "Part_VI/Chapter_II/156/"
+        }
+    ],
+    [
+        {
+            "name": "57. Eligibility for re-election.",
+            "path": "Part_V/Chapter_I/57/"
+        },
+        {
+            "name": "157. Qualifications for appointment as Governor.",
+            "path": "Part_VI/Chapter_II/157/"
+        }
+    ],
+    [
+        {
+            "name": "59. Conditions of President’s office.",
+            "path": "Part_V/Chapter_I/59/"
+        },
+        {
+            "name": "158. Conditions of Governor’s office.",
+            "path": "Part_VI/Chapter_II/158/"
+        }
+    ],
+    [
+        {
+            "name": "60. Oath or affirmation by the President.",
+            "path": "Part_V/Chapter_I/60/"
+        },
+        {
+            "name": "159. Oath or affirmation by the Governor.",
+            "path": "Part_VI/Chapter_II/159/"
+        }
+    ],
+    [
+        {
+            "name": "70. Discharge of President’s functions in other contingencies.",
+            "path": "Part_V/Chapter_I/70/"
+        },
+        {
+            "name": "160. Discharge of the functions of the Governor in certain contingencies.",
+            "path": "Part_VI/Chapter_II/160/"
+        }
+    ],
+    [
+        {
+            "name": "72. Power of President to grant pardons, etc., and to suspend, remit or commute sentences in certain cases.",
+            "path": "Part_V/Chapter_I/72/"
+        },
+        {
+            "name": "161. Power of Governor to grant pardons, etc., and to suspend, remit, or commute sentences in certain cases.",
+            "path": "Part_VI/Chapter_II/161/"
+        }
+    ],
+    [
+        {
+            "name": "73. Extent of executive power of the Union",
+            "path": "Part_V/Chapter_I/73/"
+        },
+        {
+            "name": "162. Extent of executive power of State.",
+            "path": "Part_VI/Chapter_II/162/"
+        }
+    ],
+    [
+        {
+            "name": "74. Council of Ministers to aid and advise President.",
+            "path": "Part_V/Chapter_I/74/"
+        },
+        {
+            "name": "163. Council of Ministers to aid and advise Governor.",
+            "path": "Part_VI/Chapter_II/163/"
+        }
+    ],
+    [
+        {
+            "name": "75. Other provisions as to Ministers.",
+            "path": "Part_V/Chapter_I/75/"
+        },
+        {
+            "name": "164. Other provisions as to Ministers.",
+            "path": "Part_VI/Chapter_II/164/"
+        }
+    ],
+    [
+        {
+            "name": "76. Attorney-General for India.",
+            "path": "Part_V/Chapter_I/76/"
+        },
+        {
+            "name": "165. Advocate-General for the State.",
+            "path": "Part_VI/Chapter_II/165/"
+        }
+    ],
+    [
+        {
+            "name": "77. Conduct of business of the Government of India.",
+            "path": "Part_V/Chapter_I/77/"
+        },
+        {
+            "name": "166. Conduct of the Business of the Government of a State.",
+            "path": "Part_VI/Chapter_II/166/"
+        }
+    ],
+    [
+        {
+            "name": "78. Duties of Prime Minister as respects the furnishing of information to the President, etc.",
+            "path": "Part_V/Chapter_I/78/"
+        },
+        {
+            "name": "167. Duties of Chief Minister as respects the furnishing of information to Governor, etc.",
+            "path": "Part_VI/Chapter_II/167/"
+        }
+    ],
+    [
+        {
+            "name": "79. Constitution of Parliament.",
+            "path": "Part_V/Chapter_II/79/"
+        },
+        {
+            "name": "168. Constitution of Legislatures in States.",
+            "path": "Part_VI/Chapter_III/168/"
+        }
+    ],
+    [
+        {
+            "name": "80. Composition of the Council of States.",
+            "path": "Part_V/Chapter_II/80/"
+        },
+        {
+            "name": "171. Composition of the Legislative Councils.",
+            "path": "Part_VI/Chapter_III/171/"
+        }
+    ],
+    [
+        {
+            "name": "81. Composition of the House of the People.",
+            "path": "Part_V/Chapter_II/81/"
+        },
+        {
+            "name": "170. Composition of the Legislative Assemblies.",
+            "path": "Part_VI/Chapter_III/170/"
+        }
+    ],
+    [
+        {
+            "name": "83. Duration of Houses of Parliament.",
+            "path": "Part_V/Chapter_II/83/"
+        },
+        {
+            "name": "172. Duration of State Legislatures.",
+            "path": "Part_VI/Chapter_III/172/"
+        }
+    ],
+    [
+        {
+            "name": "84. Qualification for membership of Parliament.",
+            "path": "Part_V/Chapter_II/84/"
+        },
+        {
+            "name": "173. Qualifications for membership of the State Legislature.",
+            "path": "Part_VI/Chapter_III/173/"
+        }
+    ],
+    [
+        {
+            "name": "85. Sessions of Parliament, prorogation and dissolution.",
+            "path": "Part_V/Chapter_II/85/"
+        },
+        {
+            "name": "174. Sessions of the State Legislature, prorogation and dissolution.",
+            "path": "Part_VI/Chapter_III/174/"
+        }
+    ],
+    [
+        {
+            "name": "86. Right of President to address and send messages to Houses. (Parliament)",
+            "path": "Part_V/Chapter_II/86/"
+        },
+        {
+            "name": "175. Right of Governor to address and send messages to the House or Houses. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/175/"
+        }
+    ],
+    [
+        {
+            "name": "87. Special address by the President.",
+            "path": "Part_V/Chapter_II/87/"
+        },
+        {
+            "name": "176. Special address by the Governor.",
+            "path": "Part_VI/Chapter_III/176/"
+        }
+    ],
+    [
+        {
+            "name": "88. Rights of Ministers and Attorney-General as respects Houses. (Parliament)",
+            "path": "Part_V/Chapter_II/88/"
+        },
+        {
+            "name": "177. Rights of Ministers and Advocate-General as respects the Houses. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/177/"
+        }
+    ],
+    [
+        {
+            "name": "89. The Chairman and Deputy Chairman of the Council of States.",
+            "path": "Part_V/Chapter_II/89/"
+        },
+        {
+            "name": "182. The Chairman and Deputy Chairman of the Legislative Council.",
+            "path": "Part_VI/Chapter_III/182/"
+        }
+    ],
+    [
+        {
+            "name": "90. Vacation and resignation of, and removal from, the office of Deputy Chairman. (Parliament)",
+            "path": "Part_V/Chapter_II/90/"
+        },
+        {
+            "name": "183. Vacation and resignation of, and removal from, the offices of Chairman and Deputy Chairman. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/183/"
+        }
+    ],
+    [
+        {
+            "name": "91. Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman. (Parliament)",
+            "path": "Part_V/Chapter_II/91/"
+        },
+        {
+            "name": "184. Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/184/"
+        }
+    ],
+    [
+        {
+            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under consideration. (Parliament)",
+            "path": "Part_V/Chapter_II/92/"
+        },
+        {
+            "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/185/"
+        }
+    ],
+    [
+        {
+            "name": "93. The Speaker and Deputy Speaker of the House of the People.",
+            "path": "Part_V/Chapter_II/93/"
+        },
+        {
+            "name": "178. The Speaker and Deputy Speaker of the Legislative Assembly.",
+            "path": "Part_VI/Chapter_III/178/"
+        }
+    ],
+    [
+        {
+            "name": "94. Vacation and resignation of, and removal from, the offices of Speaker and Deputy Speaker. (Parliament)",
+            "path": "Part_V/Chapter_II/94/"
+        },
+        {
+            "name": "179. Vacation and resignation of, and removal from, the offices of Speaker and Deputy Speaker. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/179/"
+        }
+    ],
+    [
+        {
+            "name": "95. Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker. (Parliament)",
+            "path": "Part_V/Chapter_II/95/"
+        },
+        {
+            "name": "180. Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/180/"
+        }
+    ],
+    [
+        {
+            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration. (Parliament)",
+            "path": "Part_V/Chapter_II/96/"
+        },
+        {
+            "name": "181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/181/"
+        }
+    ],
+    [
+        {
+            "name": "97. Salaries and allowances of the Chairman and Deputy Chairman and the Speaker and Deputy Speaker. (Parliament)",
+            "path": "Part_V/Chapter_II/97/"
+        },
+        {
+            "name": "186. Salaries and allowances of the Speaker and Deputy Speaker and the Chairman and Deputy Chairman. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/186/"
+        }
+    ],
+    [
+        {
+            "name": "98. Secretariat of Parliament.",
+            "path": "Part_V/Chapter_II/98/"
+        },
+        {
+            "name": "187. Secretariat of State Legislature.",
+            "path": "Part_VI/Chapter_III/187/"
+        }
+    ],
+    [
+        {
+            "name": "99. Oath or affirmation by members. (Parliament)",
+            "path": "Part_V/Chapter_II/99/"
+        },
+        {
+            "name": "188. Oath or affirmation by members. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/188/"
+        }
+    ],
+    [
+        {
+            "name": "100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum. (Parliament)",
+            "path": "Part_V/Chapter_II/100/"
+        },
+        {
+            "name": "189. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/189/"
+        }
+    ],
+    [
+        {
+            "name": "101. Vacation of seats. (Parliament)",
+            "path": "Part_V/Chapter_II/101/"
+        },
+        {
+            "name": "190. Vacation of seats. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/190/"
+        }
+    ],
+    [
+        {
+            "name": "102. Disqualifications for membership. (Parliament)",
+            "path": "Part_V/Chapter_II/102/"
+        },
+        {
+            "name": "191. Disqualifications for membership. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/191/"
+        }
+    ],
+    [
+        {
+            "name": "103. Decision on questions as to disqualifications of members. (Parliament)",
+            "path": "Part_V/Chapter_II/103/"
+        },
+        {
+            "name": "192. Decision on questions as to disqualifications of members. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/192/"
+        }
+    ],
+    [
+        {
+            "name": "104. Penalty for sitting and voting before making oath or affirmation under article 99 or when not qualified or when disqualified.",
+            "path": "Part_V/Chapter_II/104/"
+        },
+        {
+            "name": "193. Penalty for sitting and voting before making oath or affirmation under article 188 or when not qualified or when disqualified.",
+            "path": "Part_VI/Chapter_III/193/"
+        }
+    ],
+    [
+        {
+            "name": "105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.",
+            "path": "Part_V/Chapter_II/105/"
+        },
+        {
+            "name": "194. Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.",
+            "path": "Part_VI/Chapter_III/194/"
+        }
+    ],
+    [
+        {
+            "name": "106. Salaries and allowances of members. (Parliament)",
+            "path": "Part_V/Chapter_II/106/"
+        },
+        {
+            "name": "195. Salaries and allowances of members. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/195/"
+        }
+    ],
+    [
+        {
+            "name": "107. Provisions as to introduction and passing of Bills. (Parliament)",
+            "path": "Part_V/Chapter_II/107/"
+        },
+        {
+            "name": "196. Provisions as to introduction and passing of Bills. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/196/"
+        }
+    ],
+    [
+        {
+            "name": "108. Joint sitting of both Houses in certain cases.",
+            "path": "Part_V/Chapter_II/108/"
+        },
+        {
+            "name": "197. Restriction on powers of Legislative Council as to Bills other than Money Bills.",
+            "path": "Part_VI/Chapter_III/197/"
+        }
+    ],
+    [
+        {
+            "name": "109. Special procedure in respect of Money Bills. (Parliament)",
+            "path": "Part_V/Chapter_II/109/"
+        },
+        {
+            "name": "198. Special procedure in respect of Money Bills. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/198/"
+        }
+    ],
+    [
+        {
+            "name": "110. Definition of “Money Bills”. (Parliament)",
+            "path": "Part_V/Chapter_II/110/"
+        },
+        {
+            "name": "199. Definition of “Money Bills”. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/199/"
+        }
+    ],
+    [
+        {
+            "name": "111. Assent to Bills. (Parliament)",
+            "path": "Part_V/Chapter_II/111/"
+        },
+        {
+            "name": "200. Assent to Bills. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/200/"
+        }
+    ],
+    [
+        {
+            "name": "112. Annual financial statement. (Parliament)",
+            "path": "Part_V/Chapter_II/112/"
+        },
+        {
+            "name": "202. Annual financial statement. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/202/"
+        }
+    ],
+    [
+        {
+            "name": "113. Procedure in Parliament with respect to estimates.",
+            "path": "Part_V/Chapter_II/113/"
+        },
+        {
+            "name": "203. Procedure in Legislature with respect to estimates.",
+            "path": "Part_VI/Chapter_III/203/"
+        }
+    ],
+    [
+        {
+            "name": "114. Appropriation Bills. (Parliament)",
+            "path": "Part_V/Chapter_II/114/"
+        },
+        {
+            "name": "204. Appropriation Bills. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/204/"
+        }
+    ],
+    [
+        {
+            "name": "115. Supplementary, additional or excess grants. (Parliament)",
+            "path": "Part_V/Chapter_II/115/"
+        },
+        {
+            "name": "205. Supplementary, additional or excess grants. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/205/"
+        }
+    ],
+    [
+        {
+            "name": "116. Votes on account, votes of credit and exceptional grants. (Parliament)",
+            "path": "Part_V/Chapter_II/116/"
+        },
+        {
+            "name": "206. Votes on account, votes of credit and exceptional grants. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/206/"
+        }
+    ],
+    [
+        {
+            "name": "117. Special provisions as to financial Bills. (Parliament)",
+            "path": "Part_V/Chapter_II/117/"
+        },
+        {
+            "name": "207. Special provisions as to financial Bills. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/207/"
+        }
+    ],
+    [
+        {
+            "name": "118. Rules of procedure. (Parliament)",
+            "path": "Part_V/Chapter_II/118/"
+        },
+        {
+            "name": "208. Rules of procedure. (State Legislatures)",
+            "path": "Part_VI/Chapter_III/208/"
+        }
+    ],
+    [
+        {
+            "name": "119. Regulation by law of procedure in Parliament in relation to financial business.",
+            "path": "Part_V/Chapter_II/119/"
+        },
+        {
+            "name": "209. Regulation by law of procedure in the Legislature of the State in relation to financial business.",
+            "path": "Part_VI/Chapter_III/209/"
+        }
+    ],
+    [
+        {
+            "name": "120. Language to be used in Parliament.",
+            "path": "Part_V/Chapter_II/120/"
+        },
+        {
+            "name": "210. Language to be used in the Legislature.",
+            "path": "Part_VI/Chapter_III/210/"
+        }
+    ],
+    [
+        {
+            "name": "121. Restriction on discussion in Parliament.",
+            "path": "Part_V/Chapter_II/121/"
+        },
+        {
+            "name": "211. Restriction on discussion in the Legislature.",
+            "path": "Part_VI/Chapter_III/211/"
+        }
+    ],
+    [
+        {
+            "name": "122. Courts not to inquire into proceedings of Parliament.",
+            "path": "Part_V/Chapter_II/122/"
+        },
+        {
+            "name": "212. Courts not to inquire into proceedings of the Legislature.",
+            "path": "Part_VI/Chapter_III/212/"
+        }
+    ],
+    [
+        {
+            "name": "123. Power of President to promulgate Ordinances during recess of Parliament.",
+            "path": "Part_V/Chapter_III/123/"
+        },
+        {
+            "name": "213. Power of Governor to promulgate Ordinances during recess of Legislature.",
+            "path": "Part_VI/Chapter_IV/213/"
+        }
     ]
 ]

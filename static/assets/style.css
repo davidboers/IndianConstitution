@@ -84,7 +84,7 @@ th.subheading {
     background-color: #ff00ff22;
 }
 
-li.changes.renum::marker {
+li.changes.renum::marker, li.changes.renum::before {
     color: magenta;
 }
 

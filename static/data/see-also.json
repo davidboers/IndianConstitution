@@ -8,5 +8,19 @@
             "name": "66. Election of Vice-President",
             "path": "Part_V/Chapter_I/66/"
         }
+    ],
+    [
+        {
+            "name": "List I—Union List.",
+            "path": "Schedules/Seventh_Schedule/List_I/"
+        },
+        {
+            "name": "List II—State List.",
+            "path": "Schedules/Seventh_Schedule/List_II/"
+        },
+        {
+            "name": "List III—Concurrent List.",
+            "path": "Schedules/Seventh_Schedule/List_III/"
+        }
     ]
 ]

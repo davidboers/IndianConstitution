@@ -1,0 +1,52 @@
+/* Paragraphs of entries */
+
+li > ol {
+    counter-reset: list;
+}
+
+li > ol > li {
+    list-style: none;
+}
+
+li > ol > li:before {
+    content: "(" counter(list, lower-alpha) ") ";
+    counter-increment: list;
+}
+
+/* Special markers */
+
+#m2A::marker {
+    content: '2A. ';
+}
+
+#m11A::marker {
+    content: '11A. ';
+}
+
+#m17A::marker {
+    content: '17A. ';
+}
+
+#m17B::marker {
+    content: '17B. ';
+}
+
+#m20A::marker {
+    content: '20A. ';
+}
+
+#m33A::marker {
+    content: '33A. ';
+}
+
+#m92A::marker {
+    content: '92A. ';
+}
+
+#m92B::marker {
+    content: '92B. ';
+}
+
+#m92C::marker {
+    content: '92C. ';
+}

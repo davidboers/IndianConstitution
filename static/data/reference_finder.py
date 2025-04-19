@@ -5,7 +5,9 @@ import re
 def find_references(html):
     refs = re.findall(r'article [0-9A-Z]+', html, flags = re.IGNORECASE)
 
-    group_refs = re.findall(r'articles [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
+    group_refs = re.findall(r'articles [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
+                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
+
     for ref in group_refs:
         numbers = re.findall(r'[0-9A-Z]+', ref, re.IGNORECASE)
         for number in numbers:

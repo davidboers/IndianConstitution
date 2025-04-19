@@ -392,7 +392,7 @@
     [
         {
             "name": "101. Vacation of seats.",
-            "path": "Part_V/Chapter_II/102/"
+            "path": "Part_V/Chapter_II/101/"
         },
         {
             "name": "102. Disqualifications for membership.",
@@ -415,7 +415,7 @@
             "path": "Part_V/Chapter_II/104/"
         },
         {
-            "name": "99. Oath or affirmation of members.",
+            "name": "99. Oath or affirmation by members.",
             "path": "Part_V/Chapter_II/99/"
         }
     ],
@@ -556,7 +556,7 @@
         },
         {
             "name": "100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.",
-            "path": "Part_V/Chapter_II/101/"
+            "path": "Part_V/Chapter_II/100/"
         }
     ],
     [
@@ -576,7 +576,7 @@
         },
         {
             "name": "100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.",
-            "path": "Part_V/Chapter_II/101/"
+            "path": "Part_V/Chapter_II/100/"
         }
     ],
     [
@@ -771,12 +771,182 @@
     ],
     [
         {
+            "name": "181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "path": "Part_VI/Chapter_III/181/"
+        },
+        {
+            "name": "189. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.",
+            "path": "Part_VI/Chapter_III/189/"
+        }
+    ],
+    [
+        {
             "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
             "path": "Part_VI/Chapter_III/185/"
         },
         {
             "name": "184. Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman.",
             "path": "Part_VI/Chapter_III/184/"
+        }
+    ],
+    [
+        {
+            "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "path": "Part_VI/Chapter_III/185/"
+        },
+        {
+            "name": "189. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.",
+            "path": "Part_VI/Chapter_III/189/"
+        }
+    ],
+    [
+        {
+            "name": "190. Vacation of seats.",
+            "path": "Part_VI/Chapter_III/190/"
+        },
+        {
+            "name": "191. Disqualifications for membership.",
+            "path": "Part_VI/Chapter_III/191/"
+        }
+    ],
+    [
+        {
+            "name": "192. Decision on questions as to disqualifications of members.",
+            "path": "Part_VI/Chapter_III/192/"
+        },
+        {
+            "name": "191. Disqualifications for membership.",
+            "path": "Part_VI/Chapter_III/191/"
+        }
+    ],
+    [
+        {
+            "name": "193. Penalty for sitting and voting before making oath or affirmation under article 188 or when not qualified or when \n        disqualified.",
+            "path": "Part_VI/Chapter_III/193/"
+        },
+        {
+            "name": "188. Oath or affirmation by members.",
+            "path": "Part_VI/Chapter_III/188/"
+        }
+    ],
+    [
+        {
+            "name": "195. Provisions as to introduction and passing of Bills.",
+            "path": "Part_VI/Chapter_III/196/"
+        },
+        {
+            "name": "198. Special procedure in respect of Money Bills.",
+            "path": "Part_VI/Chapter_III/198/"
+        }
+    ],
+    [
+        {
+            "name": "195. Provisions as to introduction and passing of Bills.",
+            "path": "Part_VI/Chapter_III/196/"
+        },
+        {
+            "name": "207. Special provisions as to financial Bills.",
+            "path": "Part_VI/Chapter_III/207/"
+        }
+    ],
+    [
+        {
+            "name": "195. Provisions as to introduction and passing of Bills.",
+            "path": "Part_VI/Chapter_III/196/"
+        },
+        {
+            "name": "197. Restriction on powers of Legislative Council as to Bills other than Money Bills.",
+            "path": "Part_VI/Chapter_III/197/"
+        }
+    ],
+    [
+        {
+            "name": "199. Definition of \"Money Bills\".",
+            "path": "Part_VI/Chapter_III/199/"
+        },
+        {
+            "name": "198. Special procedure in respect of Money Bills.",
+            "path": "Part_VI/Chapter_III/198/"
+        }
+    ],
+    [
+        {
+            "name": "199. Definition of \"Money Bills\".",
+            "path": "Part_VI/Chapter_III/199/"
+        },
+        {
+            "name": "200. Assent to Bills.",
+            "path": "Part_VI/Chapter_III/200/"
+        }
+    ],
+    [
+        {
+            "name": "201. Bills reserved for consideration.",
+            "path": "Part_VI/Chapter_III/201/"
+        },
+        {
+            "name": "200. Assent to Bills.",
+            "path": "Part_VI/Chapter_III/200/"
+        }
+    ],
+    [
+        {
+            "name": "204. Appropriation Bills.",
+            "path": "Part_VI/Chapter_III/204/"
+        },
+        {
+            "name": "203. Procedure in Legislature with respect to estimates.",
+            "path": "Part_VI/Chapter_III/203/"
+        }
+    ],
+    [
+        {
+            "name": "204. Appropriation Bills.",
+            "path": "Part_VI/Chapter_III/204/"
+        },
+        {
+            "name": "205. Supplementary, additional or excess grants.",
+            "path": "Part_VI/Chapter_III/205/"
+        }
+    ],
+    [
+        {
+            "name": "204. Appropriation Bills.",
+            "path": "Part_VI/Chapter_III/204/"
+        },
+        {
+            "name": "206. Votes on account, votes of credit and exceptional grants.",
+            "path": "Part_VI/Chapter_III/206/"
+        }
+    ],
+    [
+        {
+            "name": "206. Votes on account, votes of credit and exceptional grants.",
+            "path": "Part_VI/Chapter_III/206/"
+        },
+        {
+            "name": "203. Procedure in Legislature with respect to estimates.",
+            "path": "Part_VI/Chapter_III/203/"
+        }
+    ],
+    [
+        {
+            "name": "207. Special provisions as to financial Bills.",
+            "path": "Part_VI/Chapter_III/207/"
+        },
+        {
+            "name": "199. Definition of \"Money Bills\".",
+            "path": "Part_VI/Chapter_III/199/"
+        }
+    ],
+    [
+        {
+            "name": "209. Regulation by law of procedure in the Legislature of the State in relation to financial business.",
+            "path": "Part_VI/Chapter_III/209/"
+        },
+        {
+            "name": "208. Rules of procedure.",
+            "path": "Part_VI/Chapter_III/208/"
         }
     ],
     [
@@ -825,8 +995,18 @@
             "path": "Schedules/Tenth_Schedule/Part_B/2/"
         },
         {
-            "name": "99. Oath or affirmation of members.",
+            "name": "99. Oath or affirmation by members.",
             "path": "Part_V/Chapter_II/99/"
+        }
+    ],
+    [
+        {
+            "name": "2. Responsibilities of the Government of India.",
+            "path": "Schedules/Tenth_Schedule/Part_B/2/"
+        },
+        {
+            "name": "188. Oath or affirmation by members.",
+            "path": "Part_VI/Chapter_III/188/"
         }
     ],
     [
@@ -841,12 +1021,32 @@
     ],
     [
         {
+            "name": "6. Decision on questions as to disqualification on ground of defection.",
+            "path": "Schedules/Tenth_Schedule/6/"
+        },
+        {
+            "name": "212. Courts not to inquire into proceedings of the Legislature.",
+            "path": "Part_VI/Chapter_III/212/"
+        }
+    ],
+    [
+        {
             "name": "8. Rules.",
             "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.",
             "path": "Part_V/Chapter_II/105/"
+        }
+    ],
+    [
+        {
+            "name": "8. Rules.",
+            "path": "Schedules/Tenth_Schedule/8/"
+        },
+        {
+            "name": "194. Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.",
+            "path": "Part_VI/Chapter_III/194/"
         }
     ],
     [
@@ -866,7 +1066,7 @@
         },
         {
             "name": "101. Vacation of seats.",
-            "path": "Part_V/Chapter_II/102/"
+            "path": "Part_V/Chapter_II/101/"
         }
     ],
     [

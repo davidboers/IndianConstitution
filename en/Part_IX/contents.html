@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <title>Table of Contents — Part IX — Constitution of India</title>
+</head>
+<body>
+    <table id="contents">
+        <tr>
+            <th colspan="2" id="part-num">Part IX</th>
+        </tr>
+        <tr>
+            <th colspan="2" id="part-header">The Panchayats</th>
+        </tr>
+    </table>
+    <p><i>Note:</i> Part IX, originally called "The Territories in Part D of the First Schedule and other Territories not specified in that 
+        Schedule", was omitted by the Seventh Amendment. The current Part IX was inserted by the Seventy-third Amendment.</p>
+    <script type="module">
+        import { articles } from '/static/src/contents.js';
+
+        const contents = document.getElementById('contents');
+        window.onload = () => articles(contents);
+    </script>
+</body>
+</html>

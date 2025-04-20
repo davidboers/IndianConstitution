@@ -341,6 +341,56 @@
     ],
     [
         {
+            "name": "243. Administration of territories specified in Part D of the First Schedule and other territories not specified in that \n        Schedule.",
+            "path": "Part_IX/243/"
+        },
+        {
+            "name": "243B. Constitution of Panchayats.",
+            "path": "Part_IX/243B/"
+        }
+    ],
+    [
+        {
+            "name": "243L. Application to Union territories.",
+            "path": "Part_IX/243L/"
+        },
+        {
+            "name": "239. Administration of States in Part C of the First Schedule.",
+            "path": "Part_VIII/239/"
+        }
+    ],
+    [
+        {
+            "name": "243M. Part not to apply to certain areas.",
+            "path": "Part_IX/243M/"
+        },
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        }
+    ],
+    [
+        {
+            "name": "243M. Part not to apply to certain areas.",
+            "path": "Part_IX/243M/"
+        },
+        {
+            "name": "243D. Reservation of seats.",
+            "path": "Part_IX/243D/"
+        }
+    ],
+    [
+        {
+            "name": "243O. Bar to interference by courts in electoral matters.",
+            "path": "Part_IX/243O/"
+        },
+        {
+            "name": "243K. Elections to the Panchayats.",
+            "path": "Part_IX/243K/"
+        }
+    ],
+    [
+        {
             "name": "54. Election of President.",
             "path": "Part_V/Chapter_I/54/"
         },

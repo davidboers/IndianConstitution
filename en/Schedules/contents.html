@@ -14,8 +14,16 @@
     </table>
     <script type="module">
         import { mainTable } from '/static/src/contents.js';
+
         const contents = document.getElementById('contents');
-        window.onload = () => mainTable(contents);
+        const schedules = [
+            'First_Schedule/',
+            'Seventh_Schedule/',
+            'Eighth_Schedule/',
+            'Ninth_Schedule/',
+            'Tenth_Schedule/'
+        ]
+        window.onload = () => mainTable(contents, schedules);
     </script>
 </body>
 </html>

@@ -105,11 +105,13 @@ export function addPart(part) {
     return details;
 }
 
-export function mainTable(contents) {
-    indexDirs('Error fetching parts:')
-        .then(parts => parts.map(part => {
-            contents.appendChild(addPart(part));
-        }));
+export async function mainTable(contents, parts = []) {
+    if (parts.length === 0) {
+        parts = await indexDirs('Error fetching parts:');
+    }
+    parts.map(part => {
+        contents.appendChild(addPart(part));
+    })
 }
 
 // Subheadings

@@ -11,8 +11,30 @@
     <div id="contents"></div>
     <script type="module">
         import { mainTable } from '/static/src/contents.js';
+
         const contents = document.getElementById('contents');
-        window.onload = () => mainTable(contents);
+        const parts = [
+            'Part_I/',
+            'Part_II/',
+            'Part_III/',
+            'Part_IV/',
+            'Part_IVA/',
+            'Part_V/',
+            'Part_VI/',
+            'Part_VII/',
+            'Part_VIII/',
+            'Part_IX/',
+            'Part_IXA/',
+            'Part_IXB/',
+            'Part_X/',
+            'Part_XI/',
+            'Part_XII/',
+
+            'Part_XX/',
+
+            'Schedules/'
+        ];
+        window.onload = () => mainTable(contents, parts);
     </script>
 </body>
 </html>

@@ -57,6 +57,13 @@ function makeArticle(article) {
                         window.top.location.href = article;
                     };
                     margin.appendChild(link);
+
+                    if (doc.querySelector('#omitted-indicator') !== null) {
+                        const i = document.createElement('i');
+                        i.innerText = '(Omitted)';
+                        margin.innerHTML += ' ';
+                        margin.appendChild(i);
+                    }
                     
                     entry.appendChild(margin);
                 })

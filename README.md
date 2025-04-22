@@ -38,7 +38,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 * Clarify renaming of United Provinces to Uttar Pradesh in Article 168
 * Changes by amendment
 * Government of India Act, 1935 links
-* Ordering of Parts on TOC
 * Omitted articles/parts on TOC
 * References to Schedules
 * Fix timelines

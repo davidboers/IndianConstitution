@@ -61,8 +61,8 @@ function makeArticle(article) {
                     if (doc.querySelector('#omitted-indicator') !== null) {
                         const i = document.createElement('i');
                         i.innerText = '(Omitted)';
-                        margin.innerHTML += ' ';
-                        margin.appendChild(i);
+                        link.innerHTML += ' ';
+                        link.appendChild(i);
                     }
                     
                     entry.appendChild(margin);

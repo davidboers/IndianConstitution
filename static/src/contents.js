@@ -1,16 +1,8 @@
 
-import { parseHTMLDoc } from './utils.js';
+import { parseHTMLDoc, getIndexedLinks } from './utils.js';
 
-function getIndexedLinks (html) {
-    const doc = parseHTMLDoc(html);
-    const links = Array.from(doc.querySelectorAll('a'))
-        .filter(link => link.innerText != '../')
-        .map(link => link.href);
-    return links;
-}
-
-async function indexDirs(errorPrefix) {
-    return fetch('./')
+async function indexDirs(errorPrefix, dir = './') {
+    return fetch(dir)
         .then(response => response.text())
         .then(html => {
             const links = getIndexedLinks(html);
@@ -27,7 +19,7 @@ function makeArticle(article) {
     const entry = document.createElement('tr');
     const num_cell = document.createElement('td');
     const split_path = article.split('/');
-    const dir = split_path[split_path.length-2];
+    const dir = split_path[split_path.length - 2];
     entry.id = (isNaN(dir) && isNaN(dir.substr(0, dir.length - 1))) ? dir : 'a' + dir;
     entry.title = article;
     const num = (dir + '.').replace('_', ' ');
@@ -64,7 +56,7 @@ function makeArticle(article) {
                         link.innerHTML += ' ';
                         link.appendChild(i);
                     }
-                    
+
                     entry.appendChild(margin);
                 })
                 .catch(error => console.error('Error fetching article text:', error));
@@ -74,15 +66,16 @@ function makeArticle(article) {
     return entry;
 }
 
-export async function articles(contents, exclude = []) {
-    const tbody = contents.querySelector('tbody');
-    return indexDirs('Error fetching articles:')
+export async function articles(contents, exclude = [], dir = './') {
+    //const tbody = contents.querySelector('tbody');
+    return indexDirs('Error fetching articles:', dir = dir)
         .then(articles =>
             articles
                 .filter(a => !exclude.includes(normalizeDirName(a)))
                 .sort((a, b) => parseInt(normalizeDirName(a)) - parseInt(normalizeDirName(b)))
+                .map(a => dir + a)
                 .map(makeArticle)
-                .map(a => tbody.appendChild(a))
+                .map(a => contents.appendChild(a))
         );
 }
 
@@ -112,9 +105,9 @@ export function addPart(part) {
     return details;
 }
 
-export async function mainTable(contents, parts = []) {
+export async function mainTable(contents, parts = [], dir = './') {
     if (parts.length === 0) {
-        parts = await indexDirs('Error fetching parts:');
+        parts = await indexDirs('Error fetching parts:', dir = dir);
     }
     parts.map(part => {
         contents.appendChild(addPart(part));
@@ -139,3 +132,94 @@ export function makeSubheadings(subheadings) {
         article_row.parentNode.insertBefore(subheading_row, article_row);
     }
 }
+
+// Table builder
+
+function partID(part) {
+    return part.replaceAll(', ', '_').replaceAll(' ', '_').toLowerCase();
+}
+
+function partDir(part) {
+    return part.replaceAll(', ', '/').replaceAll(' ', '_') + '/';
+}
+
+async function buildFlatPart(part) {
+    const id = partID(part);
+    const dir = partDir(part);
+    var contents = document.querySelector(`.contents#${id}`);
+    if (contents === null) {
+        return;
+    }
+    return articles(contents, undefined, dir);
+}
+
+let flat_parts = [
+    'Part I',
+    'Part II', 
+    'Part III',
+    'Part IV', 
+    'Part IVA', 
+    'Part V, Chapter I', 'Part V, Chapter II', 'Part V, Chapter III', 'Part V, Chapter IV', 'Part V, Chapter V', 
+    'Part VI, Chapter I', 'Part VI, Chapter II', 'Part VI, Chapter III', 'Part VI, Chapter IV', 'Part VI, Chapter V', 'Part VI, Chapter VI', 
+    'Part VII',
+    'Part VIII', 
+    'Part IX', 
+    'Part IXA',
+    'Part IXB', 
+    'Part X',
+    'Part XIII', 
+    'Part XIVA', 
+    'Part XV',
+    'Part XVI', 
+    'Part XVIII', 
+    'Part XIX',
+    'Part XX', 
+    'Part XXI', 
+    'Part XXII',
+    'Schedules, First Schedule',
+    'Schedules, Second Schedule'].map(buildFlatPart);
+
+const subheadings = {
+    // Part III
+    'a12': 'General',
+    'a14': 'Right to Equality',
+    'a19': 'Right to Freedom',
+    'a23': 'Right against Exploitation',
+    'a25': 'Right to Freedom of Religion',
+    'a29': 'Cultural and Educational Rights',
+    'a31A': 'Saving of Certain Laws',
+    'a32': 'Right to Constitutional Remedies',
+
+    // Part V, Chapter I
+    'a52': 'The President and Vice-President',
+    'a74': 'Council of Ministers',
+    'a76': 'The Attorney-General for India',
+    'a77': 'Conduct of Government Business',
+
+    // Part V, Chapter II
+    'a79': 'General',
+    'a89': 'Officers of Parliament',
+    'a99': 'Conduct of Business',
+    'a101': 'Disqualification of Members',
+    'a105': 'Powers, Privileges and Immunities of Parliament and its Members',
+    'a107': 'Legislative Procedure',
+    'a112': 'Procedure in Financial Matters',
+    'a118': 'Procedure Generally',
+
+    // Part VI, Chapter II
+    'a153': 'The Governor',
+    'a163': 'Council of Ministers',
+    'a165': 'The Advocate-General for the State',
+    'a166': 'Conduct of Government Business',
+
+    // Part VI, Chapter III
+    'a168': 'General',
+    'a178': 'Officers of the State Legislature',
+    'a188': 'Conduct of Business',
+    'a194': 'Powers, privileges and immunities of State Legislatures and their Members',
+    'a196': 'Legislative Procedure',
+    'a202': 'Procedure in Financial Matters',
+    'a208': 'Procedure Generally'
+}
+
+Promise.all(flat_parts).then(() => makeSubheadings(subheadings));

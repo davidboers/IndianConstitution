@@ -1,13 +1,5 @@
 
-import { parseHTMLDoc } from './utils.js';
-
-function getIndexedLinks(html) {
-    const doc = parseHTMLDoc(html);
-    const links = Array.from(doc.querySelectorAll('a'))
-        .filter(link => link.innerText != '../' && !link.innerText.includes('http-server'))
-        .map(link => link.innerText);
-    return links;
-}
+import { parseHTMLDoc, getIndexedLinks } from './utils.js';
 
 async function searchArticleVersion(path, query, articlePath) {
     return fetch(path)

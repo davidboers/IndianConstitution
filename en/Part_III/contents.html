@@ -7,7 +7,7 @@
     <title>Table of Contents — Part III — Constitution of India</title>
 </head>
 <body>
-    <table id="contents">
+    <table class="contents" id="part_iii">
         <tr>
             <th colspan="2" id="part-num">Part III</th>
         </tr>
@@ -15,23 +15,6 @@
             <th colspan="2" id="part-header">Fundamental Rights</th>
         </tr>
     </table>
-    <script type="module">
-        import { articles, makeSubheadings } from '/static/src/contents.js';
-        const contents = document.getElementById('contents');
-        const subheadings = {
-            'a12': 'General',
-            'a14': 'Right to Equality',
-            'a19': 'Right to Freedom',
-            'a23': 'Right against Exploitation',
-            'a25': 'Right to Freedom of Religion',
-            'a29': 'Cultural and Educational Rights',
-            'a31A': 'Saving of Certain Laws',
-            'a32': 'Right to Constitutional Remedies'
-        }
-
-        window.onload = () => {
-            articles(contents).then(() => makeSubheadings(subheadings));
-        }
-    </script>
+    <script type="module" src="/static/src/contents.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title>Table of Contents — Part II — Constitution of India</title>
 </head>
 <body>
-    <table id="contents">
+    <table class="contents" id="part_ii">
         <tr>
             <th colspan="2" id="part-num">Part II</th>
         </tr>
@@ -15,10 +15,6 @@
             <th colspan="2" id="part-header">Citizenship</th>
         </tr>
     </table>
-    <script type="module">
-        import { articles } from '/static/src/contents.js';
-        const contents = document.getElementById('contents');
-        window.onload = () => articles(contents);
-    </script>
+    <script type="module" src="/static/src/contents.js"></script>
 </body>
 </html>

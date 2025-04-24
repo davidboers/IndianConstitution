@@ -27,22 +27,6 @@ p, #effective-date, li {
 
 /* Text elements */
 
-th {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-th#part-header {
-    font-weight: normal;
-}
-
-th.subheading {
-    font-weight: normal;
-    text-transform: none;
-    font-style: italic;
-    padding-top: 1em;
-}
-
 .art {
     font-weight: bold;
 }

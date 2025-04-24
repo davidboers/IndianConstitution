@@ -167,7 +167,10 @@ let flat_parts = [
     'Part IXA',
     'Part IXB', 
     'Part X',
+    'Part XI, Chapter I', 'Part XI, Chapter II',
+    'Part XII, Chapter I', 'Part XII, Chapter II', 'Part XII, Chapter III', 'Part XII, Chapter IV',
     'Part XIII', 
+    'Part XIV, Chapter I',
     'Part XIVA', 
     'Part XV',
     'Part XVI', 
@@ -219,7 +222,20 @@ const subheadings = {
     'a194': 'Powers, privileges and immunities of State Legislatures and their Members',
     'a196': 'Legislative Procedure',
     'a202': 'Procedure in Financial Matters',
-    'a208': 'Procedure Generally'
+    'a208': 'Procedure Generally',
+
+    // Part XI, Chapter I
+    'a245': 'Distribution of Legislative Powers',
+
+    // Part XI, Chapter II
+    'a256': 'General',
+    'a262': 'Disputes relating to Waters',
+    'a263': 'Co-ordination between States',
+
+    // Part XII, Chapter I
+    'a264': 'General',
+    'a268': 'Distribution of Revenues between the Union and the States',
+    'a282': 'Miscellaneous Financial Provisions'
 }
 
 Promise.all(flat_parts).then(() => makeSubheadings(subheadings));

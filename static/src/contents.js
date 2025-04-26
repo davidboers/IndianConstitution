@@ -170,7 +170,7 @@ let flat_parts = [
     'Part XI, Chapter I', 'Part XI, Chapter II',
     'Part XII, Chapter I', 'Part XII, Chapter II', 'Part XII, Chapter III', 'Part XII, Chapter IV',
     'Part XIII', 
-    'Part XIV, Chapter I',
+    'Part XIV, Chapter I', 'Part XIV, Chapter II',
     'Part XIVA', 
     'Part XV',
     'Part XVI', 

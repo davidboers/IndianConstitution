@@ -1561,6 +1561,26 @@
     ],
     [
         {
+            "name": "239AA. Special provisions with respect to Delhi.",
+            "path": "Part_VIII/239AA/"
+        },
+        {
+            "name": "326. Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult \n        suffrage.",
+            "path": "Part_XV/326/"
+        }
+    ],
+    [
+        {
+            "name": "239AA. Special provisions with respect to Delhi.",
+            "path": "Part_VIII/239AA/"
+        },
+        {
+            "name": "329. Bar to interference by courts in electoral matters.",
+            "path": "Part_XV/329/"
+        }
+    ],
+    [
+        {
             "name": "239AB. Provision in case of failure of constitutional machinery.",
             "path": "Part_VIII/239AB/"
         },
@@ -2052,6 +2072,46 @@
     [
         {
             "name": "323A. Administrative tribunals.",
+            "path": "Part_XIVA/323A/"
+        },
+        {
+            "name": "136. Special leave to appeal by the Supreme Court.",
+            "path": "Part_V/Chapter_IV/136/"
+        }
+    ],
+    [
+        {
+            "name": "323B. Tribunals for other matters.",
+            "path": "Part_XIVA/323B/"
+        },
+        {
+            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
+            "path": "Part_III/31A/"
+        }
+    ],
+    [
+        {
+            "name": "323B. Tribunals for other matters.",
+            "path": "Part_XIVA/323B/"
+        },
+        {
+            "name": "329. Bar to interference by courts in electoral matters.",
+            "path": "Part_XV/329/"
+        }
+    ],
+    [
+        {
+            "name": "323B. Tribunals for other matters.",
+            "path": "Part_XIVA/323B/"
+        },
+        {
+            "name": "329A. Special provision as to elections to Parliament in the case of Prime Minister and Speaker.",
+            "path": "Part_XV/329A/"
+        }
+    ],
+    [
+        {
+            "name": "323B. Tribunals for other matters.",
             "path": "Part_XIVA/323B/"
         },
         {
@@ -2061,12 +2121,32 @@
     ],
     [
         {
-            "name": "323A. Administrative tribunals.",
-            "path": "Part_XIVA/323B/"
+            "name": "329. Bar to interference by courts in electoral matters.",
+            "path": "Part_XV/329/"
         },
         {
-            "name": "31A. Saving of laws providing for acquisition of estates, etc.",
-            "path": "Part_III/31A/"
+            "name": "327. Power of Parliament to make provision with respect to elections to Legislatures.",
+            "path": "Part_XV/327/"
+        }
+    ],
+    [
+        {
+            "name": "329. Bar to interference by courts in electoral matters.",
+            "path": "Part_XV/329/"
+        },
+        {
+            "name": "328. Power of Legislature of a State to make provision with respect to elections to such Legislature.",
+            "path": "Part_XV/328/"
+        }
+    ],
+    [
+        {
+            "name": "329A. Special provision as to elections to Parliament in the case of Prime Minister and Speaker.",
+            "path": "Part_XV/329A/"
+        },
+        {
+            "name": "329. Bar to interference by courts in electoral matters.",
+            "path": "Part_XV/329/"
         }
     ],
     [
@@ -2237,6 +2317,16 @@
         {
             "name": "103. Decision on questions as to disqualifications of members.",
             "path": "Part_V/Chapter_II/103/"
+        }
+    ],
+    [
+        {
+            "name": "4. Representation in Parliament.",
+            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+        },
+        {
+            "name": "324. Superintendence, direction and control of elections to be vested in an Election Commission.",
+            "path": "Part_XV/324/"
         }
     ]
 ]

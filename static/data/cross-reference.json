@@ -351,6 +351,16 @@
     ],
     [
         {
+            "name": "243D. Reservation of seats.",
+            "path": "Part_IX/243D/"
+        },
+        {
+            "name": "334. Reservation of seats and special representation to cease after ten years.",
+            "path": "Part_XVI/334/"
+        }
+    ],
+    [
+        {
             "name": "243L. Application to Union territories.",
             "path": "Part_IX/243L/"
         },
@@ -437,6 +447,16 @@
         {
             "name": "243S. Constitution and composition of Wards Committees, etc.",
             "path": "Part_IXA/243S/"
+        }
+    ],
+    [
+        {
+            "name": "243T. Reservation of seats.",
+            "path": "Part_IXA/243T/"
+        },
+        {
+            "name": "334. Reservation of seats and special representation to cease after ten years.",
+            "path": "Part_XVI/334/"
         }
     ],
     [
@@ -745,6 +765,16 @@
             "path": "Part_V/Chapter_II/81/"
         },
         {
+            "name": "331. Representation of the Anglo-Indian Community in the House of the People.",
+            "path": "Part_XVI/331/"
+        }
+    ],
+    [
+        {
+            "name": "81. Composition of the House of the People.",
+            "path": "Part_V/Chapter_II/81/"
+        },
+        {
             "name": "82. Special provision as to representation of States in Part C and territories other than States.",
             "path": "Part_V/Chapter_II/82/"
         }
@@ -977,6 +1007,16 @@
         {
             "name": "368. Procedures for amendment of the Constitution.",
             "path": "Part_XX/368/"
+        }
+    ],
+    [
+        {
+            "name": "170. Composition of the Legislative Assemblies.",
+            "path": "Part_VI/Chapter_III/170/"
+        },
+        {
+            "name": "333. Representation of the Anglo-Indian Community in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/333/"
         }
     ],
     [
@@ -2071,6 +2111,16 @@
     ],
     [
         {
+            "name": "320. Functions of Public Service Commissions.",
+            "path": "Part_XIV/Chapter_II/320/"
+        },
+        {
+            "name": "335. Claims of Scheduled Castes and Scheduled Tribes to services and posts.",
+            "path": "Part_XVI/335/"
+        }
+    ],
+    [
+        {
             "name": "323A. Administrative tribunals.",
             "path": "Part_XIVA/323A/"
         },
@@ -2147,6 +2197,86 @@
         {
             "name": "329. Bar to interference by courts in electoral matters.",
             "path": "Part_XV/329/"
+        }
+    ],
+    [
+        {
+            "name": "330. Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.",
+            "path": "Part_XVI/330/"
+        },
+        {
+            "name": "332. Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332/"
+        }
+    ],
+    [
+        {
+            "name": "330A. Reservation of seats for women in the House of the People.",
+            "path": "Part_XVI/330A/"
+        },
+        {
+            "name": "330. Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.",
+            "path": "Part_XVI/330/"
+        }
+    ],
+    [
+        {
+            "name": "332. Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332/"
+        },
+        {
+            "name": "170. Composition of the Legislative Assemblies.",
+            "path": "Part_VI/Chapter_III/170/"
+        }
+    ],
+    [
+        {
+            "name": "332A. Reservation of seats for women in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332A/"
+        },
+        {
+            "name": "332. Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332/"
+        }
+    ],
+    [
+        {
+            "name": "334A. Reservation of seats for women to take effect.",
+            "path": "Part_XVI/334A/"
+        },
+        {
+            "name": "239AA. Special provisions with respect to Delhi.",
+            "path": "Part_VIII/239AA/"
+        }
+    ],
+    [
+        {
+            "name": "334A. Reservation of seats for women to take effect.",
+            "path": "Part_XVI/334A/"
+        },
+        {
+            "name": "330A. Reservation of seats for women in the House of the People.",
+            "path": "Part_XVI/330A/"
+        }
+    ],
+    [
+        {
+            "name": "334A. Reservation of seats for women to take effect.",
+            "path": "Part_XVI/334A/"
+        },
+        {
+            "name": "332A. Reservation of seats for women in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332A/"
+        }
+    ],
+    [
+        {
+            "name": "338. Special Officer for the Scheduled Castes, Scheduled Tribes, etc.",
+            "path": "Part_XVI/338/"
+        },
+        {
+            "name": "340. Appointment of a Commission to investigate the conditions of backward classes.",
+            "path": "Part_XVI/340/"
         }
     ],
     [

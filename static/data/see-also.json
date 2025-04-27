@@ -205,6 +205,16 @@
     ],
     [
         {
+            "name": "81. Composition of the House of the People.",
+            "path": "Part_V/Chapter_II/81/"
+        },
+        {
+            "name": "330. Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.",
+            "path": "Part_XVI/330/"
+        }
+    ],
+    [
+        {
             "name": "83. Duration of Houses of Parliament.",
             "path": "Part_V/Chapter_II/83/"
         },
@@ -711,6 +721,80 @@
         {
             "name": "244A. Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or Council of Ministers or both therefor.",
             "path": "Part_X/244A/"
+        }
+    ],
+    [
+        {
+            "name": "330. Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.",
+            "path": "Part_XVI/330/"
+        },
+        {
+            "name": "332. Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332/"
+        },
+        {
+            "name": "243D. Reservation of seats. (Panchayats)",
+            "path": "Part_IX/243D/"
+        },
+        {
+            "name": "243T. Reservation of seats. (Municipalities)",
+            "path": "Part_IXA/243T/"
+        },
+        {
+            "name": "334. Reservation of seats and special representation to cease after certain period.",
+            "path": "Part_XVI/334/"
+        }
+    ],
+    [
+        {
+            "name": "330A. Reservation of seats for women in the House of the People.",
+            "path": "Part_XVI/330A/"
+        },
+        {
+            "name": "332A. Reservation of seats for women in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332A/"
+        },
+        {
+            "name": "239AA. Special provisions with respect to Delhi.",
+            "path": "Part_VIII/239AA/"
+        }
+    ],
+    [
+        {
+            "name": "331. Representation of the Anglo-Indian Community in the House of the People.",
+            "path": "Part_XVI/331/"
+        },
+        {
+            "name": "333. Representation of the Anglo-Indian Community in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/333/"
+        }
+    ],
+    [
+        {
+            "name": "338. National Commission for Scheduled Castes.",
+            "path": "Part_XVI/338/"
+        },
+        {
+            "name": "338A. National Commission for Scheduled Tribes.",
+            "path": "Part_XVI/338A/"
+        },
+        {
+            "name": "338B. National Commission for Backward Classes.",
+            "path": "Part_XVI/338B/"
+        }
+    ],
+    [
+        {
+            "name": "341. Scheduled Castes.",
+            "path": "Part_XVI/341/"
+        },
+        {
+            "name": "342. Scheduled Tribes.",
+            "path": "Part_XVI/342/"
+        },
+        {
+            "name": "342A. Socially and educationally backward classes.",
+            "path": "Part_XVI/342A/"
         }
     ]
 ]

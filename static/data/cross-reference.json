@@ -761,6 +761,16 @@
     ],
     [
         {
+            "name": "120. Language to be used in Parliament.",
+            "path": "Part_V/Chapter_II/120/"
+        },
+        {
+            "name": "348. Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.",
+            "path": "Part_XVII/Chapter_III/348/"
+        }
+    ],
+    [
+        {
             "name": "81. Composition of the House of the People.",
             "path": "Part_V/Chapter_II/81/"
         },
@@ -1227,6 +1237,16 @@
         {
             "name": "208. Rules of procedure.",
             "path": "Part_VI/Chapter_III/208/"
+        }
+    ],
+    [
+        {
+            "name": "210. Language to be used in the Legislature.",
+            "path": "Part_VI/Chapter_III/210/"
+        },
+        {
+            "name": "348. Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.",
+            "path": "Part_XVII/Chapter_III/348/"
         }
     ],
     [
@@ -2277,6 +2297,66 @@
         {
             "name": "340. Appointment of a Commission to investigate the conditions of backward classes.",
             "path": "Part_XVI/340/"
+        }
+    ],
+    [
+        {
+            "name": "344. Commission and Committee of Parliament on official language.",
+            "path": "Part_XVII/Chapter_I/344/"
+        },
+        {
+            "name": "348. Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.",
+            "path": "Part_XVII/Chapter_III/348/"
+        }
+    ],
+    [
+        {
+            "name": "344. Commission and Committee of Parliament on official language.",
+            "path": "Part_XVII/Chapter_I/344/"
+        },
+        {
+            "name": "343. Official language of the Union.",
+            "path": "Part_XVII/Chapter_I/343/"
+        }
+    ],
+    [
+        {
+            "name": "345. Official language or languages of a State.",
+            "path": "Part_XVII/Chapter_II/345/"
+        },
+        {
+            "name": "346. Official language for communication between one State and another or between a State and the Union.",
+            "path": "Part_XVII/Chapter_II/346/"
+        }
+    ],
+    [
+        {
+            "name": "345. Official language or languages of a State.",
+            "path": "Part_XVII/Chapter_II/345/"
+        },
+        {
+            "name": "347. Special provision relating to language spoken by a section of the population of a State.",
+            "path": "Part_XVII/Chapter_II/347/"
+        }
+    ],
+    [
+        {
+            "name": "349. Special procedure for enactment of certain laws relating to language.",
+            "path": "Part_XVII/Chapter_III/349/"
+        },
+        {
+            "name": "348. Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.",
+            "path": "Part_XVII/Chapter_III/348/"
+        }
+    ],
+    [
+        {
+            "name": "349. Special procedure for enactment of certain laws relating to language.",
+            "path": "Part_XVII/Chapter_III/349/"
+        },
+        {
+            "name": "344. Commission and Committee of Parliament on official language.",
+            "path": "Part_XVII/Chapter_I/344/"
         }
     ],
     [

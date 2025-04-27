@@ -102,32 +102,32 @@ void async function () {
 
 // See also & cross reference
 
-function handleLinkGroups(json, header) {
+function handleLinkGroups(json, header, exclude = []) {
     const path_wo_lang = window.location.pathname.toString().replace(`/${current_lang}/`, '');
     var in_groups = json.filter(group => group.map(e => e.path).includes(path_wo_lang));
     var links = [...new Set(in_groups.flat(1))]
-        .filter(link => link.path !== path_wo_lang);
+        .filter(link => link.path !== path_wo_lang && 
+                        !exclude.map(l2 => l2.path).includes(link.path));
     if (links.length === 0) {
         [header, header.nextElementSibling].forEach(p => p.style.display = 'none');
-        return;
+        return [];
     }
     const list = header.nextElementSibling;
     links.forEach(link => {
         const li = makeLinkListElem(`/${current_lang}/${link.path}`, link.name);
         list.appendChild(li);
     });
+    return links;
 }
 
 void async function () {
     var see_also = await (await fetch('/static/data/see-also.json')).json();
     var header = document.querySelector('.nav-sec#see-also');
-    handleLinkGroups(see_also, header);
-} ();
+    var exclude = handleLinkGroups(see_also, header);
 
-void async function () {
-    var see_also = await (await fetch('/static/data/cross-reference.json')).json();
-    var header = document.querySelector('.nav-sec#cross-reference');
-    handleLinkGroups(see_also, header);
+    var cross_reference = await (await fetch('/static/data/cross-reference.json')).json();
+    header = document.querySelector('.nav-sec#cross-reference');
+    handleLinkGroups(cross_reference, header, exclude);
 } ();
 
 // Switch language

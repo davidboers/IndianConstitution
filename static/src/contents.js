@@ -1,13 +1,14 @@
 
 import { parseHTMLDoc, getIndexedLinks } from './utils.js';
 
-async function indexDirs(errorPrefix, dir = './') {
+export async function indexDirs(errorPrefix, dir = './') {
     return fetch(dir)
         .then(response => response.text())
         .then(html => {
             const links = getIndexedLinks(html);
             const dirs = links
-                .filter(link => link.endsWith('/') && !link.includes('Preamble'));
+                .filter(link => link.endsWith('/') 
+                             && !link.includes('Preamble'));
             return dirs;
         })
         .catch(error => console.error(errorPrefix, error));
@@ -139,11 +140,11 @@ function partID(part) {
     return part.replaceAll(', ', '_').replaceAll(' ', '_').toLowerCase();
 }
 
-function partDir(part) {
+export function partDir(part) {
     return part.replaceAll(', ', '/').replaceAll(' ', '_') + '/';
 }
 
-async function buildFlatPart(part) {
+export async function buildFlatPart(part) {
     const id = partID(part);
     const dir = partDir(part);
     var contents = document.querySelector(`.contents#${id}`);
@@ -153,7 +154,7 @@ async function buildFlatPart(part) {
     return articles(contents, undefined, dir);
 }
 
-let flat_parts = [
+export var flat_parts = [
     'Part I',
     'Part II', 
     'Part III',
@@ -176,14 +177,11 @@ let flat_parts = [
     'Part XVI', 
     'Part XVII, Chapter I', 'Part XVII, Chapter II', 'Part XVII, Chapter III', 'Part XVII, Chapter IV',
     'Part XVIII', 
-    'Part XIX',
     'Part XX', 
-    'Part XXI', 
-    'Part XXII',
     'Schedules, First Schedule',
-    'Schedules, Second Schedule'].map(buildFlatPart);
+    'Schedules, Second Schedule'];
 
-const subheadings = {
+export var subheadings = {
     // Part III
     'a12': 'General',
     'a14': 'Right to Equality',
@@ -238,5 +236,3 @@ const subheadings = {
     'a268': 'Distribution of Revenues between the Union and the States',
     'a282': 'Miscellaneous Financial Provisions'
 }
-
-Promise.all(flat_parts).then(() => makeSubheadings(subheadings));

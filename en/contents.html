@@ -329,7 +329,11 @@
         </tbody>
 
     </table>
-    <script type="module" src="/static/src/contents.js"></script>
+    <script type="module">
+        import { flat_parts, subheadings, buildFlatPart, makeSubheadings } from '/static/src/contents.js';
+        let art_promises = flat_parts.map(buildFlatPart);
+        Promise.all(art_promises).then(() => makeSubheadings(subheadings));
+    </script>
     <style>
         #part-num {
             position: sticky;

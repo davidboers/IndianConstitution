@@ -114,7 +114,8 @@ function handleLinkGroups(json, header, exclude = []) {
     }
     const list = header.nextElementSibling;
     links.forEach(link => {
-        const li = makeLinkListElem(`/${current_lang}/${link.path}`, link.name);
+        const path_use = (link.path.startsWith('https')) ? link.path :  `/${current_lang}/${link.path}`;
+        const li = makeLinkListElem(path_use, link.name);
         list.appendChild(li);
     });
     return links;

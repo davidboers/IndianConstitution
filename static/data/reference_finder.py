@@ -53,6 +53,9 @@ def reference_finder(path):
         if a in reference_links and b in reference_links
     ]
 
+    extern = json.load(open('static/data/external-references.json', 'r'))
+
+    cross_references = cross_references + extern
     json.dump(cross_references, open('static/data/cross-reference.json', 'w'))
 
 reference_finder('en/')

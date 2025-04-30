@@ -22,6 +22,7 @@
 
         <script type="module">
             import { getArticleList, searchArticles } from '/static/src/search.js';
+
             var search = window.location.search;
             if (search !== undefined) {
                 var query = search.substr(1).split('&')
@@ -30,6 +31,7 @@
                 if (query !== undefined) {
                     query = query.trim();
                     if (query.length > 0) {
+                        query = query.replaceAll('+', ' ');
                         document.getElementById('query').value = query;
                         document.getElementById('hits').innerHTML = `<p id="loading">Loading...</p>`;
                         getArticleList().then(articles => searchArticles(articles, query));

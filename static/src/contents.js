@@ -177,6 +177,7 @@ export var flat_parts = [
     'Part XVI', 
     'Part XVII, Chapter I', 'Part XVII, Chapter II', 'Part XVII, Chapter III', 'Part XVII, Chapter IV',
     'Part XVIII', 
+    'Part XIX',
     'Part XX', 
     'Schedules, First Schedule',
     'Schedules, Second Schedule'];

@@ -7,7 +7,8 @@ def find_references(html):
 
     group_refs = re.findall(r'articles [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
                  re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
-                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
+                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
+                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
 
     for ref in group_refs:
         numbers = re.findall(r'[0-9A-Z]+', ref, re.IGNORECASE)

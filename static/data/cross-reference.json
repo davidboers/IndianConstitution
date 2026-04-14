@@ -1,7 +1,7 @@
 [
     [
         {
-            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, \n        incidental and consequential matters.",
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, incidental and consequential matters.",
             "path": "Part_I/4/"
         },
         {
@@ -11,7 +11,7 @@
     ],
     [
         {
-            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, \n        incidental and consequential matters.",
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, incidental and consequential matters.",
             "path": "Part_I/4/"
         },
         {
@@ -21,7 +21,7 @@
     ],
     [
         {
-            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, \n        incidental and consequential matters.",
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, incidental and consequential matters.",
             "path": "Part_I/4/"
         },
         {
@@ -341,7 +341,17 @@
     ],
     [
         {
-            "name": "243. Administration of territories specified in Part D of the First Schedule and other territories not specified in that \n        Schedule.",
+            "name": "35. Legislation to give effect to the provisions of this Part.",
+            "path": "Part_III/35/"
+        },
+        {
+            "name": "372. Continuance in force of existing laws and their adaptation.",
+            "path": "Part_XXI/372/"
+        }
+    ],
+    [
+        {
+            "name": "243. Administration of territories specified in Part D of the First Schedule and other territories not specified in that Schedule.",
             "path": "Part_IX/243/"
         },
         {
@@ -571,7 +581,7 @@
     ],
     [
         {
-            "name": "62. Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill \n        casual vacancy.",
+            "name": "62. Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill casual vacancy.",
             "path": "Part_V/Chapter_I/62/"
         },
         {
@@ -591,7 +601,7 @@
     ],
     [
         {
-            "name": "68. Time of holding election to fill vacancy in the office of VicePresident and the term of office of person elected to \n        fill casual vacancy.",
+            "name": "68. Time of holding election to fill vacancy in the office of VicePresident and the term of office of person elected to fill casual vacancy.",
             "path": "Part_V/Chapter_I/68/"
         },
         {
@@ -621,7 +631,7 @@
     ],
     [
         {
-            "name": "104. Penalty for sitting and voting before making oath or affirmation under article 99 or when not qualified or when \n        disqualified.",
+            "name": "104. Penalty for sitting and voting before making oath or affirmation under article 99 or when not qualified or when disqualified.",
             "path": "Part_V/Chapter_II/104/"
         },
         {
@@ -791,7 +801,7 @@
     ],
     [
         {
-            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_V/Chapter_II/92/"
         },
         {
@@ -801,7 +811,7 @@
     ],
     [
         {
-            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "92. The Chairman and Deputy Chairman not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_V/Chapter_II/92/"
         },
         {
@@ -811,7 +821,7 @@
     ],
     [
         {
-            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_V/Chapter_II/96/"
         },
         {
@@ -821,7 +831,7 @@
     ],
     [
         {
-            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_V/Chapter_II/96/"
         },
         {
@@ -1031,7 +1041,7 @@
     ],
     [
         {
-            "name": "181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_VI/Chapter_III/181/"
         },
         {
@@ -1041,7 +1051,7 @@
     ],
     [
         {
-            "name": "181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_VI/Chapter_III/181/"
         },
         {
@@ -1051,7 +1061,7 @@
     ],
     [
         {
-            "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_VI/Chapter_III/185/"
         },
         {
@@ -1061,7 +1071,7 @@
     ],
     [
         {
-            "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under \n        consideration.",
+            "name": "185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration.",
             "path": "Part_VI/Chapter_III/185/"
         },
         {
@@ -1091,7 +1101,7 @@
     ],
     [
         {
-            "name": "193. Penalty for sitting and voting before making oath or affirmation under article 188 or when not qualified or when \n        disqualified.",
+            "name": "193. Penalty for sitting and voting before making oath or affirmation under article 188 or when not qualified or when disqualified.",
             "path": "Part_VI/Chapter_III/193/"
         },
         {
@@ -1625,7 +1635,7 @@
             "path": "Part_VIII/239AA/"
         },
         {
-            "name": "326. Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult \n        suffrage.",
+            "name": "326. Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult suffrage.",
             "path": "Part_XV/326/"
         }
     ],
@@ -1691,7 +1701,7 @@
     ],
     [
         {
-            "name": "244A. Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or \n        Council of Ministers or both therefor.",
+            "name": "244A. Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or Council of Ministers or both therefor.",
             "path": "Part_X/244A/"
         },
         {
@@ -1751,7 +1761,7 @@
     ],
     [
         {
-            "name": "250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in \n        operation.",
+            "name": "250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation.",
             "path": "Part_XI/Chapter_I/250/"
         },
         {
@@ -1761,7 +1771,7 @@
     ],
     [
         {
-            "name": "251. Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of \n        States.",
+            "name": "251. Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of States.",
             "path": "Part_XI/Chapter_I/251/"
         },
         {
@@ -1771,17 +1781,17 @@
     ],
     [
         {
-            "name": "251. Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of \n        States.",
+            "name": "251. Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of States.",
             "path": "Part_XI/Chapter_I/251/"
         },
         {
-            "name": "250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in \n        operation.",
+            "name": "250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation.",
             "path": "Part_XI/Chapter_I/250/"
         }
     ],
     [
         {
-            "name": "252. Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other \n        State.",
+            "name": "252. Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State.",
             "path": "Part_XI/Chapter_I/252/"
         },
         {
@@ -1791,11 +1801,11 @@
     ],
     [
         {
-            "name": "252. Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other \n        State.",
+            "name": "252. Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State.",
             "path": "Part_XI/Chapter_I/252/"
         },
         {
-            "name": "250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in \n        operation.",
+            "name": "250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation.",
             "path": "Part_XI/Chapter_I/250/"
         }
     ],
@@ -1965,7 +1975,7 @@
             "path": "Part_XII/Chapter_I/275/"
         },
         {
-            "name": "244A. Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or \n        Council of Ministers or both therefor.",
+            "name": "244A. Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or Council of Ministers or both therefor.",
             "path": "Part_X/244A/"
         }
     ],
@@ -2147,6 +2157,16 @@
         {
             "name": "136. Special leave to appeal by the Supreme Court.",
             "path": "Part_V/Chapter_IV/136/"
+        }
+    ],
+    [
+        {
+            "name": "323A. Administrative tribunals.",
+            "path": "Part_XIVA/323A/"
+        },
+        {
+            "name": "371D. Special provisions with respect to the State of Andhra Pradesh.",
+            "path": "Part_XXI/371D/"
         }
     ],
     [
@@ -2347,6 +2367,16 @@
         {
             "name": "239B. Power of administrator to promulgate Ordinances during recess of Legislature.",
             "path": "Part_VIII/239B/"
+        }
+    ],
+    [
+        {
+            "name": "367. Interpretation.",
+            "path": "Part_XIX/367/"
+        },
+        {
+            "name": "372. Continuance in force of existing laws and their adaptation.",
+            "path": "Part_XXI/372/"
         }
     ],
     [
@@ -2701,12 +2731,482 @@
     ],
     [
         {
+            "name": "370. Temporary provisions with respect to the State of Jammu and Kashmir.",
+            "path": "Part_XXI/370/"
+        },
+        {
+            "name": "152. Definition.",
+            "path": "Part_VI/Chapter_I/152/"
+        }
+    ],
+    [
+        {
+            "name": "370. Temporary provisions with respect to the State of Jammu and Kashmir.",
+            "path": "Part_XXI/370/"
+        },
+        {
+            "name": "308. Interpretation.",
+            "path": "Part_XIV/Chapter_I/308/"
+        }
+    ],
+    [
+        {
+            "name": "370. Temporary provisions with respect to the State of Jammu and Kashmir.",
+            "path": "Part_XXI/370/"
+        },
+        {
+            "name": "363A. Recognition granted to Rulers of Indian States to cease and privy purses to be abolished.",
+            "path": "Part_XIX/363A/"
+        }
+    ],
+    [
+        {
+            "name": "370. Temporary provisions with respect to the State of Jammu and Kashmir.",
+            "path": "Part_XXI/370/"
+        },
+        {
+            "name": "238. Application of provisions of Part VI to States in Part B of the First Schedule.",
+            "path": "Part_VII/238/"
+        }
+    ],
+    [
+        {
+            "name": "370. Temporary provisions with respect to the State of Jammu and Kashmir.",
+            "path": "Part_XXI/370/"
+        },
+        {
+            "name": "1. Name and territory of the Union.",
+            "path": "Part_I/1/"
+        }
+    ],
+    [
+        {
+            "name": "371A. Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "80. Composition of the Council of States.",
+            "path": "Part_V/Chapter_II/80/"
+        }
+    ],
+    [
+        {
+            "name": "371A. Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "170. Composition of the Legislative Assemblies.",
+            "path": "Part_VI/Chapter_III/170/"
+        }
+    ],
+    [
+        {
+            "name": "371A. Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "54. Election of President.",
+            "path": "Part_V/Chapter_I/54/"
+        }
+    ],
+    [
+        {
+            "name": "371A. Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "55. Manner of election of President.",
+            "path": "Part_V/Chapter_I/55/"
+        }
+    ],
+    [
+        {
+            "name": "371F. Special provisions with respect to the State of Sikkim.",
+            "path": "Part_XXI/371F/"
+        },
+        {
+            "name": "172. Duration of State Legislatures.",
+            "path": "Part_VI/Chapter_III/172/"
+        }
+    ],
+    [
+        {
+            "name": "371F. Special provisions with respect to the State of Sikkim.",
+            "path": "Part_XXI/371F/"
+        },
+        {
+            "name": "143. Power of the President to consult the Supreme Court.",
+            "path": "Part_V/Chapter_IV/143/"
+        }
+    ],
+    [
+        {
+            "name": "372. Continuance in force of existing laws and their adaptation.",
+            "path": "Part_XXI/372/"
+        },
+        {
+            "name": "395. Repeals.",
+            "path": "Part_XXII/395/"
+        }
+    ],
+    [
+        {
+            "name": "372. Continuance in force of existing laws and their adaptation.",
+            "path": "Part_XXI/372/"
+        },
+        {
+            "name": "382. Provisions as to provisional Legislatures for States in Part A of the First Schedule.",
+            "path": "Part_XXI/382/"
+        }
+    ],
+    [
+        {
+            "name": "373. Power of President to make order in respect of persons under preventive detention in certain cases.",
+            "path": "Part_XXI/373/"
+        },
+        {
+            "name": "22. Protection against arrest and detention in certain cases.",
+            "path": "Part_III/22/"
+        }
+    ],
+    [
+        {
+            "name": "374. Provisions as to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council.",
+            "path": "Part_XXI/374/"
+        },
+        {
+            "name": "125. Salaries, etc., of Judges.",
+            "path": "Part_V/Chapter_IV/125/"
+        }
+    ],
+    [
+        {
+            "name": "376. Provisions as to Judges of the High Courts.",
+            "path": "Part_XXI/376/"
+        },
+        {
+            "name": "217. Appointment and conditions of the office of Judge of a High Court.",
+            "path": "Part_VI/Chapter_V/217/"
+        }
+    ],
+    [
+        {
+            "name": "376. Provisions as to Judges of the High Courts.",
+            "path": "Part_XXI/376/"
+        },
+        {
+            "name": "221. Salaries, etc., of Judges.",
+            "path": "Part_VI/Chapter_V/221/"
+        }
+    ],
+    [
+        {
+            "name": "377. Provisions as to Comptroller and Auditor-General of India.",
+            "path": "Part_XXI/377/"
+        },
+        {
+            "name": "148. Comptroller and Auditor-General of India.",
+            "path": "Part_V/Chapter_V/148/"
+        }
+    ],
+    [
+        {
+            "name": "378. Provisions as to Public Service Commissions.",
+            "path": "Part_XXI/378/"
+        },
+        {
+            "name": "316. Appointment and term of office of members.",
+            "path": "Part_XIV/Chapter_II/316/"
+        }
+    ],
+    [
+        {
+            "name": "378A. Special provision as to duration of Andhra Pradesh Legislative Assembly.",
+            "path": "Part_XXI/378A/"
+        },
+        {
+            "name": "172. Duration of State Legislatures.",
+            "path": "Part_VI/Chapter_III/172/"
+        }
+    ],
+    [
+        {
+            "name": "380. Provision as to President.",
+            "path": "Part_XXI/380/"
+        },
+        {
+            "name": "319. Prohibition as to the holding of offices by members of Commission on ceasing to be such members.",
+            "path": "Part_XIV/Chapter_II/319/"
+        }
+    ],
+    [
+        {
+            "name": "388. Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States.",
+            "path": "Part_XXI/388/"
+        },
+        {
+            "name": "379. Provisions as to provisional Parliament and the Speaker and Deputy Speaker thereof.",
+            "path": "Part_XXI/379/"
+        }
+    ],
+    [
+        {
+            "name": "388. Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States.",
+            "path": "Part_XXI/388/"
+        },
+        {
+            "name": "341. Scheduled Castes.",
+            "path": "Part_XVI/341/"
+        }
+    ],
+    [
+        {
+            "name": "388. Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States.",
+            "path": "Part_XXI/388/"
+        },
+        {
+            "name": "382. Provisions as to provisional Legislatures for States in Part A of the First Schedule.",
+            "path": "Part_XXI/382/"
+        }
+    ],
+    [
+        {
+            "name": "388. Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States.",
+            "path": "Part_XXI/388/"
+        },
+        {
+            "name": "385. Provision as to provisional Legislatures in States in Part B of the First Schedule.",
+            "path": "Part_XXI/385/"
+        }
+    ],
+    [
+        {
+            "name": "392. Power of the President to remove difficulties.",
+            "path": "Part_XXI/392/"
+        },
+        {
+            "name": "324. Superintendence, direction and control of elections to be vested in an Election Commission.",
+            "path": "Part_XV/324/"
+        }
+    ],
+    [
+        {
+            "name": "392. Power of the President to remove difficulties.",
+            "path": "Part_XXI/392/"
+        },
+        {
+            "name": "367. Interpretation.",
+            "path": "Part_XIX/367/"
+        }
+    ],
+    [
+        {
+            "name": "392. Power of the President to remove difficulties.",
+            "path": "Part_XXI/392/"
+        },
+        {
+            "name": "391. Power of the President to amend the First and Fourth Schedules in certain contingencies.",
+            "path": "Part_XXI/391/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "5. Citizenship at the commencement of the Constitution.",
+            "path": "Part_II/5/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "6. Rights of citizenship of certain persons who have migrated to India from Pakistan.",
+            "path": "Part_II/6/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "7. Rights of citizenship of certain migrants to Pakistan.",
+            "path": "Part_II/7/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "8. Rights of citizenship of certain persons of Indian origin residing outside India.",
+            "path": "Part_II/8/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "9. Persons voluntarily acquiring citizenship of a foreign State not to be citizens.",
+            "path": "Part_II/9/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "60. Oath or affirmation by the President.",
+            "path": "Part_V/Chapter_I/60/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "324. Superintendence, direction and control of elections to be vested in an Election Commission.",
+            "path": "Part_XV/324/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "366. Definitions.",
+            "path": "Part_XIX/366/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "367. Interpretation.",
+            "path": "Part_XIX/367/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "379. Provisions as to provisional Parliament and the Speaker and Deputy Speaker thereof.",
+            "path": "Part_XXI/379/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "380. Provision as to President.",
+            "path": "Part_XXI/380/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "388. Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States.",
+            "path": "Part_XXI/388/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "391. Power of the President to amend the First and Fourth Schedules in certain contingencies.",
+            "path": "Part_XXI/391/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "392. Power of the President to remove difficulties.",
+            "path": "Part_XXI/392/"
+        }
+    ],
+    [
+        {
+            "name": "394. Commencement.",
+            "path": "Part_XXII/394/"
+        },
+        {
+            "name": "393. Short title.",
+            "path": "Part_XXII/393/"
+        }
+    ],
+    [
+        {
             "name": "Ninth Schedule.",
             "path": "Schedules/Ninth_Schedule/Ninth_Schedule/"
         },
         {
             "name": "31A. Saving of laws providing for acquisition of estates, etc.",
             "path": "Part_III/31A/"
+        }
+    ],
+    [
+        {
+            "name": "Part D. Provisions as to the Judges of the Supreme Court and of the High Courts in States in Part A of the First Schedule.",
+            "path": "Schedules/Second_Schedule/Part_D/"
+        },
+        {
+            "name": "374. Provisions as to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council.",
+            "path": "Part_XXI/374/"
+        }
+    ],
+    [
+        {
+            "name": "Part D. Provisions as to the Judges of the Supreme Court and of the High Courts in States in Part A of the First Schedule.",
+            "path": "Schedules/Second_Schedule/Part_D/"
+        },
+        {
+            "name": "376. Provisions as to Judges of the High Courts.",
+            "path": "Part_XXI/376/"
+        }
+    ],
+    [
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        },
+        {
+            "name": "377. Provisions as to Comptroller and Auditor-General of India.",
+            "path": "Part_XXI/377/"
+        }
+    ],
+    [
+        {
+            "name": "List IUnion List.",
+            "path": "Schedules/Seventh_Schedule/List_I/"
+        },
+        {
+            "name": "371E. Establishment of Central University in Andhra Pradesh.",
+            "path": "Part_XXI/371E/"
         }
     ],
     [

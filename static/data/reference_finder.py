@@ -8,7 +8,8 @@ def find_references(html):
     group_refs = re.findall(r'articles [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
                  re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
                  re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
-                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
+                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE) + \
+                 re.findall(r'articles [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+, [0-9A-Z]+ and [0-9A-Z]+', html, re.IGNORECASE)
 
     for ref in group_refs:
         numbers = re.findall(r'[0-9A-Z]+', ref, re.IGNORECASE)
@@ -31,7 +32,8 @@ def reference_finder(path):
 
                     title = html.split('<title>')[1].split(' — Constitution of India</title>')[0].lower()
                     print(title)
-                    name = html.split('<p class="art">')[1].split('</p>')[0].replace('—', '')
+                    name = html.split('<p class="art">')[1].split('</p>')[0].replace('—', '') # Strip node marking and hyphen
+                    name = re.sub(r'\s+', ' ', name)
                     reference_links[title] = {
                         "name": name,
                         "path": artpath

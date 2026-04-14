@@ -2,11 +2,11 @@
 const begin = new Date(1949, 11, 26);
 const end = new Date();
 
-getFrac = function (date) {
+function getFrac(date) {
     return (date.getTime() - begin.getTime()) / (end.getTime() - begin.getTime());
 }
 
-changeVersion = function (link) {
+function changeVersion(link) {
     document.querySelector('.art-holder').setAttribute('data', link);
     document.querySelector('.timeline-label-bold').className = 'timeline-label';
     const labels = document.getElementsByClassName('timeline-label');
@@ -16,15 +16,20 @@ changeVersion = function (link) {
     }
 }
 
-amendmentNumber = function (link) {
+function amendmentNumber(link) {
     if (link.includes('/')) {
         link = link.substr(link.lastIndexOf('/') + 1);
     }
     if (link === 'original.html') {
         return 'Orig.';
     }
-    if (link.startsWith('a') && link.endsWith('.html')) {
-        return link.replace('a', '').replace('.html', '');
+    if (link.endsWith('.html')) {
+        link = link.replace('.html', '');
+        if (link.startsWith('a')) {
+            return link.replace('a', '');
+        } else {
+            return link.toUpperCase();
+        }
     }
 }
 
@@ -32,30 +37,36 @@ window.onload = () => {
     const timeline = document.getElementById('timeline');
     const coefficient = timeline.clientWidth / document.querySelector('body').clientWidth * 100;
 
-    addAmendment = function (link) {
-        fetch(link)
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const effectiveDate = doc.querySelector('#effective-date');
-                const day = parseInt(effectiveDate.querySelector('#eff-day').innerHTML);
-                const month = parseInt(effectiveDate.querySelector('#eff-month').innerHTML);
-                const year = parseInt(effectiveDate.querySelector('#eff-year').innerHTML);
+    const top_labels = document.createElement('div');
+    const bottom_labels = document.createElement('div');
+    top_labels.className = bottom_labels.className = 'timeline-label-container';
 
-                const date = new Date(year, month, day);
-                const frac = getFrac(date) * coefficient;
+    async function addAmendment(link) {
+        try {
+            const response = await fetch(link);
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const effectiveDate = doc.querySelector('#effective-date');
+            const day = parseInt(effectiveDate.querySelector('#eff-day').innerHTML);
+            const month = parseInt(effectiveDate.querySelector('#eff-month').innerHTML);
+            const year = parseInt(effectiveDate.querySelector('#eff-year').innerHTML);
 
-                const selected = document.querySelector('.art-holder').getAttribute('data') === link;
-                const label = document.createElement('span');
-                label.innerHTML = year.toString() + '</br>' + amendmentNumber(link);
-                label.style.left = `${frac}%`;
-                label.className = (selected) ? 'timeline-label-bold' : 'timeline-label';
-                label.onclick = () => changeVersion(link);
-                label.setAttribute('name', link);
-                timeline.appendChild(label);
-            })
-            .catch(error => console.error('Error fetching version html:', error))
+            const date = new Date(year, month, day);
+            const frac = getFrac(date) * coefficient;
+
+            const selected = document.querySelector('.art-holder').getAttribute('data') === link;
+            const label = document.createElement('span');
+            label.innerHTML = year.toString() + '</br>' + amendmentNumber(link);
+            label.style.left = `${frac}%`;
+            label.className = (selected) ? 'timeline-label-bold' : 'timeline-label';
+            label.onclick = () => changeVersion(link);
+            label.setAttribute('name', link);
+
+            return { date, label };
+        } catch (error) {
+            console.error('Error fetching version html:', error);
+        }
     }
 
     fetch('./version')
@@ -66,15 +77,40 @@ window.onload = () => {
             const links = Array.from(doc.querySelectorAll('a'))
                 .map(link => 'version/' + link.innerHTML)
                 .filter(href => href.endsWith('.html'));
-            links.forEach(link => addAmendment(link));
+
+            Promise.all(links.map(addAmendment)).then(amendments =>
+                amendments
+                    .sort((a1, a2) => a1.date - a2.date)
+                    .forEach(amendment => {
+
+                        if (bottom_labels.children.length > top_labels.children.length) {
+                            top_labels.appendChild(amendment.label);
+                        } else {
+                            bottom_labels.appendChild(amendment.label);
+                        }
+
+                    }))
         })
         .catch(error => console.error('Error fetching directory listing:', error));
 
+    const axis = document.createElement('div');
     const line = document.createElement('div');
-    line.className = 'timeline-axis';
-    timeline.appendChild(line);
+    axis.className = 'timeline-axis';
+    line.className = 'timeline-line';
+    axis.appendChild(line);
 
     for (let decade = 1950; decade < 2030; decade += 10) {
-        
+        const dec_mark = document.createElement('div');
+
+        const date = new Date(decade, 1, 1);
+        const frac = getFrac(date) * coefficient;
+
+        dec_mark.className = 'dec-mark';
+        dec_mark.style.left = `${frac}%`;
+        axis.appendChild(dec_mark);
     }
+
+    timeline.appendChild(top_labels);
+    timeline.appendChild(axis);
+    timeline.appendChild(bottom_labels);
 }

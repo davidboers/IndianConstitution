@@ -1,21 +1,51 @@
 #timeline {
-    height: 50px;
+    display: grid;
+    height: 100px;
 }
 
 #timeline, .art-holder {
     width: 65%;
-    display: inline-block;
+}
+
+/* Axis */
+
+.timeline-axis, .timeline-label-container {
+    width: 100%;
 }
 
 .timeline-axis {
-    width: 100%;
-    height: 0;
+    height: auto;
+    position: relative;
+}
+
+.timeline-line {
+    height: auto;
     border: 2px solid gray;
+    top: calc(50% - 1px);
+    position: relative;
+    display: block;
+}
+
+.dec-mark {
+    border: 0.5px solid lightgray;
+    position: sticky;
+    display: inline;
+}
+
+/* Labels */
+
+.timeline-label-container {
+    height: stretch; 
 }
 
 .timeline-label, .timeline-label-bold {
-    position: absolute;
+    cursor: pointer;
+    position: sticky;
     text-align: center;
+    font-size: 12px;
+    padding-left: 0.25em;
+    border-left: 1px solid gray;
+    display: inline-block;
 }
 
 .timeline-label-bold {

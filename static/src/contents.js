@@ -180,6 +180,7 @@ export var flat_parts = [
     'Part XIX',
     'Part XX', 
     'Part XXI',
+    'Part XXII',
     'Schedules, First Schedule',
     'Schedules, Second Schedule'];
 

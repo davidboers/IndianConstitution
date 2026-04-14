@@ -7,7 +7,7 @@
     <title>Table of Contents — Part XXI — Constitution of India</title>
 </head>
 <body>
-    <table class="contents" id="part_xxi">
+    <table id="contents">
         <tr>
             <th colspan="2" id="part-num">Part XXI</th>
         </tr>
@@ -16,6 +16,11 @@
         </tr>
     </table>
     <p>Before the Thirteenth Amendment, this Part was called "Temporary and Transitional Provisions."</p>
-    <script type="module" src="/static/src/contents.js"></script>
+    <script type="module">
+        import { articles } from '/static/src/contents.js';
+        
+        const contents = document.getElementById('contents');
+        window.onload = () => articles(contents);
+    </script>
 </body>
 </html>

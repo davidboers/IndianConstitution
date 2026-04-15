@@ -17,6 +17,7 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2001/1/200030.pdf): Bihar Reorganisation Act, 2000.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1535/1/196011.pdf): Bombay Reorganisation Act, 1960.
 * [link](https://www.indiacode.nic.in/repealedfileopen?rfilename=A1954-36.pdf): Chandernagore (Merger) Act, 1954.
+* [link](https://www.legitquest.com/act/constitution-amendment-of-the-first-and-fourth-schedules-order-1950/10023) Constitution (Amendment of the First and Fourth Schedules) Order, 1950.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/13079/1/a2019-44.pdf): Dadra and Nagar Haveli and Daman and Diu (Merger of Union Territories) Act, 2019.
 * [link](https://prsindia.org/files/bills_acts/acts_states/goa/1987/1987GOA18.pdf): Goa, Daman and Diu Reorganisation Act, 1987.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1751/1/197931.pdf): Haryana and Uttar Pradesh (Alteration of Boundaries) Act, 1979.
@@ -35,7 +36,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 # Todo
 
-* Clarify renaming of United Provinces to Uttar Pradesh in Article 168
 * Changes by amendment
 * Government of India Act, 1935 links
 * References to Schedules

@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cooch-behar {
+            margin: 0;
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
     <title>Part C of the First Schedule — Constitution of India</title>
 </head>
 <body>
     <p class="art">Part C. Former Chief Commissioner's Provinces.</p>
-    <div id="effective-date">As published <span id="eff-day">26</span>/<span id="eff-month">11</span>/<span id="eff-year">1949</span>. 
-        Superseded by Constitution (Amendment of the First and Fourth Schedules) Order, 1950</div>
+    <p><i>As per the Constitution (Amendment of the First and Fourth Schedules) Order, 1950</i></p>
+    <div id="effective-date">Effective <span id="eff-day">26</span>/<span id="eff-month">1</span>/<span id="eff-year">1950</span>; Order 
+        effective as of 25/1/1950.</div>
 
     <p class="art">Names of States</p>
     
@@ -17,13 +23,14 @@
         <li>Ajmer.</li>
         <li>Bhopal.</li>
         <li>Bilaspur.</li>
-        <li>Cooch-Behar.</li>
-        <li>Coorg.</li>
-        <li>Delhi.</li>
-        <li>Himachal Pradesh.</li>
-        <li>Kutch.</li>
-        <li>Manipur.</li>
-        <li>Tripura.</li>
+        <p class="cooch-behar"><span class="del">4. Cooch-Behar.</span></p>
+        <li class="renum">Coorg.</li>
+        <li class="renum">Delhi.</li>
+        <li class="renum">Himachal Pradesh.</li>
+        <li class="renum">Kutch.</li>
+        <li class="renum">Manipur.</li>
+        <li class="renum">Tripura.</li>
+        <li><span class="ins">Vindhya Pradesh</span></li>
     </ol>
 
     <p class="art">Territories of States</p>
@@ -34,6 +41,13 @@
     <p class="cl">The territory of each of the other States in this Part shall comprise the territories which, by virtue of an order made 
         under section 290A of the Government of India Act, 1935, were immediately before the commencement of this Constitution being 
         administered as if they were a Chief Commissioner's Province of the same name.</p>
+
+    <script src="/static/src/auto-show-changes.js"></script>
+
+    <div class="toggle-container">
+        <button id="toggleButton">Hide Changes</button>
+    </div>
+    <script src="/static/src/toggle-changes.js"></script>
     
 </body>
 </html>

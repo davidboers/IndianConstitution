@@ -25,7 +25,7 @@ function amendmentNumber(link) {
     }
     if (link.endsWith('.html')) {
         link = link.replace('.html', '');
-        if (link.startsWith('a')) {
+        if (/a[0-9]+/.test(link)) {
             return link.replace('a', '');
         } else {
             return link.toUpperCase();

@@ -10,7 +10,7 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1409/1/195956.pdf): Andhra Pradesh and Madras (Alteration of Boundaries) Act, 1959.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1603/2/A1968-36.pdf): Andhra Pradesh and Mysore (Transfer of Territory) Act, 1968.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2123/1/A2014-6.pdf): Andhra Pradesh Reorganisation Act, 2014.
-* [link](https://www.indiacode.nic.in/bitstream/123456789/2176/1/195330.pdf): Andhra State Act, 1953.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/2176/1/A1953-30.pdf): Andhra State Act, 1953.
 * [link](https://www.indiacode.nic.in/handle/123456789/1452?sam_handle=123456789/1362#:~:text=India%20Code%3A%20Assam%20(Alteration%20of%20Boundaries)%20Act%2C%201951&text=Long%20Title%3A,to%20the%20Government%20of%20Bhutan.): Assam (Alteration of Boundaries) Act, 1951.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1501/1/196824.pdf): Bihar and Uttar Pradesh (Alteration of Boundaries) Act, 1968.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1636/1/195640.pdf): Bihar and West Bengal (Transfer of Territories) Act, 1956.
@@ -30,6 +30,7 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/15932/1/the_pondicherry_%28alteration_of_name%29_act%2C_2006.pdf): Pondicherry (Alteration of Name) Act, 2006.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1645/1/196631.pdf): Punjab Reorganisation Act, 1966.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1374/3/a1959-47.pdf): Rajasthan and Madhya Pradesh (Transfer of Territories) Act, 1959.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1680/1/a1956-37.pdf): States Reorganisation Act, 1956.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1464/1/197053.pdf): State of Himachal Pradesh Act, 1970.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1384/1/196227.pdf): State of Nagaland Act, 1962.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2000/1/200029.pdf): Uttar Pradesh Reorganisation Act, 2000.

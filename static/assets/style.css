@@ -31,6 +31,10 @@ p, #effective-date, li {
     font-weight: bold;
 }
 
+.centered-heading {
+    text-align: center;
+}
+
 .cl, .ex, .scl, .item {
     text-indent: 1em;
 }

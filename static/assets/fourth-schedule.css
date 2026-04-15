@@ -1,0 +1,50 @@
+/* Table settings */
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+td {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+tr th.lined {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+th.total {
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:hover td {
+    background-color: lightblue;
+}
+
+/* Braces */
+
+.top-brace, .bottom-brace {
+    position: relative;
+}
+
+.top-brace::after, .bottom-brace::after {
+    content: "}";
+    position: absolute;
+    font-size: 24px;    /* }       */
+    height: 24px;       /* } Equal */
+    line-height: 24px;  /* }       */
+    margin-left: 0.25em;
+}
+
+.top-brace::after {
+    top: 0.1em;
+}
+
+.bottom-brace::after {
+    bottom: 0.25em;
+}

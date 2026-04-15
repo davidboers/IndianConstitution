@@ -1,5 +1,5 @@
 
-const begin = new Date(1949, 11, 26);
+const begin = new Date(1949, 10, 26); // 10 = November (0 indexed)
 const end = new Date();
 
 function getFrac(date) {
@@ -49,7 +49,7 @@ window.onload = () => {
             const doc = parser.parseFromString(html, 'text/html');
             const effectiveDate = doc.querySelector('#effective-date');
             const day = parseInt(effectiveDate.querySelector('#eff-day').innerHTML);
-            const month = parseInt(effectiveDate.querySelector('#eff-month').innerHTML);
+            const month = parseInt(effectiveDate.querySelector('#eff-month').innerHTML) - 1; // 0 indexed
             const year = parseInt(effectiveDate.querySelector('#eff-year').innerHTML);
 
             const date = new Date(year, month, day);
@@ -102,7 +102,7 @@ window.onload = () => {
     for (let decade = 1950; decade < 2030; decade += 10) {
         const dec_mark = document.createElement('div');
 
-        const date = new Date(decade, 1, 1);
+        const date = new Date(decade, 0, 1); // 0 = January (0 indexed)
         const frac = getFrac(date) * coefficient;
 
         dec_mark.className = 'dec-mark';

@@ -1,4 +1,4 @@
-p, #effective-date, li {
+p, #effective-date, li, table {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
@@ -94,4 +94,10 @@ li.changes.renum::marker, li.changes.renum::before {
 .oath-affirm {
     display: block;
     text-align: center;
+}
+
+/* Tables (First and Fourth Schedules) */
+
+table {
+    width: 100%;
 }

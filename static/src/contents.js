@@ -1,5 +1,110 @@
 
-import { parseHTMLDoc, getIndexedLinks } from './utils.js';
+import { parseHTMLDoc, getIndexedLinks, composeQueryDir, normalizeDirName, getTree } from './utils.js';
+
+export async function buildTableStructure(dir = undefined) {
+
+    const table = document.querySelector('#main-con');
+
+    try {
+        const response = await getTree();
+        if (!response.ok) throw new Error(response.statusText);
+
+        const tree = await response.json();
+        buildTableStructure1(dir, tree, table);
+
+    } catch (error) {
+        console.error('Caught error:', error.message);
+        const buildFailed = document.createElement('p');
+        buildFailed.innerHTML = 'Error: Failed to load table of contents.'
+        table.replaceWith(buildFailed);
+    }
+}
+
+function buildTableStructure1(dir, tree, table) {
+
+    for (let part of tree) {
+        if (dir && !dir.includes(part.path_part)) {
+            continue;
+        }
+
+        const tbody_p = document.createElement('tbody');
+        tbody_p.classList.add('contents');
+        tbody_p.id = partID(part.path_part);
+
+        const tr1 = document.createElement('tr');
+        const part_num = document.createElement('th');
+        part_num.id = 'part-num';
+        part_num.setAttribute('colspan', 2);
+        part_num.innerHTML = normalizeDirName(part.path_part);
+        tr1.appendChild(part_num);
+        tbody_p.appendChild(tr1);
+
+        if (part.header) {
+            const tr2 = document.createElement('tr');
+            const part_header = document.createElement('th');
+            part_header.id = 'part-header';
+            part_header.setAttribute('colspan', 2);
+            part_header.innerHTML = part.header;
+            tr2.appendChild(part_header);
+            tbody_p.appendChild(tr2);
+        }
+
+        if (part.note) {
+            const td = document.createElement('td');
+            const i = document.createElement('i');
+            i.innerHTML = 'Note: ';
+            td.appendChild(i);
+            td.innerHTML += part.note;
+            td.setAttribute('colspan', '2');
+            tbody_p.appendChild(td);
+        }
+
+        table.appendChild(tbody_p);
+
+        let p_dir = composeQueryDir(part.path_part, dir);
+
+        if (part.has_chapters) {
+
+            for (let chapter of part.chapters) {
+                if (dir && !dir.includes(chapter.path_part)) {
+                    continue;
+                }
+
+                const tbody_c = document.createElement('tbody');
+                tbody_c.classList.add('contents');
+                tbody_c.id = partID(chapter.path_part);
+
+                const tr_c = document.createElement('tr');
+                const c_header = document.createElement('th');
+                c_header.id = 'part-header';
+                c_header.setAttribute('colspan', 2);
+                c_header.innerHTML = chapter.header;
+                tr_c.appendChild(c_header);
+                tbody_c.appendChild(tr_c);
+
+                table.appendChild(tbody_c);
+
+                let c_dir = composeQueryDir(chapter.path_part, p_dir);
+                articles(tbody_c, undefined, c_dir).then(() => {
+                    if (chapter.subheadings) {
+                        makeSubheadings(chapter.subheadings);
+                    }
+                });
+
+            }
+
+        } else {
+
+            articles(tbody_p, undefined, p_dir).then(() => {
+                if (part.subheadings) {
+                    makeSubheadings(part.subheadings);
+                }
+            });
+        }
+    }
+}
+
+// Find articles
 
 export async function indexDirs(errorPrefix, dir = './') {
     return fetch(dir)
@@ -7,14 +112,14 @@ export async function indexDirs(errorPrefix, dir = './') {
         .then(html => {
             const links = getIndexedLinks(html);
             const dirs = links
-                .filter(link => link.endsWith('/') 
-                             && !link.includes('Preamble'));
+                .filter(link => link.endsWith('/')
+                    && !link.includes('Preamble'));
             return dirs;
         })
         .catch(error => console.error(errorPrefix, error));
 }
 
-// Articles
+// Make article entries
 
 function makeArticle(article) {
     const entry = document.createElement('tr');
@@ -25,7 +130,7 @@ function makeArticle(article) {
     entry.title = article;
     const num = (dir + '.').replace('_', ' ');
     num_cell.innerHTML = num;
-    num_cell.style = 'width: 50px;';
+    num_cell.style = 'width: 5em;';
     entry.appendChild(num_cell);
 
     fetch(article)
@@ -50,16 +155,14 @@ function makeArticle(article) {
                     const margin = document.createElement('td');
                     const link = document.createElement('a');
                     link.innerHTML = margin_text;
-                    link.onclick = () => {
-                        window.top.location.href = article;
-                    };
+                    link.setAttribute('href', article);
                     margin.appendChild(link);
 
-                    if (doc.querySelector('#omitted-indicator') !== null) {
+                    if (doc.querySelector('#omitted-indicator')) {
                         const i = document.createElement('i');
                         i.innerText = '(Omitted)';
-                        link.innerHTML += ' ';
-                        link.appendChild(i);
+                        margin.innerHTML += ' ';
+                        margin.appendChild(i);
                     }
 
                     entry.appendChild(margin);
@@ -71,7 +174,7 @@ function makeArticle(article) {
     return entry;
 }
 
-export async function articles(contents, exclude = [], dir = './') {
+async function articles(contents, exclude = [], dir = './') {
     //const tbody = contents.querySelector('tbody');
     return indexDirs('Error fetching articles:', dir = dir)
         .then(articles =>
@@ -84,44 +187,9 @@ export async function articles(contents, exclude = [], dir = './') {
         );
 }
 
-// Chapters and Parts
-
-function normalizeDirName(path) {
-    const parts = path.split('/');
-    const parentDir = parts[parts.length - 2];
-    return parentDir.replace(/_/g, ' ');
-}
-
-export function addPart(part) {
-    const details = document.createElement('details');
-    details.name = 'contents';
-
-    const summary = document.createElement('summary');
-    summary.innerHTML = normalizeDirName(part);
-
-    const part_div = document.createElement('iframe');
-    part_div.src = `${part}contents.html`;
-    part_div.width = '100%';
-    part_div.style.height = '50vh';
-    part_div.style.border = 'none'
-
-    details.appendChild(summary);
-    details.appendChild(part_div);
-    return details;
-}
-
-export async function mainTable(contents, parts = [], dir = './') {
-    if (parts.length === 0) {
-        parts = await indexDirs('Error fetching parts:', dir = dir);
-    }
-    parts.map(part => {
-        contents.appendChild(addPart(part));
-    })
-}
-
 // Subheadings
 
-export function makeSubheadings(subheadings) {
+function makeSubheadings(subheadings) {
     for (let article in subheadings) {
         let subheading = subheadings[article];
         const article_row = document.getElementById(article);
@@ -141,105 +209,49 @@ export function makeSubheadings(subheadings) {
 // Table builder
 
 function partID(part) {
-    return part.replaceAll(', ', '_').replaceAll(' ', '_').toLowerCase();
+    return part
+        .replaceAll(', ', '_')
+        .replaceAll(' ', '_')
+        .toLowerCase()
+        .replace('/');
 }
 
 export function partDir(part) {
     return part.replaceAll(', ', '/').replaceAll(' ', '_') + '/';
 }
 
-export async function buildFlatPart(part) {
-    const id = partID(part);
-    const dir = partDir(part);
-    var contents = document.querySelector(`.contents#${id}`);
-    if (contents === null) {
-        return;
-    }
-    return articles(contents, undefined, dir);
-}
-
+/**
+ * @deprecated Remove references
+*/
 export var flat_parts = [
     'Part I',
-    'Part II', 
+    'Part II',
     'Part III',
-    'Part IV', 
-    'Part IVA', 
-    'Part V, Chapter I', 'Part V, Chapter II', 'Part V, Chapter III', 'Part V, Chapter IV', 'Part V, Chapter V', 
-    'Part VI, Chapter I', 'Part VI, Chapter II', 'Part VI, Chapter III', 'Part VI, Chapter IV', 'Part VI, Chapter V', 'Part VI, Chapter VI', 
+    'Part IV',
+    'Part IVA',
+    'Part V, Chapter I', 'Part V, Chapter II', 'Part V, Chapter III', 'Part V, Chapter IV', 'Part V, Chapter V',
+    'Part VI, Chapter I', 'Part VI, Chapter II', 'Part VI, Chapter III', 'Part VI, Chapter IV', 'Part VI, Chapter V', 'Part VI, Chapter VI',
     'Part VII',
-    'Part VIII', 
-    'Part IX', 
+    'Part VIII',
+    'Part IX',
     'Part IXA',
-    'Part IXB', 
+    'Part IXB',
     'Part X',
     'Part XI, Chapter I', 'Part XI, Chapter II',
     'Part XII, Chapter I', 'Part XII, Chapter II', 'Part XII, Chapter III', 'Part XII, Chapter IV',
-    'Part XIII', 
+    'Part XIII',
     'Part XIV, Chapter I', 'Part XIV, Chapter II',
-    'Part XIVA', 
+    'Part XIVA',
     'Part XV',
-    'Part XVI', 
+    'Part XVI',
     'Part XVII, Chapter I', 'Part XVII, Chapter II', 'Part XVII, Chapter III', 'Part XVII, Chapter IV',
-    'Part XVIII', 
+    'Part XVIII',
     'Part XIX',
-    'Part XX', 
+    'Part XX',
     'Part XXI',
     'Part XXII',
     'Schedules, First Schedule',
-    'Schedules, Second Schedule'];
-
-export var subheadings = {
-    // Part III
-    'a12': 'General',
-    'a14': 'Right to Equality',
-    'a19': 'Right to Freedom',
-    'a23': 'Right against Exploitation',
-    'a25': 'Right to Freedom of Religion',
-    'a29': 'Cultural and Educational Rights',
-    'a31A': 'Saving of Certain Laws',
-    'a32': 'Right to Constitutional Remedies',
-
-    // Part V, Chapter I
-    'a52': 'The President and Vice-President',
-    'a74': 'Council of Ministers',
-    'a76': 'The Attorney-General for India',
-    'a77': 'Conduct of Government Business',
-
-    // Part V, Chapter II
-    'a79': 'General',
-    'a89': 'Officers of Parliament',
-    'a99': 'Conduct of Business',
-    'a101': 'Disqualification of Members',
-    'a105': 'Powers, Privileges and Immunities of Parliament and its Members',
-    'a107': 'Legislative Procedure',
-    'a112': 'Procedure in Financial Matters',
-    'a118': 'Procedure Generally',
-
-    // Part VI, Chapter II
-    'a153': 'The Governor',
-    'a163': 'Council of Ministers',
-    'a165': 'The Advocate-General for the State',
-    'a166': 'Conduct of Government Business',
-
-    // Part VI, Chapter III
-    'a168': 'General',
-    'a178': 'Officers of the State Legislature',
-    'a188': 'Conduct of Business',
-    'a194': 'Powers, privileges and immunities of State Legislatures and their Members',
-    'a196': 'Legislative Procedure',
-    'a202': 'Procedure in Financial Matters',
-    'a208': 'Procedure Generally',
-
-    // Part XI, Chapter I
-    'a245': 'Distribution of Legislative Powers',
-
-    // Part XI, Chapter II
-    'a256': 'General',
-    'a262': 'Disputes relating to Waters',
-    'a263': 'Co-ordination between States',
-
-    // Part XII, Chapter I
-    'a264': 'General',
-    'a268': 'Distribution of Revenues between the Union and the States',
-    'a282': 'Miscellaneous Financial Provisions'
-}
+    'Schedules, Second Schedule',
+    'Schedules, Third Schedule',
+    'Schedules, Fourth Schedule'
+];

@@ -1,11 +1,65 @@
-const parser = new DOMParser();
-const current_lang = document.querySelector('html').lang;
+//import { composeQueryDir, getTree } from "./utils";
 
-document.querySelector('#nav').innerHTML += `
+/**
+ * These are in here temporarily while I figure out what to do about this script not
+ * loading as a module.
+ */
+
+const lang = getLanguage();
+
+const tree_path = `/${lang}/tree.json`;
+
+async function getTree() {
+    return fetch(tree_path);
+}
+
+function getLanguage(enDefault = true) {
+    const html = document.querySelector('html');
+
+    if (html.hasAttribute('lang')) {
+        return html.getAttribute('lang');
+    }
+
+    if (enDefault) {
+        return 'en';
+    }
+}
+
+function normalizeDirName(path) {
+    const parts = path.split('/');
+    const parentDir = parts[parts.length - 2];
+    return parentDir.replace(/_/g, ' ');
+}
+
+function composeQueryDir(path, dir = undefined) {
+    const stripSideSlashes = (t) => t.split('/').filter((prt) => prt.length > 0).join('/');
+
+    path = stripSideSlashes(path);
+    if (dir) {
+        dir = stripSideSlashes(dir);
+
+        const dup_lang = `${lang}/`;
+        if (dir.startsWith(dup_lang)) {
+            dir = dir.substring(dup_lang.length)
+        }
+    }
+
+    let query_dir = `/${lang}`;
+    if (dir && path !== dir) query_dir = `${query_dir}/${dir}`;
+    query_dir = `${query_dir}/${path}/`;
+    return query_dir;
+}
+
+// End.
+
+
+
+const nav = document.querySelector('#nav');
+nav.innerHTML += `
     <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
-        <a id="prev-art">Previous article</a> * <a href="/en/contents.html">Table of Contents</a> * <a id="next-art">Next article</a>
-        <form action="/en/search.html" id="search-form"></form>
+        <a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a>
+        <form action="/${lang}/search.html" id="search-form"></form>
     </div>
     <ul id="parent-nav"></ul>
     <p class="nav-sec" id="see-also">See also</p>
@@ -30,24 +84,10 @@ form.appendChild(button);
 
 // Parent nav
 
-function getParentText(contents) {
-    let part_num = contents.querySelector('#part-num');
-    let part_header = contents.querySelector('#part-header');
-    
-    if (part_header === null) {
-        console.error('Could not find expected element of contents page.');
-        console.log(contents);
-        return 'Unknown';
-    }
-    return (part_num === null)
-        ? part_header.innerText
-        : part_num.innerText + '.—' + part_header.innerText;
-}
-
 function makeLinkListElem(link, text) {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = link;
+    a.setAttribute('href', link);
     a.innerHTML = text;
     li.appendChild(a);
     return li;
@@ -56,28 +96,38 @@ function makeLinkListElem(link, text) {
 let parent_toc = document.querySelector('#contents-hidden');
 
 async function importParentContents() {
-    parent_toc.innerHTML = await(await fetch('../contents.html')).text();
+    parent_toc.innerHTML = await (await fetch('../contents.html')).text();
 }
 
 void async function () {
     const parent_nav = document.getElementById('parent-nav');
-    if (parent_nav != undefined) {
-        if (location.href.includes('Chapter') || location.href.includes('Tenth_Schedule/Part_')) {
-            let part_contents = await fetch('../../contents.html');
-            let html = await(part_contents).text();
-            let parent_text = getParentText(parser.parseFromString(html, 'text/html'));
-            let link_elem = makeLinkListElem('../../contents.html', parent_text);
-            parent_nav.appendChild(link_elem);
-        }
+    if (!parent_nav) return;
 
-        if (parent_toc.innerHTML.length === 0) {
-            await importParentContents();
-        }
-        let parent_text = getParentText(parent_toc);
-        let link_elem = makeLinkListElem('../contents.html', parent_text);
-        parent_nav.appendChild(link_elem);
+    addLink = (dir, header) => {
+        let link_elem = makeLinkListElem(`${dir}contents.html`, header);
+        parent_nav.append(link_elem);
     }
-} ();
+
+    const tree = await (await getTree()).json();
+
+    const part = tree.find((part) => location.href.includes(part.path_part));
+    if (!part) return; // Means tree.json not updated yet
+
+    const part_dir = composeQueryDir(part.path_part);
+    const part_header = `${normalizeDirName(part.path_part)}.—${part.header}`;
+    addLink(part_dir, part_header);
+
+    if (part.has_chapters) {
+        const chapter = part.chapters.find((chapter) => location.href.includes(chapter.path_part));
+        if (!chapter) return; // Ditto
+
+        const chapter_dir = composeQueryDir(chapter.path_part, part_dir);
+        const chapter_header = chapter.header;
+        addLink(chapter_dir, chapter_header);
+
+    }
+
+}();
 
 // Previous/next articles
 
@@ -103,18 +153,18 @@ void async function () {
 // See also & cross reference
 
 function handleLinkGroups(json, header, exclude = []) {
-    const path_wo_lang = window.location.pathname.toString().replace(`/${current_lang}/`, '');
+    const path_wo_lang = window.location.pathname.toString().replace(`/${lang}/`, '');
     var in_groups = json.filter(group => group.map(e => e.path).includes(path_wo_lang));
     var links = [...new Set(in_groups.flat(1))]
-        .filter(link => link.path !== path_wo_lang && 
-                        !exclude.map(l2 => l2.path).includes(link.path));
+        .filter(link => link.path !== path_wo_lang &&
+            !exclude.map(l2 => l2.path).includes(link.path));
     if (links.length === 0) {
         [header, header.nextElementSibling].forEach(p => p.style.display = 'none');
         return [];
     }
     const list = header.nextElementSibling;
     links.forEach(link => {
-        const path_use = (link.path.startsWith('https')) ? link.path :  `/${current_lang}/${link.path}`;
+        const path_use = (link.path.startsWith('https')) ? link.path : `/${lang}/${link.path}`;
         const li = makeLinkListElem(path_use, link.name);
         list.appendChild(li);
     });
@@ -129,14 +179,14 @@ void async function () {
     var cross_reference = await (await fetch('/static/data/cross-reference.json')).json();
     header = document.querySelector('.nav-sec#cross-reference');
     handleLinkGroups(cross_reference, header, exclude);
-} ();
+}();
 
 // Switch language
 
 void async function () {
     var lang_nav = document.querySelector('div#lang-nav');
-    lang_nav.innerHTML = await ( await fetch( '/static/templates/lang-nav.html' ) ).text();
+    lang_nav.innerHTML = await (await fetch('/static/templates/lang-nav.html')).text();
     Array.from(document.querySelectorAll('a.lang')).map(a => {
         a.href = window.location.href.replace('/en/', `/${a.id}/`);
     });
-} ();
+}();

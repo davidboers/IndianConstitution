@@ -1,0 +1,313 @@
+[
+    {
+        "path_part": "Part_I/",
+        "has_chapters": false,
+        "header": "The Union and its Territory"
+    },
+    {
+        "path_part": "Part_II/",
+        "has_chapters": false,
+        "header": "Citizenship"
+    },
+    {
+        "path_part": "Part_III/",
+        "has_chapters": false,
+        "header": "Fundamental Rights",
+        "subheadings": {
+            "a12": "General",
+            "a14": "Right to Equality",
+            "a19": "Right to Freedom",
+            "a23": "Right against Exploitation",
+            "a25": "Right to Freedom of Religion",
+            "a29": "Cultural and Educational Rights",
+            "a31A": "Saving of Certain Laws",
+            "a32": "Right to Constitutional Remedies"
+        }
+    },
+    {
+        "path_part": "Part_IV/",
+        "has_chapters": false,
+        "header": "Directive Principles of State Policy"
+    },
+    {
+        "path_part": "Part_IVA/",
+        "has_chapters": false,
+        "header": "Fundamental Duties"
+    },
+    {
+        "path_part": "Part_V/",
+        "has_chapters": true,
+        "header": "The Union",
+        "chapters": [
+            {
+                "path_part": "Chapter_I/",
+                "header": "Chapter I.—The Executive",
+                "subheadings": {
+                    "a52": "The President and Vice-President",
+                    "a74": "Council of Ministers",
+                    "a76": "The Attorney-General for India",
+                    "a77": "Conduct of Government Business"
+                }
+            },
+            {
+                "path_part": "Chapter_II/",
+                "header": "Chapter II.—Parliament",
+                "subheadings": {
+                    "a79": "General",
+                    "a89": "Officers of Parliament",
+                    "a99": "Conduct of Business",
+                    "a101": "Disqualification of Members",
+                    "a105": "Powers, Privileges and Immunities of Parliament and its Members",
+                    "a107": "Legislative Procedure",
+                    "a112": "Procedure in Financial Matters",
+                    "a118": "Procedure Generally"
+                }
+            },
+            {
+                "path_part": "Chapter_III/",
+                "header": "Chapter III.—Legislative Powers of the President"
+            },
+            {
+                "path_part": "Chapter_IV/",
+                "header": "Chapter IV.—The Union Judiciary"
+            },
+            {
+                "path_part": "Chapter_V/",
+                "header": "Chapter V.—Comptroller and Auditor-General of India"
+            }
+        ]
+    },
+    {
+        "path_part": "Part_VI/",
+        "has_chapters": true,
+        "header": "The States",
+        "note": "Before the Seventh Amendment, Part VI was called \"The States in Part A of the First Schedule\".",
+        "chapters": [
+            {
+                "path_part": "Chapter_I/",
+                "header": "Chapter I.—General"
+            },
+            {
+                "path_part": "Chapter_II/",
+                "header": "Chapter II.—The Executive",
+                "subheadings": {
+                    "a153": "The Governor",
+                    "a163": "Council of Ministers",
+                    "a165": "The Advocate-General for the State",
+                    "a166": "Conduct of Government Business"
+                }
+            },
+            {
+                "path_part": "Chapter_III/",
+                "header": "Chapter III.—The State Legislatures",
+                "subheadings": {
+                    "a168": "General",
+                    "a178": "Officers of the State Legislature",
+                    "a188": "Conduct of Business",
+                    "a194": "Powers, privileges and immunities of State Legislatures and their Members",
+                    "a196": "Legislative Procedure",
+                    "a202": "Procedure in Financial Matters",
+                    "a208": "Procedure Generally"
+                }
+            },
+            {
+                "path_part": "Chapter_IV/",
+                "header": "Chapter IV.—Legislative Power of the Governor"
+            },
+            {
+                "path_part": "Chapter_V/",
+                "header": "Chapter V.—The High Courts in the States"
+            },
+            {
+                "path_part": "Chapter_VI/",
+                "header": "Chapter VI.—Subordinate Courts"
+            }
+        ]
+    },
+    {
+        "path_part": "Part_VII/",
+        "has_chapters": false,
+        "header": "The States in Part B of the First Schedule",
+        "note": "This part was omitted by the Seventh Amendment."
+    },
+    {
+        "path_part": "Part_VIII/",
+        "has_chapters": false,
+        "header": "The Union Territories",
+        "note": "Before the Seventh Amendment, Part VIII was called \"The States in Part C of the First Schedule\"."
+    },
+    {
+        "path_part": "Part_IX/",
+        "has_chapters": false,
+        "header": "The Panchayats",
+        "note": "Part IX, originally called \"The Territories in Part D of the First Schedule and other Territories not specified in that Schedule\", was omitted by the Seventh Amendment. The current Part IX was inserted by the Seventy-third Amendment."
+    },
+    {
+        "path_part": "Part_IXA/",
+        "has_chapters": false,
+        "header": "The Municipalities"
+    },
+    {
+        "path_part": "Part_IXB/",
+        "has_chapters": false,
+        "header": "The Co-Operative Societies"
+    },
+    {
+        "path_part": "Part_X/",
+        "has_chapters": false,
+        "header": "The Scheduled and Tribal Areas"
+    },
+    {
+        "path_part": "Part_XI/",
+        "has_chapters": true,
+        "header": "Relations Between the Union and the States",
+        "chapters": [
+            {
+                "path_part": "Chapter_I/",
+                "header": "Chapter I.—Legislative Relations",
+                "subheadings": { "a245": "Distribution of Legislative Powers" }
+            },
+            {
+                "path_part": "Chapter_II/",
+                "header": "Chapter II.—Administrative Relations",
+                "subheadings": {
+                    "a256": "General",
+                    "a262": "Disputes relating to Waters",
+                    "a263": "Co-ordination between States"
+                }
+            }
+        ]
+    },
+    {
+        "path_part": "Part_XII/",
+        "has_chapters": true,
+        "header": "Finance, Property, Contracts and Suits",
+        "chapters": [
+            {
+                "path_part": "Chapter_I/",
+                "header": "Chapter I.—Finance",
+                "subheadings": {
+                    "a264": "General",
+                    "a268": "Distribution of Revenues between the Union and the States",
+                    "a282": "Miscellaneous Financial Provisions"
+                }
+            },
+            {
+                "path_part": "Chapter_II/",
+                "header": "Chapter II.—Borrowing"
+            },
+            {
+                "path_part": "Chapter_III/",
+                "header": "Chapter III.—Property, Contracts, Rights, Liabilities, Obligations and Suits"
+            },
+            {
+                "path_part": "Chapter_IV/",
+                "header": "Chapter IV.—Right to Property"
+            }
+        ]
+    },
+    {
+        "path_part": "Part_XIII/",
+        "has_chapters": false,
+        "header": "Trade, Commerce and Intercourse within the Territory of India"
+    },
+    {
+        "path_part": "Part_XIV/",
+        "has_chapters": true,
+        "header": "Services under the Union and the States",
+        "chapters": [
+            {
+                "path_part": "Chapter_I/",
+                "header": "Chapter I.—Services"
+            },
+            {
+                "path_part": "Chapter_II/",
+                "header": "Chapter II.—Public Service Commissions"
+            }
+        ]
+    },
+    {
+        "path_part": "Part_XIVA/",
+        "has_chapters": false,
+        "header": "Tribunals"
+    },
+    {
+        "path_part": "Part_XV/",
+        "has_chapters": false,
+        "header": "Elections"
+    },
+    {
+        "path_part": "Part_XVI/",
+        "has_chapters": false,
+        "header": "Special Provisions relating to Certain Classes"
+    },
+    {
+        "path_part": "Part_XVII/",
+        "has_chapters": true,
+        "header": "Official Language",
+        "chapters": [
+            {
+                "path_part": "Chapter_I/",
+                "header": "Chapter I.—Language of the Union"
+            },
+            {
+                "path_part": "Chapter_II/",
+                "header": "Chapter II.—Regional Languages"
+            },
+            {
+                "path_part": "Chapter_III/",
+                "header": "Chapter III.—Language of the Supreme Court, High Courts, etc."
+            },
+            {
+                "path_part": "Chapter_IV/",
+                "header": "Chapter IV.—Special Directives"
+            }
+        ]
+    },
+    {
+        "path_part": "Part_XVIII/",
+        "has_chapters": false,
+        "header": "Emergency Provisions"
+    },
+    {
+        "path_part": "Part_XIX/",
+        "has_chapters": false,
+        "header": "Miscellaneous"
+    },
+    {
+        "path_part": "Part_XX/",
+        "has_chapters": false,
+        "header": "Amendment of the Constitution"
+    },
+    {
+        "path_part": "Part_XXI/",
+        "has_chapters": false,
+        "header": "Temporary, Transitional and Special Provisions",
+        "note": "Before the Thirteenth Amendment, this Part was called \"Temporary and Transitional Provisions.\""
+    },
+    {
+        "path_part": "Part_XXII/",
+        "has_chapters": false,
+        "header": "Short Title, Commencement, Authoritative Text in Hindi and Repeals",
+        "note": "Before the Fifty-eighth Amendment, this Part was called \"Short Title, Commencement and Repeals.\""
+    },
+    {
+        "path_part": "Schedules/First_Schedule/",
+        "has_chapters": false,
+        "header": "The States and the territories of India"
+    },
+    {
+        "path_part": "Schedules/Second_Schedule/",
+        "has_chapters": false
+    },
+    {
+        "path_part": "Schedules/Third_Schedule/",
+        "has_chapters": false,
+        "header": "Forms of Oaths or Affirmations"
+    },
+    {
+        "path_part": "Schedules/Fourth_Schedule/",
+        "has_chapters": false,
+        "header": "Allocation of seats in the Council of States"
+    }
+]

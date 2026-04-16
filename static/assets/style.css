@@ -54,25 +54,25 @@ p, #effective-date, li, table {
 
 /* Deleting and inserting */
 
-.del {
+del {
     display: none;
 }
 
-.ins, .overruled {
+ins, .overruled {
     display: inline;
+    text-decoration: initial;
 }
 
 .overruled {
     font-style: italic;
 }
 
-.del.changes {
+del.changes {
     color: magenta;
-    text-decoration: line-through;
     display: inline;
 }
 
-.ins.changes, .overruled.changes {
+ins.changes, .overruled.changes {
     color: magenta;
     background-color: #ff00ff22;
 }

@@ -43,7 +43,6 @@ window.onload = () => {
     function showChanges() {
         const text_node = Array.from(document.querySelectorAll('ins'))
             .concat(Array.from(document.querySelectorAll('del')))
-            .concat(Array.from(document.querySelectorAll('.overruled')))
             .concat(Array.from(document.querySelectorAll('li.renum')));
 
         text_node.forEach(span => {

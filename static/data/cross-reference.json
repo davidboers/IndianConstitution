@@ -1,6 +1,66 @@
 [
     [
         {
+            "name": "1. Name and territory of the Union.",
+            "path": "Part_I/1/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "1. Name and territory of the Union.",
+            "path": "Part_I/1/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "1. Name and territory of the Union.",
+            "path": "Part_I/1/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
+            "name": "1. Name and territory of the Union.",
+            "path": "Part_I/1/"
+        },
+        {
+            "name": "Part D of the First Schedule. The Andaman and Nicobar Islands.",
+            "path": "Schedules/First_Schedule/Part_D/"
+        }
+    ],
+    [
+        {
+            "name": "2A. Sikkim to be associated with the Union.",
+            "path": "Part_I/2A/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+        }
+    ],
+    [
+        {
+            "name": "3. Formation of new States and alteration of areas, boundaries or names of existing States.",
+            "path": "Part_I/3/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, incidental and consequential matters.",
             "path": "Part_I/4/"
         },
@@ -27,6 +87,16 @@
         {
             "name": "368. Procedures for amendment of the Constitution.",
             "path": "Part_XX/368/"
+        }
+    ],
+    [
+        {
+            "name": "4. Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, incidental and consequential matters.",
+            "path": "Part_I/4/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
         }
     ],
     [
@@ -211,6 +281,16 @@
     ],
     [
         {
+            "name": "31B. Validation of certain Acts and Regulations.",
+            "path": "Part_III/31B/"
+        },
+        {
+            "name": "Ninth Schedule.",
+            "path": "Schedules/Ninth_Schedule/Ninth_Schedule/"
+        }
+    ],
+    [
+        {
             "name": "31C. Saving of laws giving effect to certain directive principles.",
             "path": "Part_III/31C/"
         },
@@ -347,6 +427,16 @@
         {
             "name": "372. Continuance in force of existing laws and their adaptation.",
             "path": "Part_XXI/372/"
+        }
+    ],
+    [
+        {
+            "name": "243. Administration of territories specified in Part D of the First Schedule and other territories not specified in that Schedule.",
+            "path": "Part_IX/243/"
+        },
+        {
+            "name": "Part D of the First Schedule. The Andaman and Nicobar Islands.",
+            "path": "Schedules/First_Schedule/Part_D/"
         }
     ],
     [
@@ -581,6 +671,16 @@
     ],
     [
         {
+            "name": "59. Conditions of President's office.",
+            "path": "Part_V/Chapter_I/59/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
             "name": "62. Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill casual vacancy.",
             "path": "Part_V/Chapter_I/62/"
         },
@@ -601,6 +701,16 @@
     ],
     [
         {
+            "name": "65. The Vice-President to act as President or to discharge his functions during casual vacancies in the office, or during the absence, of President.",
+            "path": "Part_V/Chapter_I/65/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
             "name": "68. Time of holding election to fill vacancy in the office of VicePresident and the term of office of person elected to fill casual vacancy.",
             "path": "Part_V/Chapter_I/68/"
         },
@@ -611,12 +721,72 @@
     ],
     [
         {
+            "name": "73. Extent of executive power of the Union.",
+            "path": "Part_V/Chapter_I/73/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "75. Other provisions as to Ministers.",
+            "path": "Part_V/Chapter_I/75/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+        }
+    ],
+    [
+        {
+            "name": "75. Other provisions as to Ministers.",
+            "path": "Part_V/Chapter_I/75/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
+            "name": "75. Other provisions as to Ministers.",
+            "path": "Part_V/Chapter_I/75/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
             "name": "101. Vacation of seats.",
             "path": "Part_V/Chapter_II/101/"
         },
         {
             "name": "102. Disqualifications for membership.",
             "path": "Part_V/Chapter_II/102/"
+        }
+    ],
+    [
+        {
+            "name": "101. Vacation of seats.",
+            "path": "Part_V/Chapter_II/101/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "102. Disqualifications for membership.",
+            "path": "Part_V/Chapter_II/102/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         }
     ],
     [
@@ -687,6 +857,16 @@
         {
             "name": "111. Assent to Bills.",
             "path": "Part_V/Chapter_II/111/"
+        }
+    ],
+    [
+        {
+            "name": "112. Annual financial statement.",
+            "path": "Part_V/Chapter_II/112/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
         }
     ],
     [
@@ -781,6 +961,46 @@
     ],
     [
         {
+            "name": "80. Composition of the Council of States.",
+            "path": "Part_V/Chapter_II/80/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
+        }
+    ],
+    [
+        {
+            "name": "80. Composition of the Council of States.",
+            "path": "Part_V/Chapter_II/80/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+        }
+    ],
+    [
+        {
+            "name": "80. Composition of the Council of States.",
+            "path": "Part_V/Chapter_II/80/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "80. Composition of the Council of States.",
+            "path": "Part_V/Chapter_II/80/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
             "name": "81. Composition of the House of the People.",
             "path": "Part_V/Chapter_II/81/"
         },
@@ -797,6 +1017,36 @@
         {
             "name": "82. Special provision as to representation of States in Part C and territories other than States.",
             "path": "Part_V/Chapter_II/82/"
+        }
+    ],
+    [
+        {
+            "name": "81. Composition of the House of the People.",
+            "path": "Part_V/Chapter_II/81/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+        }
+    ],
+    [
+        {
+            "name": "82. Special provision as to representation of States in Part C and territories other than States.",
+            "path": "Part_V/Chapter_II/82/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
+            "name": "84. Qualification for membership of Parliament.",
+            "path": "Part_V/Chapter_II/84/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
         }
     ],
     [
@@ -841,12 +1091,62 @@
     ],
     [
         {
+            "name": "97. Salaries and allowances of the Chairman and Deputy Chairman and the Speaker and Deputy Speaker.",
+            "path": "Part_V/Chapter_II/97/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "99. Oath or affirmation by members.",
+            "path": "Part_V/Chapter_II/99/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
+            "name": "124. Establishment and constitution of Supreme Court.",
+            "path": "Part_V/Chapter_IV/124/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
             "name": "124. Establishment and constitution of Supreme Court.",
             "path": "Part_V/Chapter_IV/124/"
         },
         {
             "name": "124A. National Judicial Appointments Commission.",
             "path": "Part_V/Chapter_IV/124A/"
+        }
+    ],
+    [
+        {
+            "name": "125. Salaries, etc., of Judges.",
+            "path": "Part_V/Chapter_IV/125/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "131. Original jurisdiction of the Supreme Court.",
+            "path": "Part_V/Chapter_IV/131/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -1011,6 +1311,86 @@
     ],
     [
         {
+            "name": "148. Comptroller and Auditor-General of India.",
+            "path": "Part_V/Chapter_V/148/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
+            "name": "148. Comptroller and Auditor-General of India.",
+            "path": "Part_V/Chapter_V/148/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "152. Definition.",
+            "path": "Part_VI/Chapter_I/152/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "158. Conditions of Governor's office.",
+            "path": "Part_VI/Chapter_II/158/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "164. Other provisions as to Ministers.",
+            "path": "Part_VI/Chapter_II/164/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+        }
+    ],
+    [
+        {
+            "name": "164. Other provisions as to Ministers.",
+            "path": "Part_VI/Chapter_II/164/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
+            "name": "164. Other provisions as to Ministers.",
+            "path": "Part_VI/Chapter_II/164/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "168. Constitution of Legislatures in States.",
+            "path": "Part_VI/Chapter_III/168/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
+        }
+    ],
+    [
+        {
             "name": "169. Abolition or creation of Legislative Councils in States.",
             "path": "Part_VI/Chapter_III/169/"
         },
@@ -1081,12 +1461,42 @@
     ],
     [
         {
+            "name": "186. Salaries and allowances of the Speaker and Deputy Speaker and the Chairman and Deputy Chairman.",
+            "path": "Part_VI/Chapter_III/186/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "188. Oath or affirmation by members.",
+            "path": "Part_VI/Chapter_III/188/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
             "name": "190. Vacation of seats.",
             "path": "Part_VI/Chapter_III/190/"
         },
         {
             "name": "191. Disqualifications for membership.",
             "path": "Part_VI/Chapter_III/191/"
+        }
+    ],
+    [
+        {
+            "name": "191. Disqualifications for membership.",
+            "path": "Part_VI/Chapter_III/191/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         }
     ],
     [
@@ -1301,6 +1711,36 @@
     ],
     [
         {
+            "name": "219. Oath or affirmation by Judges of High Courts.",
+            "path": "Part_VI/Chapter_V/219/"
+        },
+        {
+            "name": "VIII",
+            "path": "Schedules/Third_Schedule/VIII/"
+        }
+    ],
+    [
+        {
+            "name": "220. Prohibition of practising in courts or before any authority by Judge.",
+            "path": "Part_VI/Chapter_V/220/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "221. Salaries, etc., of Judges.",
+            "path": "Part_VI/Chapter_V/221/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
             "name": "222. Transfer of a Judge from one High Court to another.",
             "path": "Part_VI/Chapter_V/222/"
         },
@@ -1401,6 +1841,26 @@
     ],
     [
         {
+            "name": "231. Establishment of a common High Court for two or more States.",
+            "path": "Part_VI/Chapter_V/231/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "232. Interpretation.",
+            "path": "Part_VI/Chapter_V/232/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "233A. Validation of appointments of, and judgments, etc., delivered by, certain district judges.",
             "path": "Part_VI/Chapter_VI/233A/"
         },
@@ -1417,6 +1877,16 @@
         {
             "name": "235. Control over subordinate courts.",
             "path": "Part_VI/Chapter_VI/235/"
+        }
+    ],
+    [
+        {
+            "name": "238. Application of provisions of Part VI to States in Part B of the First Schedule.",
+            "path": "Part_VII/238/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -1571,6 +2041,26 @@
     ],
     [
         {
+            "name": "238. Application of provisions of Part VI to States in Part B of the First Schedule.",
+            "path": "Part_VII/238/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "239. Administration of States in Part C of the First Schedule.",
+            "path": "Part_VIII/239/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
             "name": "239A. Creation of local Legislatures or Council of Ministers or both for certain Union territories.",
             "path": "Part_VIII/239A/"
         },
@@ -1691,6 +2181,16 @@
     ],
     [
         {
+            "name": "240. Power of President to make regulations for certain Union territories.",
+            "path": "Part_VIII/240/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
             "name": "241. High Courts for States in Part C of the First Schedule.",
             "path": "Part_VIII/241/"
         },
@@ -1701,12 +2201,62 @@
     ],
     [
         {
+            "name": "241. High Courts for States in Part C of the First Schedule.",
+            "path": "Part_VIII/241/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
+            "name": "241. High Courts for States in Part C of the First Schedule.",
+            "path": "Part_VIII/241/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "244. Administration of the Scheduled Areas and Tribal Areas.",
+            "path": "Part_X/244/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "244A. Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or Council of Ministers or both therefor.",
             "path": "Part_X/244A/"
         },
         {
             "name": "368. Procedures for amendment of the Constitution.",
             "path": "Part_XX/368/"
+        }
+    ],
+    [
+        {
+            "name": "246. Subject-matter of laws made by Parliament and by the Legislatures of States.",
+            "path": "Part_XI/Chapter_I/246/"
+        },
+        {
+            "name": "List IIIConcurrent List.",
+            "path": "Schedules/Seventh_Schedule/List_III/"
+        }
+    ],
+    [
+        {
+            "name": "246. Subject-matter of laws made by Parliament and by the Legislatures of States.",
+            "path": "Part_XI/Chapter_I/246/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -1811,12 +2361,62 @@
     ],
     [
         {
+            "name": "254. Inconsistency between laws made by Parliament and laws made by the Legislatures of States.",
+            "path": "Part_XI/Chapter_I/254/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "255. Requirements as to recommendations and previous sanctions to be regarded as matters of procedure only.",
+            "path": "Part_XI/Chapter_I/255/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "259. Armed Forces in States in Part B of the First Schedule.",
+            "path": "Part_XI/Chapter_II/259/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "264. Interpretation.",
             "path": "Part_XII/Chapter_I/264/"
         },
         {
             "name": "280. Finance Commission.",
             "path": "Part_XII/Chapter_I/280/"
+        }
+    ],
+    [
+        {
+            "name": "264. Interpretation.",
+            "path": "Part_XII/Chapter_I/264/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
+            "name": "264. Interpretation.",
+            "path": "Part_XII/Chapter_I/264/"
+        },
+        {
+            "name": "Part D of the First Schedule. The Andaman and Nicobar Islands.",
+            "path": "Schedules/First_Schedule/Part_D/"
         }
     ],
     [
@@ -1871,12 +2471,32 @@
     ],
     [
         {
+            "name": "268. Duties levied by the Union but collected and appropriated by the States.",
+            "path": "Part_XII/Chapter_I/268/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        }
+    ],
+    [
+        {
             "name": "269. Taxies levied and collected by the Union but assigned to the States.",
             "path": "Part_XII/Chapter_I/269/"
         },
         {
             "name": "269A. Levy and collection of goods and services tax in course of inter-State trade or commerce.",
             "path": "Part_XII/Chapter_I/269A/"
+        }
+    ],
+    [
+        {
+            "name": "269. Taxies levied and collected by the Union but assigned to the States.",
+            "path": "Part_XII/Chapter_I/269/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
         }
     ],
     [
@@ -1917,6 +2537,16 @@
         {
             "name": "269A. Levy and collection of goods and services tax in course of inter-State trade or commerce.",
             "path": "Part_XII/Chapter_I/269A/"
+        }
+    ],
+    [
+        {
+            "name": "270. Taxes levied and collected by the Union and distributed between the Union and the States.",
+            "path": "Part_XII/Chapter_I/270/"
+        },
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
         }
     ],
     [
@@ -2001,12 +2631,32 @@
     ],
     [
         {
+            "name": "278. Agreement with States in Part B of the First Schedule with regard to certain financial matters.",
+            "path": "Part_XII/Chapter_I/278/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "279A. Goods and Services Tax Council.",
             "path": "Part_XII/Chapter_I/279A/"
         },
         {
             "name": "269A. Levy and collection of goods and services tax in course of inter-State trade or commerce.",
             "path": "Part_XII/Chapter_I/269A/"
+        }
+    ],
+    [
+        {
+            "name": "291. Privy purse sums of Rulers.",
+            "path": "Part_XII/Chapter_I/291/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2021,12 +2671,32 @@
     ],
     [
         {
+            "name": "295. Succession to property, assets, rights, liabilities and obligations in other cases.",
+            "path": "Part_XII/Chapter_III/295/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "303. Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce.",
             "path": "Part_XIII/303/"
         },
         {
             "name": "302. Power of Parliament to impose restrictions on trade, commerce and intercourse.",
             "path": "Part_XIII/302/"
+        }
+    ],
+    [
+        {
+            "name": "303. Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce.",
+            "path": "Part_XIII/303/"
+        },
+        {
+            "name": "List IIIConcurrent List.",
+            "path": "Schedules/Seventh_Schedule/List_III/"
         }
     ],
     [
@@ -2085,8 +2755,28 @@
             "path": "Part_XIII/306/"
         },
         {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "306. Power of certain States in Part B of the First Schedule to impose restrictions on trade and commerce.",
+            "path": "Part_XIII/306/"
+        },
+        {
             "name": "280. Finance Commission.",
             "path": "Part_XII/Chapter_I/280/"
+        }
+    ],
+    [
+        {
+            "name": "308. Interpretation.",
+            "path": "Part_XIV/Chapter_I/308/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2217,6 +2907,16 @@
         {
             "name": "61. Procedure for impeachment of the President.",
             "path": "Part_V/Chapter_I/61/"
+        }
+    ],
+    [
+        {
+            "name": "361B. Disqualification for appointment on remunerative political post.",
+            "path": "Part_XIX/361B/"
+        },
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         }
     ],
     [
@@ -2371,12 +3071,32 @@
     ],
     [
         {
+            "name": "366. Definitions.",
+            "path": "Part_XIX/366/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "367. Interpretation.",
             "path": "Part_XIX/367/"
         },
         {
             "name": "372. Continuance in force of existing laws and their adaptation.",
             "path": "Part_XXI/372/"
+        }
+    ],
+    [
+        {
+            "name": "367. Interpretation.",
+            "path": "Part_XIX/367/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2441,6 +3161,16 @@
     ],
     [
         {
+            "name": "332. Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "332A. Reservation of seats for women in the Legislative Assemblies of the States.",
             "path": "Part_XVI/332A/"
         },
@@ -2481,12 +3211,52 @@
     ],
     [
         {
+            "name": "337. Special provision with respect to educational grants for the benefit of Anglo-Indian community.",
+            "path": "Part_XVI/337/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "338. Special Officer for the Scheduled Castes, Scheduled Tribes, etc.",
             "path": "Part_XVI/338/"
         },
         {
             "name": "340. Appointment of a Commission to investigate the conditions of backward classes.",
             "path": "Part_XVI/340/"
+        }
+    ],
+    [
+        {
+            "name": "339. Control of the Union over the administration of Scheduled Areas and the welfare of Scheduled Tribes.",
+            "path": "Part_XVI/339/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "341. Scheduled Castes.",
+            "path": "Part_XVI/341/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "342. Scheduled Tribes.",
+            "path": "Part_XVI/342/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2507,6 +3277,16 @@
         {
             "name": "343. Official language of the Union.",
             "path": "Part_XVII/Chapter_I/343/"
+        }
+    ],
+    [
+        {
+            "name": "344. Commission and Committee of Parliament on official language.",
+            "path": "Part_XVII/Chapter_I/344/"
+        },
+        {
+            "name": "Languages.",
+            "path": "Schedules/Eighth_Schedule/Eighth_Schedule/"
         }
     ],
     [
@@ -2547,6 +3327,16 @@
         {
             "name": "344. Commission and Committee of Parliament on official language.",
             "path": "Part_XVII/Chapter_I/344/"
+        }
+    ],
+    [
+        {
+            "name": "351. Directive for development of the Hindi language.",
+            "path": "Part_XVII/Chapter_IV/351/"
+        },
+        {
+            "name": "Languages.",
+            "path": "Schedules/Eighth_Schedule/Eighth_Schedule/"
         }
     ],
     [
@@ -2731,6 +3521,36 @@
     ],
     [
         {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "List IIIConcurrent List.",
+            "path": "Schedules/Seventh_Schedule/List_III/"
+        }
+    ],
+    [
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "370. Temporary provisions with respect to the State of Jammu and Kashmir.",
             "path": "Part_XXI/370/"
         },
@@ -2777,6 +3597,16 @@
         {
             "name": "1. Name and territory of the Union.",
             "path": "Part_I/1/"
+        }
+    ],
+    [
+        {
+            "name": "371. Special provision with respect to the States of Andhra Pradesh, <span class=\"del\">Punjab,</span> Maharashtra and Gujarat.",
+            "path": "Part_XXI/371/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2881,6 +3711,16 @@
     ],
     [
         {
+            "name": "374. Provisions as to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council.",
+            "path": "Part_XXI/374/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "376. Provisions as to Judges of the High Courts.",
             "path": "Part_XXI/376/"
         },
@@ -2897,6 +3737,16 @@
         {
             "name": "221. Salaries, etc., of Judges.",
             "path": "Part_VI/Chapter_V/221/"
+        }
+    ],
+    [
+        {
+            "name": "376. Provisions as to Judges of the High Courts.",
+            "path": "Part_XXI/376/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2931,12 +3781,62 @@
     ],
     [
         {
+            "name": "379. Provisions as to provisional Parliament and the Speaker and Deputy Speaker thereof.",
+            "path": "Part_XXI/379/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
             "name": "380. Provision as to President.",
             "path": "Part_XXI/380/"
         },
         {
             "name": "319. Prohibition as to the holding of offices by members of Commission on ceasing to be such members.",
             "path": "Part_XIV/Chapter_II/319/"
+        }
+    ],
+    [
+        {
+            "name": "382. Provisions as to provisional Legislatures for States in Part A of the First Schedule.",
+            "path": "Part_XXI/382/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "383. Provision as to Governors of Provinces.",
+            "path": "Part_XXI/383/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "385. Provision as to provisional Legislatures in States in Part B of the First Schedule.",
+            "path": "Part_XXI/385/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "386. Council of Ministers for States in Part B of the First Schedule.",
+            "path": "Part_XXI/386/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -2977,6 +3877,26 @@
         {
             "name": "385. Provision as to provisional Legislatures in States in Part B of the First Schedule.",
             "path": "Part_XXI/385/"
+        }
+    ],
+    [
+        {
+            "name": "388. Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States.",
+            "path": "Part_XXI/388/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "391. Power of the President to amend the First and Fourth Schedules in certain contingencies.",
+            "path": "Part_XXI/391/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
         }
     ],
     [
@@ -3161,6 +4081,46 @@
     ],
     [
         {
+            "name": "I. The States.",
+            "path": "Schedules/First_Schedule/I/"
+        },
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
+        }
+    ],
+    [
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
+        }
+    ],
+    [
+        {
+            "name": "Part C of the First Schedule. Former Chief Commissioner's Provinces.",
+            "path": "Schedules/First_Schedule/Part_C/"
+        },
+        {
+            "name": "Fourth Schedule.",
+            "path": "Schedules/Fourth_Schedule/Fourth_Schedule/"
+        }
+    ],
+    [
+        {
             "name": "Ninth Schedule.",
             "path": "Schedules/Ninth_Schedule/Ninth_Schedule/"
         },
@@ -3171,8 +4131,28 @@
     ],
     [
         {
-            "name": "Part D. Provisions as to the Judges of the Supreme Court and of the High Courts in States in Part A of the First Schedule.",
-            "path": "Schedules/Second_Schedule/Part_D/"
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        },
+        {
+            "name": "Part A of the First Schedule. Former Governor's Provinces.",
+            "path": "Schedules/First_Schedule/Part_A/"
+        }
+    ],
+    [
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
         },
         {
             "name": "374. Provisions as to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council.",
@@ -3181,8 +4161,8 @@
     ],
     [
         {
-            "name": "Part D. Provisions as to the Judges of the Supreme Court and of the High Courts in States in Part A of the First Schedule.",
-            "path": "Schedules/Second_Schedule/Part_D/"
+            "name": "Part E. Provisions as to the Comptroller and Auditor-General of India.",
+            "path": "Schedules/Second_Schedule/Part_E/"
         },
         {
             "name": "376. Provisions as to Judges of the High Courts.",
@@ -3201,8 +4181,8 @@
     ],
     [
         {
-            "name": "List IUnion List.",
-            "path": "Schedules/Seventh_Schedule/List_I/"
+            "name": "List IIIConcurrent List.",
+            "path": "Schedules/Seventh_Schedule/List_III/"
         },
         {
             "name": "371E. Establishment of Central University in Andhra Pradesh.",
@@ -3211,8 +4191,18 @@
     ],
     [
         {
-            "name": "2. Responsibilities of the Government of India.",
-            "path": "Schedules/Tenth_Schedule/Part_B/2/"
+            "name": "List IIIConcurrent List.",
+            "path": "Schedules/Seventh_Schedule/List_III/"
+        },
+        {
+            "name": "Part B of the First Schedule. Former Princely States.",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "99. Oath or affirmation by members.",
@@ -3221,8 +4211,8 @@
     ],
     [
         {
-            "name": "2. Responsibilities of the Government of India.",
-            "path": "Schedules/Tenth_Schedule/Part_B/2/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "188. Oath or affirmation by members.",
@@ -3231,8 +4221,8 @@
     ],
     [
         {
-            "name": "6. Decision on questions as to disqualification on ground of defection.",
-            "path": "Schedules/Tenth_Schedule/6/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "122. Courts not to inquire into proceedings of Parliament.",
@@ -3241,8 +4231,8 @@
     ],
     [
         {
-            "name": "6. Decision on questions as to disqualification on ground of defection.",
-            "path": "Schedules/Tenth_Schedule/6/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "212. Courts not to inquire into proceedings of the Legislature.",
@@ -3251,8 +4241,8 @@
     ],
     [
         {
-            "name": "8. Rules.",
-            "path": "Schedules/Tenth_Schedule/8/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.",
@@ -3261,8 +4251,8 @@
     ],
     [
         {
-            "name": "8. Rules.",
-            "path": "Schedules/Tenth_Schedule/8/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "194. Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.",
@@ -3271,8 +4261,8 @@
     ],
     [
         {
-            "name": "4. Representation in Parliament.",
-            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "84. Qualification for membership of Parliament.",
@@ -3281,8 +4271,8 @@
     ],
     [
         {
-            "name": "4. Representation in Parliament.",
-            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "101. Vacation of seats.",
@@ -3291,18 +4281,8 @@
     ],
     [
         {
-            "name": "4. Representation in Parliament.",
-            "path": "Schedules/Tenth_Schedule/Part_B/4/"
-        },
-        {
-            "name": "102. Disqualifications for membership.",
-            "path": "Part_V/Chapter_II/102/"
-        }
-    ],
-    [
-        {
-            "name": "4. Representation in Parliament.",
-            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "103. Decision on questions as to disqualifications of members.",
@@ -3311,8 +4291,8 @@
     ],
     [
         {
-            "name": "4. Representation in Parliament.",
-            "path": "Schedules/Tenth_Schedule/Part_B/4/"
+            "name": "5. Schedule not to derogate from agreements, etc.",
+            "path": "Schedules/Tenth_Schedule/Part_B/5/"
         },
         {
             "name": "324. Superintendence, direction and control of elections to be vested in an Election Commission.",

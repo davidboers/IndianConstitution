@@ -1,22 +1,36 @@
 
 import { parseHTMLDoc, getIndexedLinks, composeQueryDir, normalizeDirName, getTree } from './utils.js';
 
-export async function buildTableStructure(dir = undefined) {
-
-    const table = document.querySelector('#main-con');
+async function getTreeWithError() {
 
     try {
         const response = await getTree();
         if (!response.ok) throw new Error(response.statusText);
 
-        const tree = await response.json();
-        buildTableStructure1(dir, tree, table);
+        return await response.json();
 
     } catch (error) {
         console.error('Caught error:', error.message);
         const buildFailed = document.createElement('p');
         buildFailed.innerHTML = 'Error: Failed to load table of contents.'
-        table.replaceWith(buildFailed);
+        throw buildFailed;
+    }
+}
+
+export async function buildTableStructure(dir = undefined) {
+    const table = document.querySelector('#main-con');
+
+    try {
+        const tree = await getTreeWithError();
+        buildTableStructure1(dir, tree, table);
+    } catch (buildFailed) {
+        
+        if (buildFailed instanceof HTMLElement) {
+            table.replaceWith(buildFailed);
+        } else {
+            console.error('Unexpected error in buildTableStructure:', buildFailed);
+            throw buildFailed;
+        }
     }
 }
 
@@ -238,6 +252,26 @@ export function partDir(part) {
     return part.replaceAll(', ', '/').replaceAll(' ', '_') + '/';
 }
 
+export async function flatParts() {
+    const tree = await getTreeWithError();
+
+    let flat = [];
+
+    for (let part of tree) {
+        part.dir = part.path_part;
+        flat.push(part);
+
+        if (part.has_chapters) {
+            for (let chapter of part.chapters) {
+                chapter.dir = composeQueryDir(chapter.path_part, part.dir);
+                flat.push(chapter);
+            }
+        }
+    }
+
+    return flat;
+}
+
 /**
  * @deprecated Remove references
 */
@@ -273,3 +307,4 @@ export var flat_parts = [
     'Schedules, Third Schedule',
     'Schedules, Fourth Schedule'
 ];
+

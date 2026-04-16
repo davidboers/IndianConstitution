@@ -1,54 +1,70 @@
-import { flat_parts, partDir, indexDirs } from "/static/src/contents.js";
+import { flatParts,indexDirs } from "./contents.js";
 
-const select = document.getElementById("amendment");
+const select = document.querySelector("#amendment");
 for (let a = 1; a <= 106; a++) {
     let option = document.createElement("option");
     option.value = `${a}`;
-
-    if (`${a}`.endsWith("1")) {
-        option.innerHTML = `${a}st`;
-    } else if (`${a}`.endsWith("2")) {
-        option.innerHTML = `${a}nd`;
-    } else if (`${a}`.endsWith("3")) {
-        option.innerHTML = `${a}rd`;
-    } else {
-        option.innerHTML = `${a}th`;
-    }
+    option.innerHTML = `${a}`;
 
     select.appendChild(option);
 }
 
-var articles_box = document.getElementById("articles");
+var articles_box = document.querySelector('#articles');
 
-function updatedSelectedAmendment(selected_version) {
+async function updatedSelectedAmendment(selected_version) {
     articles_box.textContent = '';
 
     function makeArticle(dir) {
         var path = `${dir}version/a${selected_version}.html`;
-        var container = document.createElement("object");
-        container.type = "text/html";
+
+        var article_box = document.createElement('div');
+        article_box.style.display = 'none'; // Until fully loaded
+
+        var jump_to = document.createElement('a');
+        jump_to.setAttribute('href', dir);
+        jump_to.innerHTML = 'Jump to';
+        article_box.appendChild(jump_to);
+
+        var container = document.createElement('object');
+        container.type = 'text/html';
         container.data = path;
         container.onload = () => {
-            container.contentDocument.querySelector(
-                "#toggleButton"
-            ).style.display = "none";
-            container.height =
-                container.contentDocument.querySelector("body").clientHeight + 24;
-        };
-        articles_box.appendChild(container);
+            const toggleButton = container.contentDocument?.querySelector("#toggleButton");
+            if (toggleButton) {
+                toggleButton.style.display = "none";
+            }
+            const body = container.contentDocument?.querySelector('body');
+            if (body) {
+                container.height = body.clientHeight + 24;
+            }
+        };        
+        article_box.appendChild(container);
+
         fetch(path).then((response) => {
             if (response.status !== 200) {
-                articles_box.removeChild(container);
+                // Don't render this article
+                
+            } else {
+                container.data = path;
+                articles_box.appendChild(article_box);
+                article_box.style.display = 'block';
             }
+        }).catch((error) => {
+            console.error('Error checking article:', error);
         });
+
     }
 
-    function makePart(articles) {
-        articles.map(makeArticle);
+    let flat;
+    try {
+        flat = await flatParts();
+    } catch (buildFailed) {
+        articles_box.replaceWith(buildFailed);
+        return;
     }
 
-    flat_parts.map((part) => {
-        let dir = partDir(part);
+    flat.map((part) => {
+        let dir = part.dir;
         indexDirs(`Failed to index ${dir}`, (dir = dir)).then((articles) =>
             articles.map((article) => makeArticle(dir + article))
         );
@@ -56,5 +72,5 @@ function updatedSelectedAmendment(selected_version) {
 }
 
 select.oninput = () => {
-    updatedSelectedAmendment(document.getElementById("amendment").value);
+    updatedSelectedAmendment(document.querySelector("#amendment").value);
 }

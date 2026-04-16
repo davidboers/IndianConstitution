@@ -47,7 +47,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 * Ancestry
 * Navbar (top)
-* Changes by amendment
 
 ## Content
 

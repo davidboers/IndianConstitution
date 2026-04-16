@@ -37,7 +37,11 @@ function makeArticle(article) {
                 .then(response => response.text())
                 .then(html => {
                     const version_doc = parseHTMLDoc(html);
-                    let margin_text = version_doc.querySelector('.art').innerText;
+                    let margin_elem = version_doc.querySelector('.art');
+
+                    Array.from(margin_elem.querySelectorAll('del, .del')).map(del => margin_elem.removeChild(del));
+
+                    let margin_text = margin_elem.innerText;
                     if (margin_text.startsWith(num)) {
                         margin_text = margin_text.substr(num.length + 1);
                     }

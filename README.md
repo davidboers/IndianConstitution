@@ -43,7 +43,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 * Table of Contents format
 * Government of India Act, 1935 links
 * Multiline article references
-* Fix article margins in TOC if margin was changed during the last amendment (see article 334)
 
 ## Features
 

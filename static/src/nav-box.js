@@ -1,57 +1,4 @@
-//import { composeQueryDir, getTree } from "./utils";
-
-/**
- * These are in here temporarily while I figure out what to do about this script not
- * loading as a module.
- */
-
-const lang = getLanguage();
-
-const tree_path = `/${lang}/tree.json`;
-
-async function getTree() {
-    return fetch(tree_path);
-}
-
-function getLanguage(enDefault = true) {
-    const html = document.querySelector('html');
-
-    if (html.hasAttribute('lang')) {
-        return html.getAttribute('lang');
-    }
-
-    if (enDefault) {
-        return 'en';
-    }
-}
-
-function normalizeDirName(path) {
-    const parts = path.split('/');
-    const parentDir = parts[parts.length - 2];
-    return parentDir.replace(/_/g, ' ');
-}
-
-function composeQueryDir(path, dir = undefined) {
-    const stripSideSlashes = (t) => t.split('/').filter((prt) => prt.length > 0).join('/');
-
-    path = stripSideSlashes(path);
-    if (dir) {
-        dir = stripSideSlashes(dir);
-
-        const dup_lang = `${lang}/`;
-        if (dir.startsWith(dup_lang)) {
-            dir = dir.substring(dup_lang.length)
-        }
-    }
-
-    let query_dir = `/${lang}`;
-    if (dir && path !== dir) query_dir = `${query_dir}/${dir}`;
-    query_dir = `${query_dir}/${path}/`;
-    return query_dir;
-}
-
-// End.
-
+import { composeQueryDir, getTree, lang, normalizeDirName } from "./utils.js";
 
 
 const nav = document.querySelector('#nav');
@@ -103,7 +50,7 @@ void async function () {
     const parent_nav = document.getElementById('parent-nav');
     if (!parent_nav) return;
 
-    addLink = (dir, header) => {
+    function addLink(dir, header) {
         let link_elem = makeLinkListElem(`${dir}contents.html`, header);
         parent_nav.append(link_elem);
     }

@@ -1,4 +1,6 @@
-const text = Array.from(document.querySelectorAll('span.ins'))
-     .concat(Array.from(document.querySelectorAll('span.del')))
-     .concat(Array.from(document.querySelectorAll('li.renum')));
-text.forEach(span => span.classList.add('changes'));
+/**
+ * @fileoverview This file is redundant as its previous features have been moved to './toggle-changes.js'.
+ * @deprecated Remove from .html files.
+ */
+
+console.warn('[Deprecation Warning]: auto-show-changes.js is redundant.');

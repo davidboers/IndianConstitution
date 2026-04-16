@@ -52,7 +52,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Content
 
-* Article 228A is not finished
 * Fourth Schedule is not finished
 * Remaining Schedules
 * Appendices

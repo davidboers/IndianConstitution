@@ -37,10 +37,23 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 # Todo
 
-* Changes by amendment
-* Government of India Act, 1935 links
+## Quality and Usability
+
 * Fix timelines
+* Table of Contents format
+* Government of India Act, 1935 links
 * Multiline article references
 * Fix article margins in TOC if margin was changed during the last amendment (see article 334)
+
+## Features
+
+* Ancestry
+* Navbar (top)
+* Changes by amendment
+
+## Content
+
 * Article 228A is not finished
 * Fourth Schedule is not finished
+* Remaining Schedules
+* Appendices

@@ -41,11 +41,11 @@ def extract_title(html, fullpath):
         print(f'Warning: {fullpath} has no title.')
         return 'Untitled'
     
-    title = title.group(1).lower()
+    title = title.group(1)
 
     # Generalize titles of Schedules other than the pre-1956 First Schedule
 
-    if 'schedule' in title:
+    if 'Schedule' in title:
         schedule_ref = re.search(FULL_SCHEDULES, title, re.IGNORECASE)
 
         if schedule_ref is not None:
@@ -75,10 +75,11 @@ def reference_finder(path):
                     
                     name = html.split('<p class="art">')[1].split('</p>')[0].replace('—', '') # Strip node marking and hyphen
                     name = re.sub(r'\s+', ' ', name)
-                    if re.search(r'First Schedule', title, re.IGNORECASE):
-                        name = re.sub(r'(?<=Part [A-D])\.', r' of the First Schedule.', name)
+                    if re.search(r'Schedule', title, re.IGNORECASE):
+                        name = title
 
-                    reference_links[title] = {
+                    this_ref_id = title.lower()
+                    reference_links[this_ref_id] = {
                         "name": name,
                         "path": artpath
                     }
@@ -86,10 +87,10 @@ def reference_finder(path):
                     references = find_references(html)
                     for reference in references:
                         reference = reference.lower()
-                        if title == reference:
+                        if this_ref_id == reference:
                             continue
-                        if (reference, title) not in pairs and (title, reference) not in pairs:
-                            pairs.append((title, reference))
+                        if (reference, this_ref_id) not in pairs and (this_ref_id, reference) not in pairs:
+                            pairs.append((this_ref_id, reference))
 
     cross_references = [
         [

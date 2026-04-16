@@ -22,8 +22,22 @@ export async function buildTableStructure(dir = undefined) {
 
 function buildTableStructure1(dir, tree, table) {
 
+    if (!dir) { // Main TOC
+
+        const preamble = tree.find((part) => part.preamble);
+
+        const tr = document.createElement('tr');
+        const tdx = document.createElement('td');
+        const p_link = document.createElement('td');
+        addLinkToEntry(p_link, preamble.header, preamble.path_part);
+        tr.appendChild(tdx);
+        tr.appendChild(p_link);
+        table.appendChild(tr);
+
+    }
+
     for (let part of tree) {
-        if (dir && !dir.includes(part.path_part)) {
+        if ((dir && !dir.includes(part.path_part)) || part.preamble) {
             continue;
         }
 
@@ -153,10 +167,7 @@ function makeArticle(article) {
                     margin_text = margin_text.replace('—', '');
 
                     const margin = document.createElement('td');
-                    const link = document.createElement('a');
-                    link.innerHTML = margin_text;
-                    link.setAttribute('href', article);
-                    margin.appendChild(link);
+                    addLinkToEntry(margin, margin_text, article);
 
                     if (doc.querySelector('#omitted-indicator')) {
                         const i = document.createElement('i');
@@ -185,6 +196,13 @@ async function articles(contents, exclude = [], dir = './') {
                 .map(makeArticle)
                 .map(a => contents.appendChild(a))
         );
+}
+
+function addLinkToEntry(margin, margin_text, link) {
+    const a = document.createElement('a');
+    a.innerHTML = margin_text;
+    a.setAttribute('href', link);
+    margin.appendChild(a);
 }
 
 // Subheadings

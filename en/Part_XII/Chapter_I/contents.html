@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/contents.css" />
     <title>Table of Contents — Part XII — Chapter I — Constitution of India</title>
 </head>
 <body>
-    <table id="contents">
-        <tr>
-            <th colspan="2" id="part-header">Chapter I.—Finance</th>
-        </tr>
+    <table id="main-con">
+
     </table>
     <script type="module">
-        import { articles, makeSubheadings } from '/static/src/contents.js';
-
-        const contents = document.getElementById('contents');
-        const subheadings = {
-            'a264': 'General',
-            'a268': 'Distribution of Revenues between the Union and the States',
-            'a282': 'Miscellaneous Financial Provisions'
-        }
-
-        window.onload = () => {
-            articles(contents).then(() => makeSubheadings(subheadings));
-        }
+        import { buildTableStructure } from "/static/src/contents.js";
+        buildTableStructure('Part_XII/Chapter_I/');
     </script>
 </body>
 </html>

@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/contents.css" />
     <title>Table of Contents — Part XXI — Constitution of India</title>
 </head>
 <body>
-    <table id="contents">
-        <tr>
-            <th colspan="2" id="part-num">Part XXI</th>
-        </tr>
-        <tr>
-            <th colspan="2" id="part-header">Temporary, Transitional and Special Provisions</th>
-        </tr>
+    <table id="main-con">
+
     </table>
-    <p>Before the Thirteenth Amendment, this Part was called "Temporary and Transitional Provisions."</p>
     <script type="module">
-        import { articles } from '/static/src/contents.js';
-        
-        const contents = document.getElementById('contents');
-        window.onload = () => articles(contents);
+        import { buildTableStructure } from "/static/src/contents.js";
+        buildTableStructure('Part_XXI/');
     </script>
 </body>
 </html>

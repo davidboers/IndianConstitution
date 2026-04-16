@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/contents.css" />
     <title>Table of Contents — Part II — Constitution of India</title>
 </head>
 <body>
-    <table class="contents" id="part_ii">
-        <tr>
-            <th colspan="2" id="part-num">Part II</th>
-        </tr>
-        <tr>
-            <th colspan="2" id="part-header">Citizenship</th>
-        </tr>
+    <table id="main-con">
+
     </table>
-    <script type="module" src="/static/src/contents.js"></script>
+    <script type="module">
+        import { buildTableStructure } from "/static/src/contents.js";
+        buildTableStructure('Part_II/');
+    </script>
 </body>
 </html>

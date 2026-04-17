@@ -89,12 +89,12 @@ function buildTableStructure1(dir, tree, table) {
 
         table.appendChild(tbody_p);
 
-        let p_dir = composeQueryDir(part.path_part, dir);
+        let p_dir = composeQueryDir(part.path_part);
 
         if (part.has_chapters) {
 
             for (let chapter of part.chapters) {
-                if (dir && !dir.includes(chapter.path_part)) {
+                if (dir && dir !== part.path_part && !dir.includes(chapter.path_part)) {
                     continue;
                 }
 

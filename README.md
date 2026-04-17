@@ -50,6 +50,5 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Content
 
-* Fourth Schedule is not finished
 * Remaining Schedules
 * Appendices

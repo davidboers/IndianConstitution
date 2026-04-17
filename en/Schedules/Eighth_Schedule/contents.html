@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
-    <title>Table of Contents — Eighth Schedule — Constitution of India</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/contents.css" />
+    <title>Table of Contents — Schedules — Eighth Schedule — Constitution of India</title>
 </head>
 <body>
-    <table id="contents">
-        <tr>
-            <th colspan="2" id="part-num">Eighth Schedule</th>
-        </tr>
-        <tr>
-            <th colspan="2" id="part-header">Languages</th>
-        </tr>
+    <table id="main-con">
+
     </table>
-    <script>
-        const link = document.getElementById('part-header');
-        link.onclick = () => {
-            window.top.location.href = './Eighth_Schedule/';
-        };
+    <script type="module">
+        import { buildTableStructure } from "/static/src/contents.js";
+        buildTableStructure('Schedules/Eighth_Schedule/');
     </script>
 </body>
 </html>

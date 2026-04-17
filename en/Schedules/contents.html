@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/contents.css" />
     <title>Table of Contents — Schedules — Constitution of India</title>
 </head>
 <body>
-    <table id="contents">
-        <tr>
-            <th colspan="2" id="part-num">Schedules</th>
-        </tr>
+    <table id="main-con">
+
     </table>
     <script type="module">
-        import { mainTable } from '/static/src/contents.js';
-
-        const contents = document.getElementById('contents');
-        const schedules = [
-            'First_Schedule/',
-            'Second_Schedule/',
-            'Third_Schedule/',
-            'Fourth_Schedule/',
-            'Seventh_Schedule/',
-            'Eighth_Schedule/',
-            'Ninth_Schedule/',
-            'Tenth_Schedule/'
-        ]
-        window.onload = () => mainTable(contents, schedules);
+        import { buildTableStructure } from "/static/src/contents.js";
+        buildTableStructure('Schedules/');
     </script>
 </body>
 </html>

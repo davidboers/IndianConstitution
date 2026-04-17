@@ -21,18 +21,22 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/13079/1/a2019-44.pdf): Dadra and Nagar Haveli and Daman and Diu (Merger of Union Territories) Act, 2019.
 * [link](https://prsindia.org/files/bills_acts/acts_states/goa/1987/1987GOA18.pdf): Goa, Daman and Diu Reorganisation Act, 1987.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1751/1/197931.pdf): Haryana and Uttar Pradesh (Alteration of Boundaries) Act, 1979.
-* [link](https://www.indiacode.nic.in/bitstream/123456789/15242/1/re-organisation_act,2019.pdf): Jammu and Kashmir Reorganisation Act, 2019.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/15875/1/the_jammu_and_kashmir_reorganisation_act_2019.pdf): Jammu and Kashmir Reorganisation Act, 2019.
 * [link](https://www.indiacode.nic.in/repealedfileopen?rfilename=A1973-34.pdf): Laccadive, Minicoy and Admindivi Islands (Alteration of Name) Act, 1973.
-* [link](https://www.indiacode.nic.in/bitstream/123456789/1992/3/a2000-28.pdf): Madhya Pradesh Reorganisation Act, 2000.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1992/1/aa200028.pdf): Madhya Pradesh Reorganisation Act, 2000.
 * [link](https://indiankanoon.org/doc/127846701/): Madras State (Alteration of Name) Act, 1968.
 * [link](https://indiankanoon.org/doc/45260278/): Mysore State (Alteration of Name) Act, 1973.
-* [link](https://www.indiacode.nic.in/bitstream/123456789/1534/1/197181.pdf): North-Eastern Areas (Reorganisation) Act, 1971.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1534/1/A1971-81.pdf): North-Eastern Areas (Reorganisation) Act, 1971.
+* [link](https://upload.indiacode.nic.in/view-casepdf?type=act&id=AC_CEN_5_24_00021_201115_1517807326989): Orissa (Alteration of Name) Act, 2011.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/15932/1/the_pondicherry_%28alteration_of_name%29_act%2C_2006.pdf): Pondicherry (Alteration of Name) Act, 2006.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1645/1/196631.pdf): Punjab Reorganisation Act, 1966.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1374/3/a1959-47.pdf): Rajasthan and Madhya Pradesh (Transfer of Territories) Act, 1959.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1680/1/a1956-37.pdf): States Reorganisation Act, 1956.
-* [link](https://www.indiacode.nic.in/bitstream/123456789/1464/1/197053.pdf): State of Himachal Pradesh Act, 1970.
+* [link](https://indiankanoon.org/doc/994864/): State of Arunachal Pradesh Act, 1986.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1464/1/A1970-53.pdf): State of Himachal Pradesh Act, 1970.
+* [link](https://indiankanoon.org/doc/104006180/): State of Mizoram Act, 1986.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1384/1/196227.pdf): State of Nagaland Act, 1962.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/2047/1/A2006-52.pdf): Uttaranchal (Alteration of Name) Act, 2006.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2000/1/200029.pdf): Uttar Pradesh Reorganisation Act, 2000.
 
 # Todo

@@ -97,6 +97,28 @@ li.changes.renum::marker, li.changes.renum::before {
     text-align: center;
 }
 
+/* Constitutional influences */
+
+#influence li {
+    list-style: none;
+}
+
+.fi {
+    border-radius: 0.25em;
+}
+
+.fi-ca-his { /* Canada (1921-1957) */
+    background-image: url(../flags/4x3/ca-his.svg);
+}
+
+.fi-su { /* Soviet Union */
+    background-image: url(../flags/4x3/su.svg);
+}
+
+.fi-za-his { /* South Africa (1928-1994) */
+    background-image: url(../flags/4x3/za-his.svg);
+}
+
 /* Tables (First and Fourth Schedules) */
 
 table {

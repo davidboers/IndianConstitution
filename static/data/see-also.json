@@ -221,6 +221,10 @@
         {
             "name": "172. Duration of State Legislatures.",
             "path": "Part_VI/Chapter_III/172/"
+        },
+        {
+            "name": "352. Proclamation of Emergency.",
+            "path": "Part_XVIII/352/"
         }
     ],
     [
@@ -465,7 +469,7 @@
     ],
     [
         {
-            "name": "108. Joint sitting of both Houses in certain cases.",
+            "name": "108. Joint sitting of both Houses in certain cases. (Parliament)",
             "path": "Part_V/Chapter_II/108/"
         },
         {
@@ -635,12 +639,20 @@
     ],
     [
         {
-            "name": "124. Establishment and constitution of the Supreme Court.",
+            "name": "124. Establishment and constitution of Supreme Court.",
             "path": "Part_V/Chapter_IV/124/"
         },
         {
             "name": "216. Constitution of High Courts.",
             "path": "Part_VI/Chapter_V/216/"
+        },
+        {
+            "name": "217. Appointment and conditions of the office of Judge of a High Court.",
+            "path": "Part_VI/Chapter_V/217/"
+        },
+        {
+            "name": "218. Application of certain provisions relating to Supreme Court to High Courts.",
+            "path": "Part_VI/Chapter_V/218/"
         }
     ],
     [

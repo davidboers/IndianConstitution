@@ -49,7 +49,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Features
 
-* Ancestry
 * Navbar (top)
 
 ## Content

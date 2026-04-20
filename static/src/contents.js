@@ -147,7 +147,7 @@ function makeArticle(article) {
             if (margin_text.startsWith(num)) {
                 margin_text = margin_text.substr(num.length + 1);
             }
-            margin_text = margin_text.replace('—', '');
+            margin_text = margin_text.replace(/—$/, '');
 
             const $margin = $('<td></td>');
             addLinkToEntry($margin, margin_text, article);
@@ -201,8 +201,7 @@ function partID(part) {
     return part
         .replaceAll(', ', '_')
         .replaceAll(' ', '_')
-        .toLowerCase()
-        .replace('/');
+        .toLowerCase();
 }
 
 export function partDir(part) {

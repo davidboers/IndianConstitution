@@ -1,29 +1,125 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+:root {
+    --base-font-size: 12px;
+    --base-page-margin: 8px;
+    --base-background: darkseagreen;
 }
 
-.art-holder {
-    height: 500px;
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--base-font-size);
+}
+
+#contents {
+    display: grid;
+}
+
+/* Header */
+
+header {
+    padding: 1em 2em;
+    background: lightgray;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+#font-size-toggle {
+    padding: inherit;
+    margin-left: auto;
+    place-content: center;
+}
+
+#font-size-toggle button {
+    text-decoration: none;
+    padding: 0.25em;
+}
+
+#font-size-toggle button:hover {
+    opacity: 0.7;
+}
+
+/* Main navbar */
+
+#main-nav {
+    display: flex;
+    background-color: #333;
+}
+
+#main-nav a {
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    text-align: center;
+}
+
+#main-nav a:hover {
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background: darkgray;
+    color: white;
+}
+
+.fa {
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Settings for container divs */
+
+.page-margin {
+    padding: var(--base-page-margin);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Elements of article page */
+
+#container {
+    background-color: var(--base-background);
+}
+
+#art-info, #nav {
+    margin: var(--base-page-margin);
+}
+
+.art-holder, #nav {
+    border: 2px solid black;
+    border-radius: 9pt;
+    background-color: floralwhite;
+    overflow: auto;
+}
+
+#art-info {
+    flex: 65%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #nav {
-    display: inline-block;
-    border: 2px solid black;
-    margin: 5px;
-    position: absolute;
-    width: -webkit-fill-available;
-    height: 550px;
-    overflow: auto;
+    flex: 35%;
+}
+
+.art-holder {
+    padding: 0 8px;
 }
 
 .nav-sec {
     text-align: center;
     font-weight: bold;
-}
-
-#contents {
-    display: grid;
 }
 
 /* Text elements */
@@ -36,7 +132,14 @@
     text-align: center;
 }
 
-.cl, .ex, .scl, .item {
+/*
+ * cl:; Clause
+ * scl: Sub-clause
+ * ex: Explanation
+ * item: Item 
+ */
+
+.cl, .scl, .ex, .item {
     text-indent: 1em;
 }
 

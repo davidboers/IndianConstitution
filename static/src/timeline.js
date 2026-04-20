@@ -6,14 +6,10 @@ function getFrac(date) {
     return (date.getTime() - begin.getTime()) / (end.getTime() - begin.getTime());
 }
 
-function changeVersion(link) {
-    document.querySelector('.art-holder').setAttribute('data', link);
-    document.querySelector('.timeline-label-bold').className = 'timeline-label';
-    const labels = document.getElementsByClassName('timeline-label');
-    for (let i = 0; i < labels.length; i++) {
-        const selected = labels[i].getAttribute('name') === link;
-        labels[i].className = (selected) ? 'timeline-label-bold' : 'timeline-label';
-    }
+function changeVersion(label, link) {
+    $('.art-holder').load(link);
+    $('.timeline-label-bold').removeClass('timeline-label-bold');
+    label.classList.add('timeline-label-bold');
 }
 
 function amendmentNumber(link) {
@@ -33,7 +29,7 @@ function amendmentNumber(link) {
     }
 }
 
-window.onload = () => {
+void function () {
     const timeline = document.getElementById('timeline');
     const coefficient = timeline.clientWidth / document.querySelector('body').clientWidth * 100;
 
@@ -57,10 +53,11 @@ window.onload = () => {
 
             const selected = document.querySelector('.art-holder').getAttribute('data') === link;
             const label = document.createElement('span');
-            label.innerHTML = year.toString() + '</br>' + amendmentNumber(link);
+            label.innerHTML = `<span>${year.toString()}<br>${amendmentNumber(link)}</span>`;
             label.style.left = `${frac}%`;
-            label.className = (selected) ? 'timeline-label-bold' : 'timeline-label';
-            label.onclick = () => changeVersion(link);
+            label.className = 'timeline-label';
+            if (selected) label.classList.add('timeline-label-bold');
+            label.onclick = () => changeVersion(label, link);
             label.setAttribute('name', link);
 
             return { date, label };
@@ -113,4 +110,4 @@ window.onload = () => {
     timeline.appendChild(top_labels);
     timeline.appendChild(axis);
     timeline.appendChild(bottom_labels);
-}
+}();

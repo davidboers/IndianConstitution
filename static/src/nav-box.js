@@ -5,7 +5,7 @@ const nav = document.querySelector('#nav');
 nav.innerHTML += `
     <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
-        <a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a>
+        <p><a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a></p>
         <form action="/${lang}/search.html" id="search-form"></form>
     </div>
     <ul id="parent-nav"></ul>
@@ -13,6 +13,7 @@ nav.innerHTML += `
     <ul></ul>
     <p class="nav-sec" id="cross-reference">Cross reference</p>
     <ul></ul>
+    <p class="nav-sec" id="lang-select">Select language</p>
     <div id="lang-nav"></div>`;
 
 // Search form
@@ -134,6 +135,6 @@ void async function () {
     var lang_nav = document.querySelector('div#lang-nav');
     lang_nav.innerHTML = await (await fetch('/static/templates/lang-nav.html')).text();
     Array.from(document.querySelectorAll('a.lang')).map(a => {
-        a.href = window.location.href.replace('/en/', `/${a.id}/`);
+        a.setAttribute('href', window.location.href.replace(`/${lang}/`, `/${a.id}/`));
     });
 }();

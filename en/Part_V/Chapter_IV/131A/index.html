@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/assets/timelines.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="/static/src/general.js" type="module"></script>
+    <script src="/static/src/timeline.js" type="module"></script>
+    <script src="/static/src/nav-box.js" type="module"></script>
     <title>Article 131A — Constitution of India</title>
 </head>
+
 <body>
-    <span id="omitted-indicator"></span>
-    <object class="art-holder" type="text/html" data="version/a44.html"></object>
-    <div id="nav">
-        <script src="/static/src/nav-box.js" type="module"></script>
+    <header></header>
+    <div id="main-nav"></div>
+
+    <div id="container" class="flex-container">
+        <div id="art-info">
+            <div class="art-holder" name="version/a44.html"></div>
+            <div id="timeline"></div>
+        </div>
+
+        <div id="nav"></div>
     </div>
-    <div id="timeline">
-        <script src="/static/src/timeline.js"></script>
-        <link rel="stylesheet" type="text/css" href="/static/assets/timelines.css">
-    </div>
+
+    <footer></footer>
 </body>
+
 </html>

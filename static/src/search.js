@@ -23,7 +23,7 @@ async function searchArticle(path, query) {
         .then(response => response.text())
         .then(html => {
             const doc = parseHTMLDoc(html);
-            return doc.querySelector('.art-holder').getAttribute('data');
+            return doc.querySelector('.art-holder').getAttribute('name');
         })
         .catch(error => console.error('Error finding current version of article:', error));
     const resultsCurrent = await searchArticleVersion(path + currentVersion, query, path);
@@ -42,7 +42,7 @@ async function searchArticle(path, query) {
     return hits.pop();
 }
 
-export async function searchArticles(paths, query) {
+async function searchArticles(paths, query) {
     const hits = await Promise.all(paths.map(path => searchArticle(path, query)))
         .then(hits => hits.filter(hit => hit != null));
     const container = document.getElementById('hits');
@@ -99,15 +99,38 @@ async function getArticleListRecursive(path, list) {
         list.push(path);
         return list;
     }
-    
+
     const links = getIndexedLinks(html);
     return Promise.all(links.filter(link => link.endsWith('/'))
-            .map(link => (path === './') ? link : path + link)
-            .map(link => getArticleListRecursive(link, list)))
+        .map(link => (path === './') ? link : path + link)
+        .map(link => getArticleListRecursive(link, list)))
         .then(() => { return list });
 }
 
-export function getArticleList(root = './') {
+function getArticleList(root = './') {
     let list = [];
     return getArticleListRecursive(root, list);
 }
+
+// Run
+
+void function () {
+    var search = window.location.search;
+    if (search !== undefined) {
+        var queryParam = search.substr(1).split('&')
+            .map(param => param.split('='))
+            .find(param => param[0] === 'query');
+        var query = queryParam ? queryParam[1] : undefined;
+        if (query !== undefined && query !== null) {
+            query = query.trim();
+            if (query.length > 0) {
+                query = query.replaceAll('+', ' ');
+                document.getElementById('query').value = query;
+                document.getElementById('hits').innerHTML = `<p id="loading">Loading...</p>`;
+                getArticleList().then(articles => searchArticles(articles, query));
+            } else {
+                localStorage.removeItem('query');
+            }
+        }
+    }
+}();

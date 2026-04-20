@@ -1,4 +1,4 @@
-window.onload = () => {
+void function () {
 
     // Convert <span class="ins/del"></span> to <ins></ins> or <del></del>
 
@@ -59,5 +59,5 @@ window.onload = () => {
             c.classList.remove('changes');
         }
     }
-}
+}();
 

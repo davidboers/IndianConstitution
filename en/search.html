@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
     <link rel="stylesheet" type="text/css" href="/static/assets/search.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="/static/src/general.js" type="module"></script>
+    <script src="/static/src/search.js" type="module"></script>
     <title>Search — Constitution of India</title>
 </head>
+
 <body>
-    <div>
+    <header></header>
+    <div id="main-nav"></div>
+
+    <div id="container" class="page-margin">
         <form>
             <input type="text" id="query" name="query">
             <button>Search</button>
@@ -19,28 +27,9 @@
         <div id="hits">
             <p id="no-results">No results found.</p>
         </div>
-
-        <script type="module">
-            import { getArticleList, searchArticles } from '/static/src/search.js';
-
-            var search = window.location.search;
-            if (search !== undefined) {
-                var query = search.substr(1).split('&')
-                    .map(param => param.split('='))
-                    .find(param => param[0] === 'query')[1];
-                if (query !== undefined) {
-                    query = query.trim();
-                    if (query.length > 0) {
-                        query = query.replaceAll('+', ' ');
-                        document.getElementById('query').value = query;
-                        document.getElementById('hits').innerHTML = `<p id="loading">Loading...</p>`;
-                        getArticleList().then(articles => searchArticles(articles, query));
-                    } else {
-                        localStorage.query = undefined;
-                    }
-                }
-            }
-        </script>
     </div>
+
+    <footer></footer>
 </body>
+
 </html>

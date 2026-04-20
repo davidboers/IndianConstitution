@@ -1,10 +1,11 @@
 #timeline {
     display: grid;
     height: 100px;
+    padding: 8px;
 }
 
 #timeline, .art-holder {
-    width: 65%;
+    width: -webkit-fill-available;
 }
 
 /* Axis */
@@ -34,18 +35,23 @@
 
 /* Labels */
 
-.timeline-label-container {
-    height: stretch; 
-}
-
 .timeline-label, .timeline-label-bold {
     cursor: pointer;
     position: sticky;
     text-align: center;
-    font-size: 12px;
     padding-left: 0.25em;
-    border-left: 1px solid gray;
+    border-left: 2px solid gray;
     display: inline-block;
+    height: 2.5em;
+}
+
+.timeline-label span {
+    display: none;
+    position: absolute;
+}
+
+.timeline-label:hover span, .timeline-label-bold span {
+    display: inline;
 }
 
 .timeline-label-bold {

@@ -1,4 +1,4 @@
-import { composeQueryDir, getTree, lang, normalizeDirName } from "./utils.js";
+import { composeQueryDir, getTree, lang, normalizeDirName, toc_link_attr } from "./utils.js";
 
 
 const $nav = $('#nav');

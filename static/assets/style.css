@@ -33,6 +33,14 @@ header {
 #font-size-toggle button {
     text-decoration: none;
     padding: 0.25em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#font-size-toggle button:focus {
+    outline: 2px solid #333;
+    outline-offset: 2px;
 }
 
 #font-size-toggle button:hover {

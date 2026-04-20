@@ -2,6 +2,7 @@
     display: grid;
     height: 100px;
     padding: 8px;
+    margin-top: auto;
 }
 
 #timeline, .art-holder {
@@ -40,7 +41,7 @@
     position: sticky;
     text-align: center;
     padding-left: 0.25em;
-    border-left: 2px solid gray;
+    border-left: 2px solid black;
     display: inline-block;
     height: 2.5em;
 }

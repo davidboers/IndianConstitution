@@ -6,10 +6,10 @@ function getFrac(date) {
     return (date.getTime() - begin.getTime()) / (end.getTime() - begin.getTime());
 }
 
-function changeVersion(label, link) {
+function changeVersion($label, link) {
     $('.art-holder').load(link);
     $('.timeline-label-bold').removeClass('timeline-label-bold');
-    label.classList.add('timeline-label-bold');
+    $label.addClass('timeline-label-bold');
 }
 
 function amendmentNumber(link) {
@@ -30,12 +30,13 @@ function amendmentNumber(link) {
 }
 
 void function () {
-    const timeline = document.getElementById('timeline');
-    const coefficient = timeline.clientWidth / document.querySelector('body').clientWidth * 100;
+    const $timeline = $('#timeline');
+    const coefficient = $timeline.width() / $('body').width() * 100;
 
-    const top_labels = document.createElement('div');
-    const bottom_labels = document.createElement('div');
-    top_labels.className = bottom_labels.className = 'timeline-label-container';
+    const $top_labels = $('<div></div>');
+    const $bottom_labels = $('<div></div>');
+    $top_labels.addClass('timeline-label-container');
+    $bottom_labels.addClass('timeline-label-container');
 
     async function addAmendment(link) {
         try {
@@ -43,24 +44,22 @@ void function () {
             const html = await response.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const effectiveDate = doc.querySelector('#effective-date');
-            const day = parseInt(effectiveDate.querySelector('#eff-day').innerHTML);
-            const month = parseInt(effectiveDate.querySelector('#eff-month').innerHTML) - 1; // 0 indexed
-            const year = parseInt(effectiveDate.querySelector('#eff-year').innerHTML);
+            const $effectiveDate = $(doc).find('#effective-date');
+            const day = parseInt($effectiveDate.find('#eff-day').html());
+            const month = parseInt($effectiveDate.find('#eff-month').html()) - 1; // 0 indexed
+            const year = parseInt($effectiveDate.find('#eff-year').html());
 
             const date = new Date(year, month, day);
             const frac = getFrac(date) * coefficient;
 
-            const selected = document.querySelector('.art-holder').getAttribute('data') === link;
-            const label = document.createElement('span');
-            label.innerHTML = `<span>${year.toString()}<br>${amendmentNumber(link)}</span>`;
-            label.style.left = `${frac}%`;
-            label.className = 'timeline-label';
-            if (selected) label.classList.add('timeline-label-bold');
-            label.onclick = () => changeVersion(label, link);
-            label.setAttribute('name', link);
+            const selected = $('.art-holder').attr('name') === link;
+            const $label = $(`<span class="timeline-label"><span>${year.toString()}<br>${amendmentNumber(link)}</span></span>`);
+            $label.css('left', `${frac}%`);
+            if (selected) $label.addClass('timeline-label-bold');
+            $label.on('click', () => changeVersion($label, link));
+            $label.attr('name', link);
 
-            return { date, label };
+            return { date, $label };
         } catch (error) {
             console.error('Error fetching version html:', error);
         }
@@ -71,43 +70,41 @@ void function () {
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const links = Array.from(doc.querySelectorAll('a'))
-                .map(link => 'version/' + link.innerHTML)
-                .filter(href => href.endsWith('.html'));
+            const $links = Array.from($(doc).find('a')
+                .map((_, link) => 'version/' + link.innerHTML)
+                .filter((_, href) => href.endsWith('.html')));
 
-            Promise.all(links.map(addAmendment)).then(amendments =>
+            Promise.all($links.map(addAmendment)).then(amendments =>
                 amendments
+                    .filter(Boolean)
                     .sort((a1, a2) => a1.date - a2.date)
                     .forEach(amendment => {
 
-                        if (bottom_labels.children.length > top_labels.children.length) {
-                            top_labels.appendChild(amendment.label);
+                        if ($bottom_labels.children().length > $top_labels.children().length) {
+                            $top_labels.append(amendment.$label);
                         } else {
-                            bottom_labels.appendChild(amendment.label);
+                            $bottom_labels.append(amendment.$label);
                         }
 
                     }))
         })
         .catch(error => console.error('Error fetching directory listing:', error));
 
-    const axis = document.createElement('div');
-    const line = document.createElement('div');
-    axis.className = 'timeline-axis';
-    line.className = 'timeline-line';
-    axis.appendChild(line);
+    const $axis = $('<div class="timeline-axis"></div>');
+    const $line = $('<div class="timeline-line"></div>');
+    $line.appendTo($axis);
 
     for (let decade = 1950; decade < 2030; decade += 10) {
-        const dec_mark = document.createElement('div');
+        const $dec_mark = $('<div class="dec-mark"></div>');
 
         const date = new Date(decade, 0, 1); // 0 = January (0 indexed)
         const frac = getFrac(date) * coefficient;
 
-        dec_mark.className = 'dec-mark';
-        dec_mark.style.left = `${frac}%`;
-        axis.appendChild(dec_mark);
+        $dec_mark.css('left', `${frac}%`);
+        $dec_mark.appendTo($axis);
     }
 
-    timeline.appendChild(top_labels);
-    timeline.appendChild(axis);
-    timeline.appendChild(bottom_labels);
+    $top_labels.appendTo($timeline);
+    $axis.appendTo($timeline);
+    $bottom_labels.appendTo($timeline);
 }();

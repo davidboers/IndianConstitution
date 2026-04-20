@@ -314,5 +314,18 @@
         "path_part": "Schedules/Fourth_Schedule/",
         "has_chapters": false,
         "header": "Allocation of seats in the Council of States"
+    },
+    {
+        "path_part": "Schedules/Seventh_Schedule/",
+        "has_chapters": false
+    },
+    {
+        "path_part": "Schedules/Eighth_Schedule/",
+        "has_chapters": false,
+        "header": "Languages"
+    },
+    {
+        "path_part": "Schedules/Ninth_Schedule/",
+        "has_chapters": false
     }
 ]

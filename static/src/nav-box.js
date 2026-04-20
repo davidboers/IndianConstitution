@@ -90,17 +90,17 @@ void async function () {
             let $tr_entry = $(this).find(`tr[${toc_link_attr}='${window.location.pathname.toString()}']`);
             let $prev_sibling = $tr_entry.prev();
             let $next_sibling = $tr_entry.next();
-            while ($prev_sibling && $prev_sibling.children().first().hasClass('subheading')) {
+            while ($prev_sibling.length && $prev_sibling.children().first().hasClass('subheading')) {
                 $prev_sibling = $prev_sibling.prev();
             }
-            if ($prev_sibling) {
+            if ($prev_sibling.length) {
                 let adjacent_article = $prev_sibling.attr(toc_link_attr);
                 $('a#prev-art').attr('href', adjacent_article);
             }
-            while ($next_sibling && $next_sibling.children().first().hasClass('subheading')) {
+            while ($next_sibling.length && $next_sibling.children().first().hasClass('subheading')) {
                 $next_sibling = $next_sibling.next();
             }
-            if ($next_sibling) {
+            if ($next_sibling.length) {
                 let adjacent_article = $next_sibling.attr(toc_link_attr);
                 $('a#next-art').attr('href', adjacent_article);
             }

@@ -45,11 +45,8 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 * Fix timelines
 * Government of India Act, 1935 links
-* Multiline article references
 
 ## Features
-
-* Navbar (top)
 
 ## Content
 

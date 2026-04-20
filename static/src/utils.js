@@ -1,3 +1,7 @@
+export const toc_link_attr = 'title'; // bc I might change this
+
+
+
 export function parseHTMLDoc(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');

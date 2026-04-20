@@ -1,5 +1,5 @@
 
-import { parseHTMLDoc, getIndexedLinks, composeQueryDir, normalizeDirName, getTree } from './utils.js';
+import { parseHTMLDoc, getIndexedLinks, composeQueryDir, normalizeDirName, getTree, toc_link_attr } from './utils.js';
 
 async function getTreeWithError() {
 
@@ -24,7 +24,7 @@ export async function buildTableStructure(dir = undefined) {
         const tree = await getTreeWithError();
         buildTableStructure1(dir, tree, table);
     } catch (buildFailed) {
-        
+
         if (buildFailed instanceof HTMLElement) {
             table.replaceWith(buildFailed);
         } else {
@@ -35,6 +35,8 @@ export async function buildTableStructure(dir = undefined) {
 }
 
 function buildTableStructure1(dir, tree, table) {
+
+    let promises = [];
 
     if (!dir) { // Main TOC
 
@@ -113,23 +115,25 @@ function buildTableStructure1(dir, tree, table) {
                 table.appendChild(tbody_c);
 
                 let c_dir = composeQueryDir(chapter.path_part, p_dir);
-                articles(tbody_c, undefined, c_dir).then(() => {
+                promises.push(articles(tbody_c, undefined, c_dir).then(() => {
                     if (chapter.subheadings) {
                         makeSubheadings(chapter.subheadings);
                     }
-                });
+                }));
 
             }
 
         } else {
 
-            articles(tbody_p, undefined, p_dir).then(() => {
+            promises.push(articles(tbody_p, undefined, p_dir).then(() => {
                 if (part.subheadings) {
                     makeSubheadings(part.subheadings);
                 }
-            });
+            }));
         }
     }
+
+    Promise.all(promises).then(() => $(document).trigger('tableBuilt'));
 }
 
 // Find articles
@@ -155,7 +159,7 @@ function makeArticle(article) {
     const split_path = article.split('/');
     const dir = split_path[split_path.length - 2];
     entry.id = (isNaN(dir) && isNaN(dir.substr(0, dir.length - 1))) ? dir : 'a' + dir;
-    entry.title = article;
+    entry.setAttribute(toc_link_attr, article);
     const num = (dir + '.').replace('_', ' ');
     num_cell.innerHTML = num;
     num_cell.style = 'width: 5em;';

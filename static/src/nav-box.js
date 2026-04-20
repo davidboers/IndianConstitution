@@ -52,12 +52,6 @@ function makeLinkListElem(link, text) {
     return li;
 }
 
-let parent_toc = document.querySelector('#contents-hidden');
-
-async function importParentContents() {
-    parent_toc.innerHTML = await (await fetch('../contents.html')).text();
-}
-
 void async function () {
     const parent_nav = document.getElementById('parent-nav');
     if (!parent_nav) return;
@@ -91,23 +85,29 @@ void async function () {
 // Previous/next articles
 
 void async function () {
-    if (parent_toc.innerHTML.length === 0) {
-        await importParentContents();
-    }
-    let tr_entry = Array.from(parent_toc.querySelectorAll('tr')).find(tr => tr.title == window.location.href);
-    let prev_sibling = tr_entry.previousElementSibling;
-    let next_sibling = tr_entry.nextElementSibling;
-    while (prev_sibling !== null && prev_sibling.firstChild.className === 'subheading') {
-        prev_sibling = prev_sibling.previousElementSibling
-    }
-    if (prev_sibling !== null) {
-        let adjacent_article = prev_sibling.title;
-        document.querySelector('a#prev-art').href = adjacent_article;
-    }
-    while (next_sibling !== null && next_sibling.firstChild.className === 'subheading') {
-        next_sibling = next_sibling.nextElementSibling
-    }
-};
+    $('#contents-hidden').load('../contents.html', function () {
+        $(document).one('tableBuilt', function () {
+            let $tr_entry = $(this).find(`tr[${toc_link_attr}='${window.location.pathname.toString()}']`);
+            let $prev_sibling = $tr_entry.prev();
+            let $next_sibling = $tr_entry.next();
+            while ($prev_sibling && $prev_sibling.children().first().hasClass('subheading')) {
+                $prev_sibling = $prev_sibling.prev();
+            }
+            if ($prev_sibling) {
+                let adjacent_article = $prev_sibling.attr(toc_link_attr);
+                $('a#prev-art').attr('href', adjacent_article);
+            }
+            while ($next_sibling && $next_sibling.children().first().hasClass('subheading')) {
+                $next_sibling = $next_sibling.next();
+            }
+            if ($next_sibling) {
+                let adjacent_article = $next_sibling.attr(toc_link_attr);
+                $('a#next-art').attr('href', adjacent_article);
+            }
+        })
+    });
+
+}();
 
 // See also & cross reference
 

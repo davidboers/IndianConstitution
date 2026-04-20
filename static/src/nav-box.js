@@ -51,8 +51,11 @@ void async function () {
     if (!part) return; // Means tree.json not updated yet
 
     const part_dir = composeQueryDir(part.path_part);
-    const part_header = `${normalizeDirName(part.path_part)}.—${part.header}`;
-    addLink(part_dir, part_header);
+    let part_label = normalizeDirName(part.path_part);
+    if (part.header) {
+        part_label = part_label.concat(`.—${part.header}`);
+    }
+    addLink(part_dir, part_label);
 
     if (part.has_chapters) {
         const chapter = part.chapters.find((chapter) => location.href.includes(chapter.path_part));

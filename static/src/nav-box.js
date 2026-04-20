@@ -13,7 +13,10 @@ $nav.html(`
     <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
         <p><a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a></p>
-        <form action="/${lang}/search.html" id="search-form"></form>
+        <form action="/${lang}/search.html" id="search-form">
+            <input type="text" id="query" name="query"></input>
+            <button>Search</button>
+        </form>
     </div>
     <ul id="parent-nav"></ul>
     <p class="nav-sec" id="see-also">See also</p>
@@ -27,38 +30,19 @@ if (influence_set) {
     $('#lang-nav').after($influences);
 }
 
-// Search form
-
-const form = document.querySelector('form#search-form');
-
-const input = document.createElement('input');
-input.type = 'text';
-input.id = 'query';
-input.name = 'query';
-form.appendChild(input);
-
-const button = document.createElement('button');
-button.innerHTML = 'Search';
-form.appendChild(button);
-
 // Parent nav
 
 function makeLinkListElem(link, text) {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.setAttribute('href', link);
-    a.innerHTML = text;
-    li.appendChild(a);
-    return li;
+    return $(`<li><a href="${link}">${text}</a></li>`);
 }
 
 void async function () {
-    const parent_nav = document.getElementById('parent-nav');
-    if (!parent_nav) return;
+    const $parent_nav = $('#parent-nav');
+    if ($parent_nav.length === 0) return;
 
     function addLink(dir, header) {
-        let link_elem = makeLinkListElem(`${dir}contents.html`, header);
-        parent_nav.append(link_elem);
+        let $link_elem = makeLinkListElem(`${dir}contents.html`, header);
+        $parent_nav.append($link_elem);
     }
 
     const tree = await (await getTree()).json();
@@ -84,8 +68,9 @@ void async function () {
 
 // Previous/next articles
 
-void async function () {
+void function () {
     $('#contents-hidden').load('../contents.html', function () {
+        $(this).one('tableBuilt', function() { console.error('Wrong place for the event.'); });
         $(document).one('tableBuilt', function () {
             let $tr_entry = $(this).find(`tr[${toc_link_attr}='${window.location.pathname.toString()}']`);
             let $prev_sibling = $tr_entry.prev();
@@ -111,41 +96,39 @@ void async function () {
 
 // See also & cross reference
 
-function handleLinkGroups(json, header, exclude = []) {
+function handleLinkGroups(json, $header, exclude = []) {
     const path_wo_lang = window.location.pathname.toString().replace(`/${lang}/`, '');
     var in_groups = json.filter(group => group.map(e => e.path).includes(path_wo_lang));
     var links = [...new Set(in_groups.flat(1))]
         .filter(link => link.path !== path_wo_lang &&
             !exclude.map(l2 => l2.path).includes(link.path));
     if (links.length === 0) {
-        [header, header.nextElementSibling].forEach(p => p.style.display = 'none');
+        [$header, $header.next()].forEach($p => $p.css('display', 'none'));
         return [];
     }
-    const list = header.nextElementSibling;
+    const $list = $header.next();
     links.forEach(link => {
         const path_use = (link.path.startsWith('https')) ? link.path : `/${lang}/${link.path}`;
-        const li = makeLinkListElem(path_use, link.name);
-        list.appendChild(li);
+        const $li = makeLinkListElem(path_use, link.name);
+        $list.append($li);
     });
     return links;
 }
 
 void async function () {
     var see_also = await (await fetch('/static/data/see-also.json')).json();
-    var header = document.querySelector('.nav-sec#see-also');
-    var exclude = handleLinkGroups(see_also, header);
+    var $header = $('.nav-sec#see-also');
+    var exclude = handleLinkGroups(see_also, $header);
 
     var cross_reference = await (await fetch('/static/data/cross-reference.json')).json();
-    header = document.querySelector('.nav-sec#cross-reference');
-    handleLinkGroups(cross_reference, header, exclude);
+    $header = $('.nav-sec#cross-reference');
+    handleLinkGroups(cross_reference, $header, exclude);
 }();
 
 // Switch language
 
-void async function () {
-    var lang_nav = document.querySelector('div#lang-nav');
-    lang_nav.innerHTML = await (await fetch('/static/templates/lang-nav.html')).text();
-    Array.from(document.querySelectorAll('a.lang')).map(a => {
-        a.setAttribute('href', window.location.href.replace(`/${lang}/`, `/${a.id}/`));
+void function () {
+    $('div#lang-nav').load('/static/templates/lang-nav.html', function () {
+        $(this).find('a.lang').each((_, $a) => $($a).attr('href', window.location.href.replace(`/${lang}/`, `/${$($a).attr('id')}/`)));
     });
 }();

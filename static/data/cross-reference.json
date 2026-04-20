@@ -155,6 +155,16 @@
             "path": "Part_II/9/"
         },
         {
+            "name": "6. Rights of citizenship of certain persons who have migrated to India from Pakistan.",
+            "path": "Part_II/6/"
+        }
+    ],
+    [
+        {
+            "name": "9. Persons voluntarily acquiring citizenship of a foreign State not to be citizens.",
+            "path": "Part_II/9/"
+        },
+        {
             "name": "8. Rights of citizenship of certain persons of Indian origin residing outside India.",
             "path": "Part_II/8/"
         }
@@ -407,6 +417,16 @@
         {
             "name": "32. Remedies for enforcement of rights conferred by this Part.",
             "path": "Part_III/32/"
+        }
+    ],
+    [
+        {
+            "name": "35. Legislation to give effect to the provisions of this Part.",
+            "path": "Part_III/35/"
+        },
+        {
+            "name": "33. Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc.",
+            "path": "Part_III/33/"
         }
     ],
     [
@@ -687,6 +707,16 @@
         {
             "name": "56. Term of office of President.",
             "path": "Part_V/Chapter_I/56/"
+        }
+    ],
+    [
+        {
+            "name": "64. The Vice-President to be <i>ex officio</i> Chairman of the Council of States.",
+            "path": "Part_V/Chapter_I/64/"
+        },
+        {
+            "name": "65. The Vice-President to act as President or to discharge his functions during casual vacancies in the office, or during the absence, of President.",
+            "path": "Part_V/Chapter_I/65/"
         }
     ],
     [
@@ -1151,6 +1181,16 @@
     ],
     [
         {
+            "name": "132. Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases.",
+            "path": "Part_V/Chapter_IV/132/"
+        },
+        {
+            "name": "134A. Certificate for appeal to the Supreme Court.",
+            "path": "Part_V/Chapter_IV/134A/"
+        }
+    ],
+    [
+        {
             "name": "133. Appellate jurisdiction of the Supreme Court in appeals from High Courts in regard to civil matters.",
             "path": "Part_V/Chapter_IV/133/"
         },
@@ -1187,16 +1227,6 @@
         {
             "name": "145. Rules of Court, etc.",
             "path": "Part_V/Chapter_IV/145/"
-        }
-    ],
-    [
-        {
-            "name": "134A. Certificate for appeal to the Supreme Court.",
-            "path": "Part_V/Chapter_IV/134A/"
-        },
-        {
-            "name": "132. Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases.",
-            "path": "Part_V/Chapter_IV/132/"
         }
     ],
     [
@@ -2691,6 +2721,16 @@
     ],
     [
         {
+            "name": "296. Property accruing by escheat or lapse or as <i>bona vacantia</i>.",
+            "path": "Part_XII/Chapter_III/296/"
+        },
+        {
+            "name": "363A. Recognition granted to Rulers of Indian States to cease and privy purses to be abolished.",
+            "path": "Part_XIX/363A/"
+        }
+    ],
+    [
+        {
             "name": "303. Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce.",
             "path": "Part_XIII/303/"
         },
@@ -2765,8 +2805,8 @@
             "path": "Part_XIII/306/"
         },
         {
-            "name": "Part B of the First Schedule",
-            "path": "Schedules/First_Schedule/Part_B/"
+            "name": "280. Finance Commission.",
+            "path": "Part_XII/Chapter_I/280/"
         }
     ],
     [
@@ -2775,8 +2815,8 @@
             "path": "Part_XIII/306/"
         },
         {
-            "name": "280. Finance Commission.",
-            "path": "Part_XII/Chapter_I/280/"
+            "name": "Part B of the First Schedule",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -3115,6 +3155,16 @@
             "path": "Part_XV/329/"
         },
         {
+            "name": "329A. Special provision as to elections to Parliament in the case of Prime Minister and Speaker.",
+            "path": "Part_XV/329A/"
+        }
+    ],
+    [
+        {
+            "name": "329. Bar to interference by courts in electoral matters.",
+            "path": "Part_XV/329/"
+        },
+        {
             "name": "327. Power of Parliament to make provision with respect to elections to Legislatures.",
             "path": "Part_XV/327/"
         }
@@ -3135,8 +3185,8 @@
             "path": "Part_XV/329A/"
         },
         {
-            "name": "329. Bar to interference by courts in electoral matters.",
-            "path": "Part_XV/329/"
+            "name": "102. Disqualifications for membership.",
+            "path": "Part_V/Chapter_II/102/"
         }
     ],
     [
@@ -3237,6 +3287,16 @@
         {
             "name": "340. Appointment of a Commission to investigate the conditions of backward classes.",
             "path": "Part_XVI/340/"
+        }
+    ],
+    [
+        {
+            "name": "338B. National Commission for Backward Classes.",
+            "path": "Part_XVI/338B/"
+        },
+        {
+            "name": "342A. Socially and educationally backward classes.",
+            "path": "Part_XVI/342A/"
         }
     ],
     [

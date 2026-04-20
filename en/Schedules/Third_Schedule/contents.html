@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/static/assets/style.css" />
     <link rel="stylesheet" type="text/css" href="/static/assets/contents.css" />
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="/static/src/general.js" type="module"></script>
     <title>Table of Contents — Schedules — Third Schedule — Constitution of India</title>
 </head>
 <body>
-    <table id="main-con">
+    <header></header>
+    <div id="main-nav"></div>
 
-    </table>
+    <div id="container" class="page-margin">
+        <table id="main-con"></table>
+    </div>
+
+    <footer></footer>
     <script type="module">
         import { buildTableStructure } from "/static/src/contents.js";
         buildTableStructure('Schedules/Third_Schedule/');

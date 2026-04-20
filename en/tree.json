@@ -327,5 +327,13 @@
     {
         "path_part": "Schedules/Ninth_Schedule/",
         "has_chapters": false
+    },
+    {
+        "path_part": "Schedules/Eleventh_Schedule/",
+        "has_chapters": false
+    },
+    {
+        "path_part": "Schedules/Twelfth_Schedule/",
+        "has_chapters": false
     }
 ]

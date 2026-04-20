@@ -1,8 +1,15 @@
 import { composeQueryDir, getTree, lang, normalizeDirName } from "./utils.js";
 
 
-const nav = document.querySelector('#nav');
-nav.innerHTML += `
+const $nav = $('#nav');
+
+const $influences = $nav.find('#influence');
+const influence_set = $influences.length > 0;
+if (influence_set) {
+    $influences.detach();
+}
+
+$nav.html(`
     <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
         <p><a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a></p>
@@ -14,7 +21,11 @@ nav.innerHTML += `
     <p class="nav-sec" id="cross-reference">Cross reference</p>
     <ul></ul>
     <p class="nav-sec" id="lang-select">Select language</p>
-    <div id="lang-nav"></div>`;
+    <div id="lang-nav"></div>`);
+
+if (influence_set) {
+    $('#lang-nav').after($influences);
+}
 
 // Search form
 

@@ -11,22 +11,21 @@ async function getTreeWithError() {
 
     } catch (error) {
         console.error('Caught error:', error.message);
-        const buildFailed = document.createElement('p');
-        buildFailed.innerHTML = 'Error: Failed to load table of contents.'
+        const buildFailed = $(`<p>Error: Failed to load table of contents.</p>`);
         throw buildFailed;
     }
 }
 
 export async function buildTableStructure(dir = undefined) {
-    const table = document.querySelector('#main-con');
+    const $table = $('#main-con');
 
     try {
         const tree = await getTreeWithError();
-        buildTableStructure1(dir, tree, table);
+        buildTableStructure1(dir, tree, $table);
     } catch (buildFailed) {
 
-        if (buildFailed instanceof HTMLElement) {
-            table.replaceWith(buildFailed);
+        if (buildFailed instanceof $ || buildFailed.jquery) {
+            $table.replaceWith(buildFailed);
         } else {
             console.error('Unexpected error in buildTableStructure:', buildFailed);
             throw buildFailed;
@@ -34,7 +33,7 @@ export async function buildTableStructure(dir = undefined) {
     }
 }
 
-function buildTableStructure1(dir, tree, table) {
+function buildTableStructure1(dir, tree, $table) {
 
     let promises = [];
 
@@ -42,14 +41,8 @@ function buildTableStructure1(dir, tree, table) {
 
         const preamble = tree.find((part) => part.preamble);
 
-        const tr = document.createElement('tr');
-        const tdx = document.createElement('td');
-        const p_link = document.createElement('td');
-        addLinkToEntry(p_link, preamble.header, preamble.path_part);
-        tr.appendChild(tdx);
-        tr.appendChild(p_link);
-        table.appendChild(tr);
-
+        $table.append($('<tr><td></td><td id="preamble-link"></td></tr>'));
+        addLinkToEntry($('#preamble-link'), preamble.header, preamble.path_part);
     }
 
     for (let part of tree) {
@@ -57,39 +50,22 @@ function buildTableStructure1(dir, tree, table) {
             continue;
         }
 
-        const tbody_p = document.createElement('tbody');
-        tbody_p.classList.add('contents');
-        tbody_p.id = partID(part.path_part);
-
-        const tr1 = document.createElement('tr');
-        const part_num = document.createElement('th');
-        part_num.id = 'part-num';
-        part_num.setAttribute('colspan', 2);
-        part_num.innerHTML = normalizeDirName(part.path_part);
-        tr1.appendChild(part_num);
-        tbody_p.appendChild(tr1);
+        const $tbody_p = $(`
+            <tbody class="contents" id="${partID(part.path_part)}">
+                <tr>
+                    <th class="part-num" colspan="2">${normalizeDirName(part.path_part)}</th>
+                </tr>
+            </tbody>`);
 
         if (part.header) {
-            const tr2 = document.createElement('tr');
-            const part_header = document.createElement('th');
-            part_header.id = 'part-header';
-            part_header.setAttribute('colspan', 2);
-            part_header.innerHTML = part.header;
-            tr2.appendChild(part_header);
-            tbody_p.appendChild(tr2);
+            $tbody_p.append($(`<tr><th class="part-header" colspan="2">${part.header}</th></tr>`));
         }
 
         if (part.note) {
-            const td = document.createElement('td');
-            const i = document.createElement('i');
-            i.innerHTML = 'Note: ';
-            td.appendChild(i);
-            td.innerHTML += part.note;
-            td.setAttribute('colspan', '2');
-            tbody_p.appendChild(td);
+            $tbody_p.append($(`<tr><td colspan="2"><i>Note: </i>${part.note}</td></tr>`));
         }
 
-        table.appendChild(tbody_p);
+        $table.append($tbody_p);
 
         let p_dir = composeQueryDir(part.path_part);
 
@@ -100,22 +76,17 @@ function buildTableStructure1(dir, tree, table) {
                     continue;
                 }
 
-                const tbody_c = document.createElement('tbody');
-                tbody_c.classList.add('contents');
-                tbody_c.id = partID(chapter.path_part);
+                const $tbody_c = $(`
+                    <tbody class="contents" id="${partID(chapter.path_part)}">
+                        <tr>
+                            <th class="part-header" colspan="2">${chapter.header}</th>
+                        </tr>
+                    </tbody>`);
 
-                const tr_c = document.createElement('tr');
-                const c_header = document.createElement('th');
-                c_header.id = 'part-header';
-                c_header.setAttribute('colspan', 2);
-                c_header.innerHTML = chapter.header;
-                tr_c.appendChild(c_header);
-                tbody_c.appendChild(tr_c);
-
-                table.appendChild(tbody_c);
+                $table.append($tbody_c);
 
                 let c_dir = composeQueryDir(chapter.path_part, p_dir);
-                promises.push(articles(tbody_c, undefined, c_dir).then(() => {
+                promises.push(articles($tbody_c, undefined, c_dir).then(() => {
                     if (chapter.subheadings) {
                         makeSubheadings(chapter.subheadings);
                     }
@@ -125,7 +96,7 @@ function buildTableStructure1(dir, tree, table) {
 
         } else {
 
-            promises.push(articles(tbody_p, undefined, p_dir).then(() => {
+            promises.push(articles($tbody_p, undefined, p_dir).then(() => {
                 if (part.subheadings) {
                     makeSubheadings(part.subheadings);
                 }
@@ -154,57 +125,45 @@ export async function indexDirs(errorPrefix, dir = './') {
 // Make article entries
 
 function makeArticle(article) {
-    const entry = document.createElement('tr');
-    const num_cell = document.createElement('td');
     const split_path = article.split('/');
     const dir = split_path[split_path.length - 2];
-    entry.id = (isNaN(dir) && isNaN(dir.substr(0, dir.length - 1))) ? dir : 'a' + dir;
-    entry.setAttribute(toc_link_attr, article);
+    const id = (isNaN(dir) && isNaN(dir.substr(0, dir.length - 1))) ? dir : 'a' + dir;
     const num = (dir + '.').replace('_', ' ');
-    num_cell.innerHTML = num;
-    num_cell.style = 'width: 5em;';
-    entry.appendChild(num_cell);
 
-    fetch(article)
-        .then(response => response.text())
-        .then(html => {
-            const doc = parseHTMLDoc(html);
-            const latest_version_path = article.toString() + doc.querySelector('.art-holder').getAttribute('name');
-            fetch(latest_version_path)
-                .then(response => response.text())
-                .then(html => {
-                    const version_doc = parseHTMLDoc(html);
-                    let margin_elem = version_doc.querySelector('.art');
+    const $entry = $(`
+        <tr id="${id}" ${toc_link_attr}="${article}">
+            <td style="width: 5em;">${num}</td>
+        </tr>`);
 
-                    Array.from(margin_elem.querySelectorAll('del, .del')).map(del => margin_elem.removeChild(del));
+    $('<div></div>').load(article, function () {
+        const $doc = $(this);
+        const latest_version_path = article.toString().concat($(this).find('.art-holder').attr('name'));
+        $('<div></div>').load(latest_version_path, function () {
+            const $margin_elem = $(this).find('.art');
 
-                    let margin_text = margin_elem.innerText;
-                    if (margin_text.startsWith(num)) {
-                        margin_text = margin_text.substr(num.length + 1);
-                    }
-                    margin_text = margin_text.replace('—', '');
+            $margin_elem.find('del, .del').remove();
 
-                    const margin = document.createElement('td');
-                    addLinkToEntry(margin, margin_text, article);
+            let margin_text = $margin_elem.html();
+            if (margin_text.startsWith(num)) {
+                margin_text = margin_text.substr(num.length + 1);
+            }
+            margin_text = margin_text.replace('—', '');
 
-                    if (doc.querySelector('#omitted-indicator')) {
-                        const i = document.createElement('i');
-                        i.innerText = '(Omitted)';
-                        margin.innerHTML += ' ';
-                        margin.appendChild(i);
-                    }
+            const $margin = $('<td></td>');
+            addLinkToEntry($margin, margin_text, article);
 
-                    entry.appendChild(margin);
-                })
-                .catch(error => console.error('Error fetching article text:', error));
-        })
-        .catch(error => console.error('Error fetching article version:', error));
+            if ($doc.find('#omitted-indicator').length > 0) {
+                $margin.append(' <i>(Omitted)</i>');
+            }
 
-    return entry;
+            $entry.append($margin);
+        });
+    });
+
+    return $entry;
 }
 
-async function articles(contents, exclude = [], dir = './') {
-    //const tbody = contents.querySelector('tbody');
+async function articles($contents, exclude = [], dir = './') {
     return indexDirs('Error fetching articles:', dir = dir)
         .then(articles =>
             articles
@@ -212,15 +171,12 @@ async function articles(contents, exclude = [], dir = './') {
                 .sort((a, b) => parseInt(normalizeDirName(a)) - parseInt(normalizeDirName(b)))
                 .map(a => dir + a)
                 .map(makeArticle)
-                .map(a => contents.appendChild(a))
+                .map($a => $contents.append($a))
         );
 }
 
-function addLinkToEntry(margin, margin_text, link) {
-    const a = document.createElement('a');
-    a.innerHTML = margin_text;
-    a.setAttribute('href', link);
-    margin.appendChild(a);
+function addLinkToEntry($margin, margin_text, link) {
+    $margin.append($(`<a href="${link}">${margin_text}</a>`));
 }
 
 // Subheadings
@@ -228,17 +184,14 @@ function addLinkToEntry(margin, margin_text, link) {
 function makeSubheadings(subheadings) {
     for (let article in subheadings) {
         let subheading = subheadings[article];
-        const article_row = document.getElementById(article);
-        if (article_row == null) {
+        const $article_row = $(`#${article}`);
+        if ($article_row.length === 0) {
             continue;
         }
-        const subheading_row = document.createElement('tr');
-        const subheading_th = document.createElement('th');
-        subheading_th.className = 'subheading';
-        subheading_th.colSpan = '2';
-        subheading_th.innerText = subheading;
-        subheading_row.appendChild(subheading_th)
-        article_row.parentNode.insertBefore(subheading_row, article_row);
+
+        $(` <tr>
+                <th class="subheading" colspan="2">${subheading}</th>
+            </tr>`).insertBefore($article_row);
     }
 }
 

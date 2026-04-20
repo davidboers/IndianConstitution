@@ -3,7 +3,7 @@ th {
     text-transform: uppercase;
 }
 
-th#part-header {
+th.part-header {
     font-weight: normal;
 }
 

@@ -165,7 +165,7 @@ function makeArticle(article) {
         .then(response => response.text())
         .then(html => {
             const doc = parseHTMLDoc(html);
-            const latest_version_path = article.toString() + doc.querySelector('.art-holder').getAttribute('data');
+            const latest_version_path = article.toString() + doc.querySelector('.art-holder').getAttribute('name');
             fetch(latest_version_path)
                 .then(response => response.text())
                 .then(html => {

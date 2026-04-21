@@ -1,4 +1,4 @@
-export const toc_link_attr = 'title'; // bc I might change this
+export const toc_link_attr = 'name'; 
 
 
 
@@ -22,10 +22,10 @@ export function getIndexedLinks(html) {
 export const lang = getLanguage();
 
 function getLanguage(enDefault = true) {
-    const html = document.querySelector('html');
+    const $html = $('html');
 
-    if (html.hasAttribute('lang')) {
-        return html.getAttribute('lang');
+    if ($html.is('[lang]')) {
+        return $html.attr('lang');
     }
 
     if (enDefault) {

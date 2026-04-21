@@ -8,12 +8,13 @@ async function searchArticleVersion(path, query, articlePath) {
             const doc = parseHTMLDoc(html);
             const text = doc.querySelector('body').innerText.replace(/\s{2,}/g, ' ');
             let matches = [];
-            let i = text.search(query);
-            while (i != -1) {
-                matches.push(i);
-                i = text.indexOf(query, i + 1);
+            const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(escapedQuery, 'gi');
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                matches.push(match.index);
             }
-            return { matches: matches, text: text, path: articlePath, query: query };
+            return { matches: matches, text: text, path: articlePath, query: regex };
         })
         .catch(error => console.error('Error searching article version:', error));
 }
@@ -45,30 +46,25 @@ async function searchArticle(path, query) {
 async function searchArticles(paths, query) {
     const hits = await Promise.all(paths.map(path => searchArticle(path, query)))
         .then(hits => hits.filter(hit => hit != null));
-    const container = document.getElementById('hits');
+    const $container = $('#hits');
     if (hits.length === 0) {
-        container.innerHTML = '<p id="no-results">No results found.</p>';
+        $container.html('<p id="no-results">No results found.</p>');
         return;
     }
-    container.innerHTML = '';
+    $container.empty();
     hits.map(hit => makeHitEntry(hit, query))
-        .forEach(hit => container.appendChild(hit));
+        .forEach(hit => $container.append(hit));
 }
 
 function makeHitEntry(hit, query) {
-    const entry = document.createElement('div');
-    entry.className = 'hit';
+    const $entry = $('<div class="hit"></div>');
 
-    const link = document.createElement('a');
-    link.href = hit.path;
-    link.className = 'hit-link';
-    link.innerText = hit.path.split('/').map(seg => seg.replace('_', ' ')).filter(seg => seg.length > 0).join(' > ');
-    entry.appendChild(link);
+    const link_text = hit.path.split('/').map(seg => seg.replace('_', ' ')).filter(seg => seg.length > 0).join(' > ');
+    $entry.append(`<a href="${hit.path}" class="hit-link">${link_text}</a>`);
 
     for (let match of hit.matches) {
-        let excerpt = document.createElement('p');
         let text = hit.text;
-        let trail = 100;
+        const trail = 100;
         if (text.length > trail * 2) {
             let begin = Math.max(match - trail, 0);
             let end = Math.min(match + query.length + trail, text.length);
@@ -80,11 +76,18 @@ function makeHitEntry(hit, query) {
                 text += '...';
             }
         }
-        excerpt.innerHTML = text.split(query).join(`<span class='excerpt-highlight'>${hit.query}</span>`);
-        entry.appendChild(excerpt);
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+        }
+        const escapedText = escapeHtml(text);
+        const highlightRegex = new RegExp(hit.query.source, 'gi');
+        let excerpt = escapedText.replace(highlightRegex, function (match) {
+            return `<span class='excerpt-highlight'>${match}</span>`;
+        });
+        $entry.append(`<p>${excerpt}</p>`);
     }
 
-    return entry;
+    return $entry;
 }
 
 // Article lists
@@ -116,17 +119,17 @@ function getArticleList(root = './') {
 
 void function () {
     var search = window.location.search;
-    if (search !== undefined) {
+    if (search) {
         var queryParam = search.substr(1).split('&')
             .map(param => param.split('='))
             .find(param => param[0] === 'query');
         var query = queryParam ? queryParam[1] : undefined;
-        if (query !== undefined && query !== null) {
+        if (query) {
             query = query.trim();
             if (query.length > 0) {
                 query = query.replaceAll('+', ' ');
-                document.getElementById('query').value = query;
-                document.getElementById('hits').innerHTML = `<p id="loading">Loading...</p>`;
+                $('#query').val(query);
+                $('#hits').html(`<p id="loading">Loading...</p>`);
                 getArticleList().then(articles => searchArticles(articles, query));
             } else {
                 localStorage.removeItem('query');

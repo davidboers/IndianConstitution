@@ -10,7 +10,7 @@ export function formatRefs($div) {
     $div.load($div.attr('name'),
         // Clause references
         () => {
-            $div.find('p').each(function () {
+            $div.find('p, li, td, th').each(function () {
                 let html = $(this).html();
 
                 html = html.replace(pattern, function (match, inner) {

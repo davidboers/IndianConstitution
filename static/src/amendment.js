@@ -1,4 +1,4 @@
-import { flatParts,indexDirs } from "./contents.js";
+import { flatParts, indexDirs } from "./contents.js";
 
 const $select = $("#amendment");
 for (let a = 1; a <= 106; a++) {
@@ -15,31 +15,24 @@ async function updatedSelectedAmendment(selected_version) {
         var path = `${dir}version/a${selected_version}.html`;
 
         var $article_box = $('<div class="art-holder"></div>');
-        $article_box.css('display', 'none'); // Until fully loaded
 
         var $jump_to = $('<a>Jump to</a>');
         $jump_to.attr('href', dir);
         $jump_to.appendTo($article_box);
 
         var $container = $('<div></div>');
-        $container.load(path, () => {
+        $container.load(path, (_, status, xhr) => {
+            if (status === 'error' && xhr.status === 404) {
+                return;
+            }
+
             const $toggleButton = $container.find("#toggleButton");
             if ($toggleButton) {
                 $toggleButton.css('display', 'none');
             }
-        });
-        $container.appendTo($article_box);
-
-        fetch(path).then((response) => {
-            if (response.status !== 200) {
-                // Don't render this article
-                
-            } else {
-                $article_box.appendTo($articles_box);
-                $article_box.css('display', 'block');
-            }
-        }).catch((error) => {
-            console.error('Error checking article:', error);
+            $container.find('script').attr('type', 'module');
+            $container.appendTo($article_box);
+            $article_box.appendTo($articles_box);
         });
 
     }
@@ -48,7 +41,7 @@ async function updatedSelectedAmendment(selected_version) {
     try {
         flat = await flatParts();
     } catch (buildFailed) {
-        articles_box.replaceWith(buildFailed);
+        $articles_box.replaceWith(buildFailed);
         return;
     }
 

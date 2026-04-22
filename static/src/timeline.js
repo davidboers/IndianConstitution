@@ -9,8 +9,8 @@ function getFrac(date) {
 
 function changeVersion($label, link) {
     $('.art-holder').attr('name', link);
-    $('.art-holder').each(function() {
-        formatRefs($(this));
+    $('.art-holder').each(function () {
+        $(this).load(link, () => formatRefs($(this)));
     });
     $('.timeline-label-bold').removeClass('timeline-label-bold');
     $label.addClass('timeline-label-bold');

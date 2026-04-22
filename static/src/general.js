@@ -7,23 +7,19 @@ $('footer').load(`/${lang}/footer.html`);
 const pattern = /\(([0-9a-z]+)\)/g;
 
 export function formatRefs($div) {
-    $div.load($div.attr('name'),
-        // Clause references
-        () => {
-            $div.find('p, li, td, th').each(function () {
-                let html = $(this).html();
+    $div.find('p, li, td, th').each(function () {
+        let html = $(this).html();
 
-                html = html.replace(pattern, function (match, inner) {
-                    return `(<i>${inner}</i>)`;
-                });
+        html = html.replace(pattern, function (match, inner) {
+            return `(<i>${inner}</i>)`;
+        });
 
-                $(this).html(html);
-            });
-        })
+        $(this).html(html);
+    });
 }
 
 if (document.querySelector('.art-holder')) {
-    $('.art-holder').each(function() {
-        formatRefs($(this));
+    $('.art-holder').each(function () {
+        $(this).load($(this).attr('name'), () => formatRefs($(this)));
     });
 }

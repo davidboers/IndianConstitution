@@ -4,7 +4,7 @@ $('header').load(`/${lang}/header.html`);
 $('#main-nav').load(`/${lang}/main-nav.html`);
 $('footer').load(`/${lang}/footer.html`);
 
-const pattern = /\(([0-9a-zA-Z]+)\)/g;
+const pattern = /\(([0-9a-z]+)\)/g;
 
 export function formatRefs($div) {
     $div.load($div.attr('name'),

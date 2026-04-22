@@ -27,7 +27,7 @@ async function updatedSelectedAmendment(selected_version) {
             }
 
             const $toggleButton = $container.find("#toggleButton");
-            if ($toggleButton) {
+            if ($toggleButton.length) {
                 $toggleButton.css('display', 'none');
             }
             $container.find('script').attr('type', 'module');

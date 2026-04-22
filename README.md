@@ -5,7 +5,9 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.legislative.gov.in/documents/constitution-of-india/constitution-of-india-AjN2EjMtQWa?pageTitle=Constitution-of-India): Indian government's repository containing the English-language version as well as translations into various languages. A diglot Hindi-English version is also provided.
 * [link](https://www.legislative.gov.in/documents/constitution-of-india/the-constitution-amendment-acts-YTM2EjMtQWa?pageTitle=The-Constitution-(Amendment)-Acts): Constitution Amendment Acts.
 * [link](https://en.wikipedia.org/wiki/List_of_amendments_of_the_Constitution_of_India): Wikipedia's overview of all 106 constitutional amendments. 
+* [link](https://web.archive.org/web/20131203013122/http://164.100.47.134/intranet/CAI/2.pdf): An (outdated) list of constitutional amendments with detailed effective/notification dates, and ratifying states.
 * [link](https://www.loc.gov/resource/llscd.57026883/): Photocopies of the original handwritten constitution in English by the Library of Congress (United States).
+* [link](https://www.legislative.gov.in/static/uploads/2025/06/d26a074aded05b773e0cd05f75b489e1.pdf): List of Constitution Orders.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1498/3/A1960-64.pdf): Acquired Territories (Merger) Act, 1960.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1409/1/195956.pdf): Andhra Pradesh and Madras (Alteration of Boundaries) Act, 1959.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1603/2/A1968-36.pdf): Andhra Pradesh and Mysore (Transfer of Territory) Act, 1968.
@@ -45,10 +47,18 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 * Fix timelines
 * Government of India Act, 1935 links
+* References to Seventh Schedule (see article 368)
+* Inserted articles have `<ins></ins>`
+* Clause italicization in amendment.html
+* Effective dates
+* Notification of 106th amendment: April 16, 2026
 
 ## Features
+
+* Ratification maps
 
 ## Content
 
 * Remaining Schedules
 * Appendices
+* Constitution orders (amendments, not text)

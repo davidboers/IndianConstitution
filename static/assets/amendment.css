@@ -1,0 +1,36 @@
+#dashboard {
+    padding: var(--base-page-margin);
+    display: flex;
+    flex-direction: row;
+}
+
+#articles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-page-margin);
+}
+
+#open-map {
+    color: blue;
+}
+
+#close-map {
+    color: red;
+    margin-left: auto;
+}
+
+#map {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: var(--base-page-margin);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

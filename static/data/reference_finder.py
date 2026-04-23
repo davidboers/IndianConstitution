@@ -75,6 +75,7 @@ def reference_finder(path):
                     
                     name = html.split('<p class="art">')[1].split('</p>')[0].replace('—', '') # Strip node marking and hyphen
                     name = re.sub(r'\s+', ' ', name)
+                    name = re.sub(r'<(/)?(ins|del)>', '', name)
                     if re.search(r'Schedule', title, re.IGNORECASE):
                         name = title
 

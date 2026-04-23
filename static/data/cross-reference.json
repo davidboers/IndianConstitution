@@ -1945,16 +1945,6 @@
             "path": "Part_VII/238/"
         },
         {
-            "name": "Part B of the First Schedule",
-            "path": "Schedules/First_Schedule/Part_B/"
-        }
-    ],
-    [
-        {
-            "name": "238. Application of provisions of Part VI to States in Part B of the First Schedule.",
-            "path": "Part_VII/238/"
-        },
-        {
             "name": "232. Interpretation.",
             "path": "Part_VI/Chapter_V/232/"
         }
@@ -2107,6 +2097,16 @@
         {
             "name": "Second Schedule",
             "path": "Schedules/Second_Schedule/Part_E/"
+        }
+    ],
+    [
+        {
+            "name": "238. Application of provisions of Part VI to States in Part B of the First Schedule.",
+            "path": "Part_VII/238/"
+        },
+        {
+            "name": "Part B of the First Schedule",
+            "path": "Schedules/First_Schedule/Part_B/"
         }
     ],
     [
@@ -3691,7 +3691,7 @@
     ],
     [
         {
-            "name": "371. Special provision with respect to the States of Andhra Pradesh, <span class=\"del\">Punjab,</span> Maharashtra and Gujarat.",
+            "name": "371. Special provision with respect to the States of Andhra Pradesh, Punjab, Maharashtra and Gujarat.",
             "path": "Part_XXI/371/"
         },
         {

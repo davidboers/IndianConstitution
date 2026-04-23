@@ -61,6 +61,10 @@ function buildTableStructure1(dir, tree, $table) {
             $tbody_p.append($(`<tr><th class="part-header" colspan="2">${part.header}</th></tr>`));
         }
 
+        if (part.refs) {
+            $tbody_p.append($(`<tr><th class="part-header" colspan="2">${part.refs}</th></tr>`));
+        }
+
         if (part.note) {
             $tbody_p.append($(`<tr><td colspan="2"><i>Note: </i>${part.note}</td></tr>`));
         }
@@ -124,11 +128,25 @@ export async function indexDirs(errorPrefix, dir = './') {
 
 // Make article entries
 
+function normalizeMargin(obj) {
+    if (obj.clone().children().remove().end().html().trim().length === 0) {
+        // This is for articles that have been totally omitted.
+        obj.html(obj.text());
+
+    } else {
+        obj.find('del, .del').remove();
+    }
+
+    return obj.html();
+}
+
 function makeArticle(article) {
+
     const split_path = article.split('/');
     const dir = split_path[split_path.length - 2];
     const id = (isNaN(dir) && isNaN(dir.substr(0, dir.length - 1))) ? dir : 'a' + dir;
-    const num = (dir + '.').replace('_', ' ');
+
+    const num = (article.includes('Schedules/')) ? '' : (dir + '.').replace('_', ' ');
 
     const $entry = $(`
         <tr id="${id}" ${toc_link_attr}="${article}">
@@ -139,23 +157,38 @@ function makeArticle(article) {
         const $doc = $(this);
         const latest_version_path = article.toString().concat($(this).find('.art-holder').attr('name'));
         $('<div></div>').load(latest_version_path, function () {
-            const $margin_elem = $(this).find('.art');
+            
+            let margin_text = '';
+            let omitted = $doc.find('#omitted-indicator').length > 0;
 
-            if ($margin_elem.clone().children().remove().end().html().trim().length === 0) {
-                // This is for articles that have been totally omitted.
-                $margin_elem.html($margin_elem.text());
+            if (article.match(/Tenth_Schedule\/Part_(A|B)\//)) {
+                // Save Tenth Schedule
+                article = `${article}contents.html`;
+                margin_text = dir.replace('_', ' ');
+                omitted = true;
 
             } else {
-                $margin_elem.find('del, .del').remove();
-            }
 
-            let margin_text = $margin_elem.html();
-            margin_text = margin_text.replace(/—$/, '').replace(`${num} `, '');
+                margin_text = normalizeMargin($(this).find('.art'));
+                margin_text = margin_text.replace(/—$/, '');
+
+                if (article.includes('Schedules/')) {
+                    if ($(this).find('#subtitle').length) {
+                        let additional_text = normalizeMargin($(this).find('#subtitle'));
+                        margin_text = `${margin_text}—${additional_text}`;
+                    }
+
+                } else {
+                    margin_text = margin_text.replace(`${num} `, '');
+
+                }
+
+            }
 
             const $margin = $('<td></td>');
             addLinkToEntry($margin, margin_text, article);
 
-            if ($doc.find('#omitted-indicator').length > 0) {
+            if (omitted) {
                 $margin.append(' <i>(Omitted)</i>');
             }
 

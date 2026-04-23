@@ -299,41 +299,57 @@
     {
         "path_part": "Schedules/First_Schedule/",
         "has_chapters": false,
+        "refs": "[Articles 1 and 4]",
         "note": "Before the Seventh Amendment, this Schedule was called \"The States and the territories of India\"."
     },
     {
         "path_part": "Schedules/Second_Schedule/",
+        "refs": "[Articles 59(3), 65(3), 75(6), 97, 125, 148(3), 158(3), 164(5), 186 and 221]",
         "has_chapters": false
     },
     {
         "path_part": "Schedules/Third_Schedule/",
+        "refs": "[Articles 75(4), 99, 124(6), 148(2), 164(3), 188 and 219]",
         "has_chapters": false,
         "header": "Forms of Oaths or Affirmations"
     },
     {
         "path_part": "Schedules/Fourth_Schedule/",
+        "refs": "[Articles 4(1) and 80(2)]",
         "has_chapters": false,
         "header": "Allocation of seats in the Council of States"
     },
     {
         "path_part": "Schedules/Seventh_Schedule/",
+        "refs": "[Article 246]",
         "has_chapters": false
     },
     {
         "path_part": "Schedules/Eighth_Schedule/",
+        "refs": "[Articles 344(1) and 351]",
         "has_chapters": false,
         "header": "Languages"
     },
     {
         "path_part": "Schedules/Ninth_Schedule/",
+        "refs": "[Article 31B]",
         "has_chapters": false
     },
     {
+        "path_part": "Schedules/Tenth_Schedule/",
+        "refs": "[Articles 102(2) and 191(2)]",
+        "has_chapters": false,
+        "header": "Provisions as to disqualification on ground of defection",
+        "note": "Parts A and B of the Tenth Schedule have been omitted by the Thirty-sixth Amendment. Both parts, previously inserted by the Thirty-fifth Amendment, dealt with transitional provisions relating to Sikkim's admission to the Union."
+    },
+    {
         "path_part": "Schedules/Eleventh_Schedule/",
+        "refs": "[Article 243G]",
         "has_chapters": false
     },
     {
         "path_part": "Schedules/Twelfth_Schedule/",
+        "refs": "[Article 243W]",
         "has_chapters": false
     }
 ]

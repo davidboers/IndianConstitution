@@ -11,15 +11,15 @@
     ],
     [
         {
-            "name": "List I—Union List.",
+            "name": "List I—Union List",
             "path": "Schedules/Seventh_Schedule/List_I/"
         },
         {
-            "name": "List II—State List.",
+            "name": "List II—State List",
             "path": "Schedules/Seventh_Schedule/List_II/"
         },
         {
-            "name": "List III—Concurrent List.",
+            "name": "List III—Concurrent List",
             "path": "Schedules/Seventh_Schedule/List_III/"
         }
     ],
@@ -1569,7 +1569,7 @@
             "path": "Part_VIII/239/"
         },
         {
-            "name": "First Schedule, Part C.",
+            "name": "Part C of the First Schedule",
             "path": "Schedules/First_Schedule/Part_C/"
         }
     ],
@@ -1583,7 +1583,7 @@
             "path": "Part_IX/243/"
         },
         {
-            "name": "First Schedule, Part D.",
+            "name": "Part D of the First Schedule",
             "path": "Schedules/First_Schedule/Part_D/"
         }
     ],

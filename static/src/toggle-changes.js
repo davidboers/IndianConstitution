@@ -2,28 +2,36 @@ void function () {
 
     // Convert <span class="ins/del"></span> to <ins></ins> or <del></del>
 
-    const convertible = document.querySelectorAll('.ins, .del');
-    for (let node of convertible) {
-        const cls = node.classList.contains('ins') ? 'ins' : 'del';
-        const html = node.innerHTML;
-        const new_node = document.createElement(cls);
-        new_node.innerHTML = html;
+    function convertSpans() {
+        const convertible = document.querySelectorAll('.ins, .del');
+        for (let node of convertible) {
+            const cls = node.classList.contains('ins') ? 'ins' : 'del';
+            const html = node.innerHTML;
+            const new_node = document.createElement(cls);
+            new_node.innerHTML = html;
 
-        // Copy other attributes
-        for (const attr of node.attributes) {
-            new_node.setAttribute(attr.name, attr.value);
+            // Copy other attributes
+            for (const attr of node.attributes) {
+                new_node.setAttribute(attr.name, attr.value);
 
-            if (attr.name === 'class') {
-                new_node.classList.remove(cls);
+                if (attr.name === 'class') {
+                    new_node.classList.remove(cls);
+                }
             }
-        }
 
-        node.replaceWith(new_node);
+            node.replaceWith(new_node);
+        }
     }
+
+    convertSpans();
 
     // .changes to be added to class list by default
 
     showChanges();
+
+    // Set up listener for amendment.html queries
+
+    document.addEventListener('markChanges', () => { convertSpans(); showChanges(); });
 
     // Set up toggle button
 

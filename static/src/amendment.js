@@ -47,6 +47,7 @@ async function updatedSelectedAmendment(selected_version) {
             $container.appendTo($article_box);
             $article_box.appendTo($articles_box);
             formatRefs($container);
+            document.dispatchEvent(new Event('markChanges'));
         });
 
     }

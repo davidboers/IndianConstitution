@@ -141,13 +141,16 @@ function makeArticle(article) {
         $('<div></div>').load(latest_version_path, function () {
             const $margin_elem = $(this).find('.art');
 
-            $margin_elem.find('del, .del').remove();
+            if ($margin_elem.clone().children().remove().end().html().trim().length === 0) {
+                // This is for articles that have been totally omitted.
+                $margin_elem.html($margin_elem.text());
+
+            } else {
+                $margin_elem.find('del, .del').remove();
+            }
 
             let margin_text = $margin_elem.html();
-            if (margin_text.startsWith(num)) {
-                margin_text = margin_text.substr(num.length + 1);
-            }
-            margin_text = margin_text.replace(/—$/, '');
+            margin_text = margin_text.replace(/—$/, '').replace(`${num} `, '');
 
             const $margin = $('<td></td>');
             addLinkToEntry($margin, margin_text, article);

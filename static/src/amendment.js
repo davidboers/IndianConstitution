@@ -24,6 +24,27 @@ var $articles_box = $('#articles');
 async function updatedSelectedAmendment(selected_version) {
     $articles_box.empty();
 
+    $('.stats').each(function () { $(this).hide(); });
+
+    const progress = { articles_completed: 0 };
+    var total_articles = 0;
+    var stats = {
+        words_added: 0,
+        words_deleted: 0,
+        articles_added: 0,
+        articles_deleted: 0
+    };
+
+    const progressProxy = new Proxy(progress, {
+        set(target, property, value) {
+            target[property] = value;
+            if (value === total_articles && total_articles !== 0) {
+                updateStats(stats);
+            }
+            return true;
+        }
+    });
+
     function makeArticle(dir) {
         var path = `${dir}version/a${selected_version}.html`;
 
@@ -35,19 +56,68 @@ async function updatedSelectedAmendment(selected_version) {
 
         var $container = $('<div></div>');
         $container.load(path, (_, status, xhr) => {
+
             if (status === 'error' && xhr.status === 404) {
+                progressProxy.articles_completed += 1;
                 return;
             }
 
             const $toggleButton = $container.find("#toggleButton");
             if ($toggleButton.length) {
-                $toggleButton.css('display', 'none');
+                $toggleButton.hide();
             }
             $container.find('script').attr('type', 'module');
             $container.appendTo($article_box);
             $article_box.appendTo($articles_box);
             formatRefs($container);
             document.dispatchEvent(new Event('markChanges'));
+
+            // Stats
+
+            function hasBeenEntirely(obj, s) {
+                return obj.clone().find(s).remove().end().html().trim().length === 0;
+            }
+
+            $container.find('ins, .ins').each(function () {
+                if ($(this).text().trim().length) { 
+                    stats.words_added += $(this).text().match(/\S+/gm).length;
+                }
+            });
+
+            $container.find('del, .del').each(function () {
+                if ($(this).text().trim().length) { 
+                    stats.words_deleted += $(this).text().match(/\S+/gm).length;
+                }
+            });
+
+            $container.find('li.renum').each(function () {
+                // For new/old numbers
+
+                if (hasBeenEntirely($(this), 'ins, .ins')) {
+                    stats.words_added += 1;
+
+                } else if (hasBeenEntirely($(this), 'del, .del, i:contains("Omitted")')) {
+                    stats.words_deleted += 1;
+
+                } else {
+                    stats.words_added += 1;
+                    stats.words_deleted += 1;
+                }
+            });
+
+            if (!dir.includes('Schedules')) {
+                const $margin = $container.find('.art');
+
+                if (hasBeenEntirely($margin, 'ins, .ins')) {
+                    stats.articles_added += 1;
+                }
+
+                if (hasBeenEntirely($margin, 'del, .del')) {
+                    stats.articles_deleted += 1;
+                }
+            }
+
+            progressProxy.articles_completed += 1;
         });
 
     }
@@ -70,9 +140,10 @@ async function updatedSelectedAmendment(selected_version) {
 
     flat.map((part) => {
         let dir = part.dir;
-        indexDirs(`Failed to index ${dir}`, (dir = dir)).then((articles) =>
-            articles.map((article) => makeArticle(dir + article))
-        );
+        indexDirs(`Failed to index ${dir}`, (dir = dir)).then((articles) => {
+            total_articles += articles.length;
+            articles.map((article) => makeArticle(dir + article));
+        });
     });
 }
 
@@ -155,4 +226,15 @@ function setMap(amendment) {
 
     drawIndiaMap(path, ratification_data[amendment].states);
 }
-// setMap('101');
+
+
+// Update words/articles added/deleted
+
+function updateStats(stats) {
+    $('#words-added').html(stats.words_added.toLocaleString());
+    $('#words-deleted').html(stats.words_deleted.toLocaleString());
+    $('#articles-added').html(stats.articles_added.toLocaleString());
+    $('#articles-deleted').html(stats.articles_deleted.toLocaleString());
+
+    $('.stats').each(function () { $(this).show(); });
+}

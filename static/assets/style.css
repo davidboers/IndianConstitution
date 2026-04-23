@@ -141,6 +141,11 @@ footer {
     text-align: center;
 }
 
+.word-count {
+    /* These are for the purposes of the word count in `amendments.html` */
+    display: none;
+}
+
 /*
  * cl:; Clause
  * scl: Sub-clause

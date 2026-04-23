@@ -6,7 +6,9 @@ async function searchArticleVersion(path, query, articlePath) {
         .then(response => response.text())
         .then(html => {
             const doc = parseHTMLDoc(html);
-            const text = doc.querySelector('body').innerText.replace(/\s{2,}/g, ' ');
+            const body = doc.querySelector('body');
+            body.querySelectorAll('.word-count').forEach(word_count => word_count.remove());
+            const text = body.innerText.replace(/\s{2,}/g, ' ');
             let matches = [];
             const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const regex = new RegExp(escapedQuery, 'gi');

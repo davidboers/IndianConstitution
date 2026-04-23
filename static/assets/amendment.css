@@ -2,6 +2,8 @@
     padding: var(--base-page-margin);
     display: flex;
     flex-direction: row;
+    place-items: center;
+    gap: var(--base-page-margin);
 }
 
 #articles {
@@ -17,6 +19,21 @@
 #close-map {
     color: red;
     margin-left: auto;
+}
+
+.stats {
+    text-align: center;
+    border: 1px solid black;
+    background-color: aliceblue;
+    padding: var(--base-page-margin);
+}
+
+#words-added, #articles-added {
+    color: green;
+}
+
+#words-deleted, #articles-deleted {
+    color: red;
 }
 
 #map {

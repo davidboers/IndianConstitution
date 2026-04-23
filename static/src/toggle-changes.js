@@ -11,8 +11,10 @@ void function () {
 
         // Copy other attributes
         for (const attr of node.attributes) {
-            if (attr.name !== 'class') {
-                new_node.setAttribute(attr.name, attr.value);
+            new_node.setAttribute(attr.name, attr.value);
+
+            if (attr.name === 'class') {
+                new_node.classList.remove(cls);
             }
         }
 

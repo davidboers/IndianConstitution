@@ -4,7 +4,7 @@ $('header').load(`/${lang}/header.html`);
 $('#main-nav').load(`/${lang}/main-nav.html`);
 $('footer').load(`/${lang}/footer.html`);
 
-const pattern = /\(([0-9a-z]+)\)/g;
+const pattern = /(?<=>|^|\s|"|—)\(([a-z]+|[A-Z]+)\)/g;
 
 export function formatRefs($div) {
     $div.find('p, li, td, th').each(function () {

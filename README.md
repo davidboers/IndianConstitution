@@ -48,7 +48,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 * Government of India Act, 1935 links
 * References to Seventh Schedule (see article 368)
 * Effective dates
-* Notification of 106th amendment: April 16, 2026
 
 ## Features
 

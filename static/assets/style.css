@@ -118,6 +118,7 @@ footer {
 }
 
 #nav {
+    padding: var(--base-page-margin);
     flex: 35%;
 }
 

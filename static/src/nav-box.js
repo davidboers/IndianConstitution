@@ -9,7 +9,7 @@ if (influence_set) {
     $influences.detach();
 }
 
-$nav.html(`
+$nav.append(`
     <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
         <p><a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a></p>

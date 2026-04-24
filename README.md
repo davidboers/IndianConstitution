@@ -14,6 +14,7 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2123/1/A2014-6.pdf): Andhra Pradesh Reorganisation Act, 2014.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2176/1/A1953-30.pdf): Andhra State Act, 1953.
 * [link](https://www.indiacode.nic.in/handle/123456789/1452?sam_handle=123456789/1362#:~:text=India%20Code%3A%20Assam%20(Alteration%20of%20Boundaries)%20Act%2C%201951&text=Long%20Title%3A,to%20the%20Government%20of%20Bhutan.): Assam (Alteration of Boundaries) Act, 1951.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1716/1/A1969-55.pdf): Assam Reorganisation (Meghalaya) Act, 1969.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1501/1/196824.pdf): Bihar and Uttar Pradesh (Alteration of Boundaries) Act, 1968.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1636/1/195640.pdf): Bihar and West Bengal (Transfer of Territories) Act, 1956.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2001/1/200030.pdf): Bihar Reorganisation Act, 2000.
@@ -23,8 +24,10 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/13079/1/a2019-44.pdf): Dadra and Nagar Haveli and Daman and Diu (Merger of Union Territories) Act, 2019.
 * [link](https://prsindia.org/files/bills_acts/acts_states/goa/1987/1987GOA18.pdf): Goa, Daman and Diu Reorganisation Act, 1987.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1751/1/197931.pdf): Haryana and Uttar Pradesh (Alteration of Boundaries) Act, 1979.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1377/3/a1954-32.pdf): Himachal Pradesh and Bilaspur (New State) Act, 1954.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/15875/1/the_jammu_and_kashmir_reorganisation_act_2019.pdf): Jammu and Kashmir Reorganisation Act, 2019.
 * [link](https://www.indiacode.nic.in/repealedfileopen?rfilename=A1973-34.pdf): Laccadive, Minicoy and Admindivi Islands (Alteration of Name) Act, 1973.
+* [link](https://www.indiacode.nic.in/bitstream/123456789/1395/3/A1954-18.pdf): Lushai Hills District (Change of Name) Act, 1954.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/1992/1/aa200028.pdf): Madhya Pradesh Reorganisation Act, 2000.
 * [link](https://indiankanoon.org/doc/127846701/): Madras State (Alteration of Name) Act, 1968.
 * [link](https://indiankanoon.org/doc/45260278/): Mysore State (Alteration of Name) Act, 1973.

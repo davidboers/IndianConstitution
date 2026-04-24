@@ -320,6 +320,30 @@
         "header": "Allocation of seats in the Council of States"
     },
     {
+        "path_part": "Schedules/Fifth_Schedule/",
+        "refs": "[Article 244(1)]",
+        "has_chapters": true,
+        "chapters": [
+            {
+                "path_part": "Part_A/",
+                "header": "Part A—General"
+            },
+            {
+                "path_part": "Part_B/",
+                "header": "Part B—Administration and Control of Scheduled Areas and Scheduled Tribes"
+            },
+            {
+                "path_part": "Part_C/",
+                "header": "Part C—Scheduled Areas"
+            },
+            {
+                "path_part": "Part_D/",
+                "header": "Part D—Amendment of the Schedule"
+            }
+        ],
+        "header": "Provisions as to the Administration and Control of Scheduled Areas and Scheduled Tribes"
+    },
+    {
         "path_part": "Schedules/Seventh_Schedule/",
         "refs": "[Article 246]",
         "has_chapters": false

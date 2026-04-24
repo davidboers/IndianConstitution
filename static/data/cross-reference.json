@@ -2285,6 +2285,16 @@
             "path": "Part_X/244/"
         },
         {
+            "name": "Fifth Schedule",
+            "path": "Schedules/Fifth_Schedule/Part_D/7/"
+        }
+    ],
+    [
+        {
+            "name": "244. Administration of the Scheduled Areas and Tribal Areas.",
+            "path": "Part_X/244/"
+        },
+        {
             "name": "Part B of the First Schedule",
             "path": "Schedules/First_Schedule/Part_B/"
         }
@@ -4167,6 +4177,26 @@
         {
             "name": "393. Short title.",
             "path": "Part_XXII/393/"
+        }
+    ],
+    [
+        {
+            "name": "Fifth Schedule",
+            "path": "Schedules/Fifth_Schedule/Part_D/7/"
+        },
+        {
+            "name": "Part B of the First Schedule",
+            "path": "Schedules/First_Schedule/Part_B/"
+        }
+    ],
+    [
+        {
+            "name": "Fifth Schedule",
+            "path": "Schedules/Fifth_Schedule/Part_D/7/"
+        },
+        {
+            "name": "368. Procedures for amendment of the Constitution.",
+            "path": "Part_XX/368/"
         }
     ],
     [

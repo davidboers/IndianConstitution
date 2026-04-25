@@ -755,6 +755,10 @@
         {
             "name": "334. Reservation of seats and special representation to cease after certain period.",
             "path": "Part_XVI/334/"
+        },
+        {
+            "name": "239AA. Special provisions with respect to Delhi.",
+            "path": "Part_VIII/239AA/"
         }
     ],
     [
@@ -765,10 +769,6 @@
         {
             "name": "332A. Reservation of seats for women in the Legislative Assemblies of the States.",
             "path": "Part_XVI/332A/"
-        },
-        {
-            "name": "239AA. Special provisions with respect to Delhi.",
-            "path": "Part_VIII/239AA/"
         }
     ],
     [

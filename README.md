@@ -53,13 +53,12 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Quality and Usability
 
-* References to Seventh Schedule (see article 368)
+* Single quotes
 * Override names in references json
 * Effective dates
-* Interpretation articles
+* Search mechanism with special symbols like ,
 
 ## Features
 
 * Constitution orders (table)
-
-## Content
+* Interpretation articles

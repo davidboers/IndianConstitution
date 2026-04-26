@@ -53,15 +53,13 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Quality and Usability
 
-* Government of India Act, 1935 links
 * References to Seventh Schedule (see article 368)
-* Effective dates
-* Collapse Tenth Schedule into flat directory
-* Interpretation articles
 * Override names in references json
+* Effective dates
+* Interpretation articles
 
 ## Features
 
-## Content
-
 * Constitution orders (table)
+
+## Content

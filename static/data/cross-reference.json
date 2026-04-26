@@ -46,7 +46,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -786,7 +786,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -836,7 +836,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -1026,7 +1026,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -1076,7 +1076,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -1406,7 +1406,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -1546,7 +1546,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -3026,7 +3026,7 @@
         },
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         }
     ],
     [
@@ -4432,7 +4432,7 @@
     [
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "99. Oath or affirmation by members.",
@@ -4442,7 +4442,7 @@
     [
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "188. Oath or affirmation by members.",
@@ -4452,47 +4452,7 @@
     [
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
-        },
-        {
-            "name": "122. Courts not to inquire into proceedings of Parliament.",
-            "path": "Part_V/Chapter_II/122/"
-        }
-    ],
-    [
-        {
-            "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
-        },
-        {
-            "name": "212. Courts not to inquire into proceedings of the Legislature.",
-            "path": "Part_VI/Chapter_III/212/"
-        }
-    ],
-    [
-        {
-            "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
-        },
-        {
-            "name": "105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.",
-            "path": "Part_V/Chapter_II/105/"
-        }
-    ],
-    [
-        {
-            "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
-        },
-        {
-            "name": "194. Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.",
-            "path": "Part_VI/Chapter_III/194/"
-        }
-    ],
-    [
-        {
-            "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "84. Qualification for membership of Parliament.",
@@ -4502,7 +4462,7 @@
     [
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "101. Vacation of seats.",
@@ -4512,7 +4472,7 @@
     [
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "103. Decision on questions as to disqualifications of members.",
@@ -4522,11 +4482,51 @@
     [
         {
             "name": "Tenth Schedule",
-            "path": "Schedules/Tenth_Schedule/Part_B/5/"
+            "path": "Schedules/Tenth_Schedule/8/"
         },
         {
             "name": "324. Superintendence, direction and control of elections to be vested in an Election Commission.",
             "path": "Part_XV/324/"
+        }
+    ],
+    [
+        {
+            "name": "Tenth Schedule",
+            "path": "Schedules/Tenth_Schedule/8/"
+        },
+        {
+            "name": "122. Courts not to inquire into proceedings of Parliament.",
+            "path": "Part_V/Chapter_II/122/"
+        }
+    ],
+    [
+        {
+            "name": "Tenth Schedule",
+            "path": "Schedules/Tenth_Schedule/8/"
+        },
+        {
+            "name": "212. Courts not to inquire into proceedings of the Legislature.",
+            "path": "Part_VI/Chapter_III/212/"
+        }
+    ],
+    [
+        {
+            "name": "Tenth Schedule",
+            "path": "Schedules/Tenth_Schedule/8/"
+        },
+        {
+            "name": "105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.",
+            "path": "Part_V/Chapter_II/105/"
+        }
+    ],
+    [
+        {
+            "name": "Tenth Schedule",
+            "path": "Schedules/Tenth_Schedule/8/"
+        },
+        {
+            "name": "194. Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.",
+            "path": "Part_VI/Chapter_III/194/"
         }
     ],
     [

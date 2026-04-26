@@ -57,7 +57,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 * References to Seventh Schedule (see article 368)
 * Effective dates
 * Collapse Tenth Schedule into flat directory
-* Quotation marks
 * Interpretation articles
 * Override names in references json
 

@@ -53,8 +53,6 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Quality and Usability
 
-* Single quotes
-* Override names in references json
 * Effective dates
 * Search mechanism with special symbols like ,
 

@@ -151,9 +151,10 @@ footer {
  * scl: Sub-clause
  * ex: Explanation
  * item: Item 
+ * sub-item: Sub-item
  */
 
-.cl, .scl, .ex, .item {
+.cl, .scl, .ex, .item, .sub-item {
     text-indent: 1em;
 }
 
@@ -163,6 +164,10 @@ footer {
 
 .item {
     margin-left: 2em;
+}
+
+.sub-item {
+    margin-left: 3em;
 }
 
 #effective-date, .ex-hd {
@@ -240,4 +245,25 @@ li.changes.renum::marker, li.changes.renum::before {
 
 table {
     width: 100%;
+}
+
+/* Provisions with limited application */
+
+.la-container {
+    margin-block-start: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+button.toggle-la {
+    background: transparent;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+button.toggled-la {
+    padding: 2px;
+    border: 1px solid black;
 }

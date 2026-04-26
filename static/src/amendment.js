@@ -1,5 +1,5 @@
 import { flatParts, indexDirs } from "./contents.js";
-import { formatRefs } from "./general.js";
+import { formatArticleText } from "./general.js";
 
 const ratification_data = await fetch('/static/data/ratification.json').then(r => r.json());
 
@@ -69,7 +69,7 @@ async function updatedSelectedAmendment(selected_version) {
             $container.find('script').attr('type', 'module');
             $container.appendTo($article_box);
             $article_box.appendTo($articles_box);
-            formatRefs($container);
+            formatArticleText($container);
             document.dispatchEvent(new Event('markChanges'));
 
             // Stats

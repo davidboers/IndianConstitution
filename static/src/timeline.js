@@ -1,4 +1,4 @@
-import { formatRefs } from "./general.js";
+import { formatArticleText } from "./general.js";
 
 const begin = new Date(1949, 10, 26); // 10 = November (0 indexed)
 const end = new Date();
@@ -10,7 +10,7 @@ function getFrac(date) {
 function changeVersion($label, link) {
     $('.art-holder').attr('name', link);
     $('.art-holder').each(function () {
-        $(this).load(link, () => formatRefs($(this)));
+        $(this).load(link, () => formatArticleText($(this)));
     });
     $('.timeline-label-bold').removeClass('timeline-label-bold');
     $label.addClass('timeline-label-bold');

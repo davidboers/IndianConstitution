@@ -129,7 +129,11 @@ void function () {
         if (query) {
             query = query.trim();
             if (query.length > 0) {
-                query = query.replaceAll('+', ' ');
+                try {
+                    query = decodeURIComponent(query).replaceAll('+', ' ');
+                } catch (e) {
+                    query = query.replaceAll('+', ' ');
+                }                
                 $('#query').val(query);
                 $('#hits').html(`<p id="loading">Loading...</p>`);
                 getArticleList().then(articles => searchArticles(articles, query));

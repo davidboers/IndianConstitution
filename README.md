@@ -54,9 +54,8 @@ This is an independent project creating a dynamic and interactive digital copy o
 ## Quality and Usability
 
 * Effective dates
-* See also sections
 
 ## Features
 
-* Constitution orders (table)
-* Interpretation articles
+* Table of constitution orders
+* Links to interpretation articles

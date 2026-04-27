@@ -1,11 +1,21 @@
 [
     [
         {
-            "name": "55. Manner of election of President",
+            "name": "30. Right of minorities to establish and administer educational institutions.",
+            "path": "Part_III/30/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 6. Powers of the District Council to establish primary schools, etc.",
+            "path": "Schedules/Sixth_Schedule/6/"
+        }
+    ],
+    [
+        {
+            "name": "55. Manner of election of President.",
             "path": "Part_V/Chapter_I/55/"
         },
         {
-            "name": "66. Election of Vice-President",
+            "name": "66. Election of Vice-President.",
             "path": "Part_V/Chapter_I/66/"
         }
     ],
@@ -25,7 +35,7 @@
     ],
     [
         {
-            "name": "52. The President of India",
+            "name": "52. The President of India.",
             "path": "Part_V/Chapter_I/52/"
         },
         {
@@ -223,6 +233,14 @@
             "path": "Part_VI/Chapter_III/172/"
         },
         {
+            "name": "243E. Duration of Panchayats, etc.",
+            "path": "Part_IX/243E/"
+        },
+        {
+            "name": "243U. Duration of Municipalities, etc.",
+            "path": "Part_IXA/243U/"
+        },
+        {
             "name": "352. Proclamation of Emergency.",
             "path": "Part_XVIII/352/"
         }
@@ -415,6 +433,14 @@
         {
             "name": "191. Disqualifications for membership. (State Legislatures)",
             "path": "Part_VI/Chapter_III/191/"
+        },
+        {
+            "name": "243F. Disqualifications for membership. (The Panchayats)",
+            "path": "Part_IX/243F/"
+        },
+        {
+            "name": "243V. Disqualifications for membership. (The Municipalities)",
+            "path": "Part_IXA/243V/"
         }
     ],
     [
@@ -657,6 +683,16 @@
     ],
     [
         {
+            "name": "124(4). Establishment and constitution of Supreme Court.",
+            "path": "Part_V/Chapter_IV/124/"
+        },
+        {
+            "name": "324(5). Superintendence, direction and control of elections to be vested in an Election Commission.",
+            "path": "Part_XV/324/"
+        }
+    ],
+    [
+        {
             "name": "125. Salaries, etc., of Judges. (Supreme Court)",
             "path": "Part_V/Chapter_IV/125/"
         },
@@ -717,12 +753,212 @@
     ],
     [
         {
+            "name": "163. Council of Ministers to aid and advise Governor.",
+            "path": "Part_VI/Chapter_II/163/"
+        },
+        {
+            "name": "200. Assent to Bills.",
+            "path": "Part_VI/Chapter_III/200/"
+        },
+        {
+            "name": "371A. Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "371H(a). Special provision with respect to the State of Arunachal Pradesh.",
+            "path": "Part_XXI/371H/"
+        },
+        {
+            "name": "371F(g). Special provisions with respect to the State of Sikkim.",
+            "path": "Part_XXI/371F/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 9. Licences or leases for the purpose of prospecting for, or extraction of, minerals.",
+            "path": "Schedules/Sixth_Schedule/9/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 20BA. Exercise of discretionary powers by the Governor (of Assam) in the discharge of his functions.",
+            "path": "Schedules/Sixth_Schedule/20BA/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 20BB. Exercise of discretionary powers by the Governor(s of Tripura and Mizoram) in the discharge of his functions.",
+            "path": "Schedules/Sixth_Schedule/20BB/"
+        }
+    ],
+    [
+        {
+            "name": "170(1). Composition of the Legislative Assemblies.",
+            "path": "Part_VI/Chapter_III/170/"
+        },
+        {
+            "name": "371A(2)(h)(i). Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "371F(a). Special provision with respect to the State of Sikkim.",
+            "path": "Part_XXI/371F/"
+        },
+        {
+            "name": "371G(b). Special provision with respect to the State of Mizoram.",
+            "path": "Part_XXI/371G/"
+        },
+        {
+            "name": "371I. Special provision with respect to the State of Goa.",
+            "path": "Part_XXI/371I/"
+        }
+    ],
+    [
+        {
+            "name": "243. Definitions. (The Panchayats)",
+            "path": "Part_IX/243/"
+        },
+        {
+            "name": "243P. Definitions. (The Municipalities)",
+            "path": "Part_IXA/243P/"
+        }
+    ],
+    [
+        {
+            "name": "243B. Constitution of Panchayats.",
+            "path": "Part_IX/243B/"
+        },
+        {
+            "name": "243Q. Constitution of Municipalities.",
+            "path": "Part_IXA/243Q/"
+        }
+    ],
+    [
+        {
+            "name": "243C. Composition of Panchayats.",
+            "path": "Part_IX/243C/"
+        },
+        {
+            "name": "243R. Composition of Municipalities.",
+            "path": "Part_IXA/243R/"
+        }
+    ],
+    [
+        {
+            "name": "243G. Powers, authority and responsibilities of Panchayats.",
+            "path": "Part_IX/243G/"
+        },
+        {
+            "name": "243W. Powers, authority and responsibilities of Municipalities, etc.",
+            "path": "Part_IXA/243W/"
+        }
+    ],
+    [
+        {
+            "name": "243H. Powers to impose taxes by, and Funds of, the Panchayats.",
+            "path": "Part_IX/243H/"
+        },
+        {
+            "name": "243X. Power to impose taxes by, and Funds of, the Municipalities.",
+            "path": "Part_IXA/243X/"
+        }
+    ],
+    [
+        {
+            "name": "243I. Constitution of Finance Commission to review financial position. (The Panchayats)",
+            "path": "Part_IX/243I/"
+        },
+        {
+            "name": "243Y. Finance Commission. (The Municipalities)",
+            "path": "Part_IXA/243Y/"
+        },
+        {
+            "name": "280. Finance Commission. (Central)",
+            "path": "Part_XII/280/"
+        }
+    ],
+    [
+        {
+            "name": "243J. Audit of accounts of Panchayats.",
+            "path": "Part_IX/243J/"
+        },
+        {
+            "name": "243Z. Audit of accounts of Municipalities.",
+            "path": "Part_IXA/243Z/"
+        },
+        {
+            "name": "243ZM. Audit of accounts of co-operative societies.",
+            "path": "Part_IXB/243ZM/"
+        }
+    ],
+    [
+        {
+            "name": "243K. Elections to the Panchayats.",
+            "path": "Part_IX/243K/"
+        },
+        {
+            "name": "243ZA. Elections to the Municipalities.",
+            "path": "Part_IXA/243ZA/"
+        }
+    ],
+    [
+        {
+            "name": "243L. Application to Union territories. (The Panchayats)",
+            "path": "Part_IX/243L/"
+        },
+        {
+            "name": "243ZB. Application to Union territories. (The Municipalities)",
+            "path": "Part_IXA/243ZB/"
+        },
+        {
+            "name": "243ZS. Application to Union territories. (The Co-operative Societies)",
+            "path": "Part_IXA/243ZS/"
+        }
+    ],
+    [
+        {
+            "name": "243M. Part not to apply to certain areas. (The Panchayats)",
+            "path": "Part_IX/243M/"
+        },
+        {
+            "name": "243ZC. Part not to apply to certain areas. (The Municipalities)",
+            "path": "Part_IXA/243ZC/"
+        }
+    ],
+    [
+        {
+            "name": "243N. Continuance of existing laws and Panchayats.",
+            "path": "Part_IX/243N/"
+        },
+        {
+            "name": "243ZF. Continuance of existing laws and Municipalities.",
+            "path": "Part_IXA/243ZF/"
+        },
+        {
+            "name": "243ZT. Continuance of existing laws. (The Co-operative Societies)",
+            "path": "Part_IXA/243ZT/"
+        }
+    ],
+    [
+        {
+            "name": "243O. Bar to interference by courts in electoral matters. (The Panchayats)",
+            "path": "Part_IX/243O/"
+        },
+        {
+            "name": "243ZG. Bar to interference by courts in electoral matters. (The Municipalities)",
+            "path": "Part_IXA/243ZG/"
+        },
+        {
+            "name": "329. Bar to interference by courts in electoral matters. (General)",
+            "path": "Part_XV/329/"
+        }
+    ],
+    [
+        {
             "name": "356. Provisions in case of failure of constitutional machinery in States.",
             "path": "Part_XVIII/356/"
         },
         {
             "name": "239AB. Provisions in case of failure of constitutional machinery. (Delhi)",
             "path": "Part_VIII/239AB/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 16. Dissolution of a District or Regional Council.",
+            "path": "Schedules/Sixth_Schedule/16/"
         }
     ],
     [
@@ -783,6 +1019,16 @@
     ],
     [
         {
+            "name": "332(2). Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.",
+            "path": "Part_XVI/332/"
+        },
+        {
+            "name": "Schedule, Para. 17. Exclusion of areas from autonomous districts in forming constituencies in such districts.",
+            "path": "Schedules/Sixth_Schedule/17/"
+        }
+    ],
+    [
+        {
             "name": "338. National Commission for Scheduled Castes.",
             "path": "Part_XVI/338/"
         },
@@ -827,6 +1073,56 @@
         {
             "name": "356. Provisions in case of failure of constitutional machinery in States.",
             "path": "Part_XVIII/356/"
+        }
+    ],
+    [
+        {
+            "name": "371A(1)(b). Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "371H. Special provision with respect to the State of Arunachal Pradesh.",
+            "path": "Part_XXI/371H/"
+        }
+    ],
+    [
+        {
+            "name": "371A(2)(c). Special provision with respect to the State of Nagaland.",
+            "path": "Part_XXI/371A/"
+        },
+        {
+            "name": "371G. Special provision with respect to the State of Mizoram.",
+            "path": "Part_XXI/371G/"
+        },
+        {
+            "name": "Fifth Schedule, Para. 5. Law applicable to Scheduled Areas.",
+            "path": "Schedules/Fifth_Schedule/Part_B/5/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 12. Application of Acts of Parliament and of the Legislature of the State of Assam to autonomous districts and autonomous regions in the State of Assam.",
+            "path": "Schedules/Sixth_Schedule/12/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 12A. Application of Acts of Parliament and of the Legislature of the State of Meghalaya to autonomous districts and autonomous regions in the State of Meghalaya.",
+            "path": "Schedules/Sixth_Schedule/12A/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 12AA. Application of Acts of Parliament and of the Legislature of the State of Tripura to the autonomous district and autonomous regions in the State of Tripura.",
+            "path": "Schedules/Sixth_Schedule/12AA/"
+        },
+        {
+            "name": "Sixth Schedule, Para. 12B. Application of Acts of Parliament and of the Legislature of the State of Mizoram to autonomous districts and autonomous regions in the State of Mizoram.",
+            "path": "Schedules/Sixth_Schedule/12B/"
+        }
+    ],
+    [
+        {
+            "name": "371D. Special provision with respect to the State of Andhra Pradesh or the State of Telangana.",
+            "path": "Part_XXI/371D/"
+        },
+        {
+            "name": "371J. Special provisions with respect to the State of Karnataka.",
+            "path": "Part_XXI/371J/"
         }
     ],
     [

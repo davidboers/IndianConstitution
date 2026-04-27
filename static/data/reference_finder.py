@@ -1,3 +1,10 @@
+"""
+This file is now deprecated, as it was only used in development to identify references
+"""
+
+exit(0)
+
+
 import os
 import json
 import re

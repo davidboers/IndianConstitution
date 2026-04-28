@@ -29,6 +29,8 @@ jobs:
         run: docker run --rm indianconstitution bundle exec jekyll build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: target/
 
   deploy:
     environment:

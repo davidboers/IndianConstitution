@@ -15,5 +15,5 @@ vendor/bundle
 .DS_Store
 
 # Docker
-.dockerigore
+.dockerignore
 Dockerfile

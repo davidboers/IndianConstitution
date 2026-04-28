@@ -1,15 +1,9 @@
 ---
-layout: default
+layout: contents
 ---
 
-<link rel="stylesheet" type="text/css" href="/static/assets/contents.css">
-
-<div id="container" class="page-margin">
-    <table id="main-con"></table>
-</div>
-
 <script type="module">
-    import { buildTableStructure } from "/static/src/contents.js";
+    import { buildTableStructure } from "{{ site.baseurl }}/static/src/contents.js";
     buildTableStructure();
 </script>
 <style>

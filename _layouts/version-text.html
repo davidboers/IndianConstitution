@@ -1,0 +1,15 @@
+---
+---
+
+{{ content }}
+
+{% if page.version-omits %}
+<p><i>{{ placeholder.omitted }}</i></p>
+{% endif %}
+
+{% unless page.original %}
+<div class="toggle-container">
+    <button id="toggleButton">Hide Changes</button>
+</div>
+<script src="{{ site.baseurl }}/static/src/toggle-changes.js" type="module"></script>
+{% endunless %}

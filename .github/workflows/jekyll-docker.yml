@@ -23,6 +23,4 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: srv/jekyll/_site
+      uses: fabacab/jekyll-builder-for-github-pages-action@master

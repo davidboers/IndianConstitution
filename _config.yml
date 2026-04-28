@@ -1,5 +1,6 @@
 # Site settings
 
+url: 'https://indianconstitution.github.io'
 baseurl: ''
 
 defaults:

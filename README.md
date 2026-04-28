@@ -53,12 +53,14 @@ This is an independent project creating a dynamic and interactive digital copy o
 
 ## Using Docker
 
+Serve locally with Docker:
+
 ```bash
 $ docker build -t indianconstitution .
 $ docker run --rm -it -p 4000:4000 indianconstitution
 ```
 
-Tested on Docker version 28.4.0.
+Tested on Docker version 28.4.0. You can use this method to preview any changes.
 
 <!--## Using Gemfile
 

@@ -1,4 +1,4 @@
-import { lang } from '/static/src/utils.js';
+import { lang } from './utils.js';
 
 if ($('header').children().length === 0) $('header').load(`/${lang}/header.html`);
 if ($('#main-nav').children().length === 0) $('#main-nav').load(`/${lang}/main-nav.html`);

@@ -21,3 +21,6 @@ defaults:
       path: "hi/"
     values:
       lang: "hi"
+
+exclude:
+  - README.md

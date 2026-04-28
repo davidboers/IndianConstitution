@@ -1,0 +1,19 @@
+.vscode
+dev
+**/README.md
+
+# Git
+.git*
+
+# Don't load Jekyll outside of Docker container
+_site
+.jekyll-cache
+.sass-cache
+.bundle
+vendor/bundle
+*.log
+.DS_Store
+
+# Docker
+.dockerigore
+Dockerfile

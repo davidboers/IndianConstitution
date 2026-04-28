@@ -49,11 +49,32 @@ This is an independent project creating a dynamic and interactive digital copy o
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2047/1/A2006-52.pdf): Uttaranchal (Alteration of Name) Act, 2006.
 * [link](https://www.indiacode.nic.in/bitstream/123456789/2000/1/200029.pdf): Uttar Pradesh Reorganisation Act, 2000.
 
+# How to serve locally
+
+## Using Docker
+
+```bash
+$ docker build -t indianconstitution .
+$ docker run --rm -it -p 4000:4000 indianconstitution
+```
+
+Tested on Docker version 28.4.0.
+
+<!--## Using Gemfile
+
+```bash
+$ bundle install
+$ bundle exec jekyll serve
+```
+
+Tested on Bundle version 4.0.10. -->
+
 # Todo
 
 ## Quality and Usability
 
 * Effective dates
+* 404
 
 ## Features
 

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/timelines.css">
+<script src="{{ site.baseurl }}/static/src/timeline.js" type="module"></script>
+<script src="{{ site.baseurl }}/static/src/nav-box.js" type="module"></script>
+
+<div id="container" class="flex-container">
+    <div id="art-info">
+        <div class="art-holder" data-version="{{ page.current-version }}" name="{{ page.current-version }}"></div>
+        <div id="timeline"></div>
+    </div>
+
+    <div id="nav">
+        {% if page.influences %}
+        <div id="influence">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
+                integrity="8olrmTcwXL3OYMeB+2ok8jx9/U/FZxeLnoRWdu1Pyi+lakrkqoI7hfysfQF5Q1Xx" crossorigin="anonymous" />
+            <p class="nav-sec">{{ placeholder.influences-header }}</p>
+            <ul>
+                {% if page.influences.us %}
+                <li><span class="fi fi-us"></span> {{ page.influences.us }}</li>
+                {% endif %}
+                {% if page.influences.ca %}
+                <li><span class="fi fi-ca-his"></span> {{ page.influences.ca }}</li>
+                {% endif %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>

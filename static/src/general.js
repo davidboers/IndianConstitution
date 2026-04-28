@@ -1,8 +1,8 @@
 import { lang } from '/static/src/utils.js';
 
-$('header').load(`/${lang}/header.html`);
-$('#main-nav').load(`/${lang}/main-nav.html`);
-$('footer').load(`/${lang}/footer.html`);
+if ($('header').children().length === 0) $('header').load(`/${lang}/header.html`);
+if ($('#main-nav').children().length === 0) $('#main-nav').load(`/${lang}/main-nav.html`);
+if ($('footer').children().length === 0) $('footer').load(`/${lang}/footer.html`);
 
 const pattern = /(?<=>|^|\s|"|—)\(([a-z]+|[A-Z]+)\)/g;
 

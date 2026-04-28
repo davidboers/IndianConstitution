@@ -1,0 +1,22 @@
+# Site settings
+
+baseurl: ''
+
+defaults:
+  -
+    scope:
+      path: "en/"
+    values:
+      lang: "en"
+
+  -
+    scope:
+      path: "en/**/contents.html"
+    values:
+      title-begin: "Table of Contents"
+
+  -
+    scope:
+      path: "hi/"
+    values:
+      lang: "hi"

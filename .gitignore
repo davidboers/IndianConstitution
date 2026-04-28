@@ -1,1 +1,6 @@
-dev/
+dev
+
+# Jekyll
+_site
+.jekyll-cache
+.jekyll-metadata

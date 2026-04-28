@@ -1,0 +1,55 @@
+---
+---
+
+{% assign placeholder = site.data.languages[page.lang] %}
+
+<!DOCTYPE html>
+
+<html lang="{{ page.lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="{{ site.baseurl }}/static/src/general.js" type="module"></script>
+    <script src="{{ site.baseurl }}/static/src/font-size.js" type="module"></script>
+    <title>{{ page.title-begin }} — {{ placeholder.constitution-of-india }}</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h2>{{ placeholder.constitution-of-india }}</h2>
+            <p><i>{{ placeholder.satyameva-jayate }}</i></p>
+        </div>
+
+        <div id="font-size-toggle">
+            <button type="button" style="font-size: 12px" id="font-size-small" aria-label="{{ placeholder.decrease-font-size }}">{{ placeholder.font-size-letter }}</button>
+            <span style="font-size: 12px">/</span>
+            <button type="button" style="font-size: 14px" id="font-size-large" aria-label="{{ placeholder.increase-font-size }}">{{ placeholder.font-size-letter }}</button>
+        </div>    
+    </header>
+    <div id="main-nav">
+        <a href="{{ site.baseurl }}/{{ page.lang }}/contents.html">{{ placeholder.table-of-contents-nav }}</a>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/amendment.html">{{ placeholder.changes-by-amendment-nav }}</a>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/search.html">{{ placeholder.search-nav }}</a>
+    </div>
+
+    {{ content }}
+
+    <footer>
+        <div>
+            <p> {{ placeholder.github-ref }}:
+                <a href="https://github.com/davidboers/IndianConstitution" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                    class="external" style="margin-left: 5px;">
+                    <i class="fa fa-github"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

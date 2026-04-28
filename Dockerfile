@@ -2,7 +2,7 @@ FROM ruby:3.3
 
 WORKDIR /target
 COPY Gemfile* .
-RUN AS_TEST=true bundle install
+RUN bundle install
 COPY . .
 
 #COPY en as
@@ -22,5 +22,4 @@ COPY . .
 #COPY en ur
 
 EXPOSE 4000
-ENV AS_TEST="true"
 CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]

@@ -1,7 +1,7 @@
 # Site settings
 
 url: 'https://davidboers.github.io'
-baseurl: 'IndianConstitution'
+baseurl: '/IndianConstitution'
 
 defaults:
   -

@@ -75,10 +75,6 @@ Tested on Bundle version 4.0.10. -->
 
 ## Quality and Usability
 
-* Effective dates
 * 404
-
-## Features
-
-* Table of constitution orders
-* Links to interpretation articles
+* Fix relative urls
+* Docker ignore

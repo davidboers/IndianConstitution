@@ -1,5 +1,7 @@
 dev
 
+Gemfile.lock
+
 # Jekyll
 _site
 .jekyll-cache

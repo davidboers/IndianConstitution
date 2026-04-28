@@ -6,19 +6,14 @@ baseurl: '/IndianConstitution'
 defaults:
   -
     scope:
-      path: "en/"
+      path: "en"
     values:
       lang: "en"
-
-  -
-    scope:
-      path: "en/**/contents.html"
-    values:
       title-begin: "Table of Contents"
 
   -
     scope:
-      path: "hi/"
+      path: "hi"
     values:
       lang: "hi"
 

@@ -62,19 +62,17 @@ $ docker run --rm -it -p 4000:4000 indianconstitution
 
 Tested on Docker version 28.4.0. You can use this method to preview any changes.
 
-<!--## Using Gemfile
+## Using Gemfile
 
 ```bash
 $ bundle install
 $ bundle exec jekyll serve
 ```
 
-Tested on Bundle version 4.0.10. -->
+Tested on Bundle version 4.0.10.
 
 # Todo
 
 ## Quality and Usability
 
 * 404
-* Fix relative urls
-* Docker ignore

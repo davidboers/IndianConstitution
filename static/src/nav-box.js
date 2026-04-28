@@ -1,4 +1,4 @@
-import { composeQueryDir, getTree, lang, normalizeDirName, toc_link_attr } from "./utils.js";
+import { composeQueryDir, getTree, baseurl, langurl, lang, normalizeDirName, toc_link_attr } from "./utils.js";
 
 
 const $nav = $('#nav');
@@ -12,8 +12,8 @@ if (influence_set) {
 $nav.append(`
     <div id="contents-hidden" hidden></div>
     <div style="padding: 5px; text-align: center;">
-        <p><a id="prev-art">Previous article</a> * <a href="/${lang}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a></p>
-        <form action="/${lang}/search.html" id="search-form">
+        <p><a id="prev-art">Previous article</a> * <a href="${langurl}/contents.html">Table of Contents</a> * <a id="next-art">Next article</a></p>
+        <form action="${langurl}/search.html" id="search-form">
             <input type="text" id="query" name="query"></input>
             <button>Search</button>
         </form>
@@ -73,7 +73,7 @@ void async function () {
 
 void function () {
     $('#contents-hidden').load('../contents.html', function () {
-        $(this).one('tableBuilt', function() { console.error('Wrong place for the event.'); });
+        $(this).one('tableBuilt', function () { console.error('Wrong place for the event.'); });
         $(document).one('tableBuilt', function () {
             let $tr_entry = $(this).find(`tr[${toc_link_attr}='${window.location.pathname.toString()}']`);
             let $prev_sibling = $tr_entry.prev();
@@ -100,7 +100,7 @@ void function () {
 // See also & cross reference
 
 function handleLinkGroups(json, $header, exclude = []) {
-    const path_wo_lang = window.location.pathname.toString().replace(`/${lang}/`, '');
+    const path_wo_lang = window.location.pathname.toString().replace(`${langurl}/`, '');
     var in_groups = json.filter(group => group.map(e => e.path).includes(path_wo_lang));
     var links = [...new Set(in_groups.flat(1))]
         .filter(link => link.path !== path_wo_lang &&
@@ -111,7 +111,7 @@ function handleLinkGroups(json, $header, exclude = []) {
     }
     const $list = $header.next();
     links.forEach(link => {
-        const path_use = (link.path.startsWith('https')) ? link.path : `/${lang}/${link.path}`;
+        const path_use = (link.path.startsWith('https')) ? link.path : `${langurl}/${link.path}`;
         const $li = makeLinkListElem(path_use, link.name);
         $list.append($li);
     });
@@ -119,11 +119,11 @@ function handleLinkGroups(json, $header, exclude = []) {
 }
 
 void async function () {
-    var see_also = await (await fetch('/static/data/see-also.json')).json();
+    var see_also = await (await fetch(`${baseurl}/static/data/see-also.json`)).json();
     var $header = $('.nav-sec#see-also');
     var exclude = handleLinkGroups(see_also, $header);
 
-    var cross_reference = await (await fetch('/static/data/cross-reference.json')).json();
+    var cross_reference = await (await fetch(`${baseurl}/static/data/cross-reference.json`)).json();
     $header = $('.nav-sec#cross-reference');
     handleLinkGroups(cross_reference, $header, exclude);
 }();
@@ -131,7 +131,7 @@ void async function () {
 // Switch language
 
 void function () {
-    $('div#lang-nav').load('/static/templates/lang-nav.html', function () {
+    $('div#lang-nav').load(`${baseurl}/static/templates/lang-nav.html`, function () {
         $(this).find('a.lang').each((_, $a) => $($a).attr('href', window.location.href.replace(`/${lang}/`, `/${$($a).attr('id')}/`)));
     });
 }();

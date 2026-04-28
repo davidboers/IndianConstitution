@@ -1,7 +1,8 @@
 import { flatParts, indexDirs } from "./contents.js";
 import { formatArticleText } from "./general.js";
+import { baseurl } from "./utils.js";
 
-const ratification_data = await fetch('/static/data/ratification.json').then(r => r.json());
+const ratification_data = await fetch(`${baseurl}/static/data/ratification.json`).then(r => r.json());
 
 // Set up amendment selection
 
@@ -222,7 +223,7 @@ $('#close-map').on('click', () => {
 });
 
 function setMap(amendment) {
-    const path = `/static/data/gis/${ratification_data[amendment].id}.json`;
+    const path = `${baseurl}/static/data/gis/${ratification_data[amendment].id}.json`;
 
     drawIndiaMap(path, ratification_data[amendment].states);
 }

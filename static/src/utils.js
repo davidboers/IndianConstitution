@@ -1,7 +1,6 @@
 export const toc_link_attr = 'name'; 
 
 
-
 export function parseHTMLDoc(html) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
@@ -34,7 +33,13 @@ function getLanguage(enDefault = true) {
 }
 
 
-const tree_path = `/${lang}/tree.json`;
+
+export const baseurl = '/IndianConstitution';
+export const langurl = `${baseurl}/${lang}`;
+
+
+
+const tree_path = `${langurl}/tree.json`;
 
 export async function getTree() {
     return fetch(tree_path);
@@ -54,13 +59,13 @@ export function composeQueryDir(path, dir = undefined) {
     if (dir) {
         dir = stripSideSlashes(dir);
 
-        const dup_lang = `${lang}/`;
+        const dup_lang = langurl.substring(1);
         if (dir.startsWith(dup_lang)) {
             dir = dir.substring(dup_lang.length)
         }
     }
 
-    let query_dir = `/${lang}`;
+    let query_dir = langurl;
     if (dir && path !== dir) query_dir = `${query_dir}/${dir}`;
     query_dir = `${query_dir}/${path}/`;
     return query_dir;

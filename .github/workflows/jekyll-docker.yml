@@ -26,7 +26,9 @@ jobs:
       - name: Install bundle via Docker
         run: docker build -t indianconstitution .
       - name: Build site via Docker
-        run: docker run --rm indianconstitution bundle exec jekyll build
+        run: | 
+          docker run --rm indianconstitution bundle exec jekyll build
+          ls -la
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

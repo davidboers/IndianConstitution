@@ -23,11 +23,32 @@ layout: default
                 integrity="8olrmTcwXL3OYMeB+2ok8jx9/U/FZxeLnoRWdu1Pyi+lakrkqoI7hfysfQF5Q1Xx" crossorigin="anonymous" />
             <p class="nav-sec">{{ placeholder.influences-header }}</p>
             <ul>
+                {% if page.influences.uk %}
+                <li><span class="fi fi-gb"></span> {{ page.influences.uk }}</li>
+                {% endif %}
                 {% if page.influences.us %}
                 <li><span class="fi fi-us"></span> {{ page.influences.us }}</li>
                 {% endif %}
                 {% if page.influences.ca %}
                 <li><span class="fi fi-ca-his"></span> {{ page.influences.ca }}</li>
+                {% endif %}
+                {% if page.influences.au %}
+                <li><span class="fi fi-au"></span> {{ page.influences.au }}</li>
+                {% endif %}
+                {% if page.influences.za %}
+                <li><span class="fi fi-za-his"></span> {{ page.influences.za }}</li>
+                {% endif %}
+                {% if page.influences.de %}
+                <li><span class="fi fi-de"></span> {{ page.influences.de }}</li>
+                {% endif %}
+                {% if page.influences.su %}
+                <li><span class="fi fi-su"></span> {{ page.influences.su }}</li>
+                {% endif %}
+                {% if page.influences.ie %}
+                <li><span class="fi fi-ie"></span> {{ page.influences.ie }}</li>
+                {% endif %}
+                {% if page.influences.jp %}
+                <li><span class="fi fi-ie"></span> {{ page.influences.jp }}</li>
                 {% endif %}
             </ul>
         </div>

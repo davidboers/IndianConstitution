@@ -49,7 +49,7 @@ layout: default
                     {% assign articles = site.pages | where_exp: "article", "article.path contains chapter.path_part and article.path contains part.path_part and article.name == 'index.html'" | sort: "path" %}
                     {% for article in articles %}
                         {% assign num = article.dir | split: "/" | remove_last | last %}
-                        {% if part.subheadings and part.subheadings[num] %}
+                        {% if chapter.subheadings and chapter.subheadings[num] %}
                         <tr>
                             <th class="subheading" colspan="2">{{ chapter.subheadings[num] }}</th>
                         </tr>

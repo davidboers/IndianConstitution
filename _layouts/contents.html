@@ -3,7 +3,11 @@ layout: default
 ---
 
 {% assign placeholder = site.data.languages[page.lang] %}
-{% assign tree = site.data.tree[page.lang] | where_exp: "post", "page.path contains post.path_part or page.all-contents" %}
+{% if page.all-contents %}
+    {% assign tree = site.data.tree[page.lang] %}
+{% else %}
+    {% assign tree = site.data.tree[page.lang] | where_exp: "part", "page.path contains part.path_part" %}
+{% endif %}
 
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/contents.css">
 
@@ -39,16 +43,22 @@ layout: default
             {% endif %}
 
             {% if part.has_chapters %}
-                {% assign chapters = part.chapters | where_exp: "chapter", "page.path contains chapter.path_part or page.all-contents" %}
+                {% if page.all-contents %}
+                    {% assign chapters = part.chapters %}
+                {% else %}
+                    {% assign chapters = part.chapters | where_exp: "chapter", "page.path contains chapter.path_part" %}
+                {% endif %}
                 {% for chapter in chapters %}
                     <tbody class="contents" id="{{ chapter.path_part | downcase }}">
                         <tr>
                             <th class="part-header" colspan="2">{{ chapter.header }}</th>
                         </tr>
                     </tbody>
-                    {% assign articles = site.pages | where_exp: "article", "article.path contains chapter.path_part and article.path contains part.path_part and article.name == 'index.html'" | sort: "path" %}
-                    {% for article in articles %}
-                        {% assign num = article.dir | split: "/" | remove_last | last %}
+                    {% assign chapter_full_path_part = part.path_part | append: chapter.path_part %}
+                    {% assign articles = site.pages | where_exp: "article", "article.path contains chapter_full_path_part" | where_exp: "article", "article.name == 'index.html'" %}
+                    {% assign articles_sorted = articles | sort_articles %}
+                    {% for article in articles_sorted %}
+                        {% assign num = article.dir | article_num %}
                         {% if chapter.subheadings and chapter.subheadings[num] %}
                         <tr>
                             <th class="subheading" colspan="2">{{ chapter.subheadings[num] }}</th>
@@ -66,9 +76,10 @@ layout: default
                     {% endfor %}
                 {% endfor %}
             {% else %}
-                {% assign articles = site.pages | where_exp: "article", "article.path contains part.path_part and article.name == 'index.html'" | sort: "path" %}
-                {% for article in articles %}
-                    {% assign num = article.dir | split: "/" | remove_last | last %}
+                {% assign articles = site.pages | where_exp: "article", "article.path contains part.path_part" | where_exp: "article", "article.name == 'index.html'" %}
+                {% assign articles_sorted = articles | sort_articles %}
+                {% for article in articles_sorted %}
+                    {% assign num = article.dir | article_num %}
                     {% if part.subheadings and part.subheadings[num] %}
                     <tr>
                         <th class="subheading" colspan="2">{{ part.subheadings[num] }}</th>

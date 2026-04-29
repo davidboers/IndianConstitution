@@ -1,6 +1,7 @@
 .vscode
 dev
 **/README.md
+.secrets
 
 # Git
 .git*

@@ -26,6 +26,7 @@ jobs:
       - name: Build
         uses: actions/jekyll-build-pages@v1
       - name: Upload artifact
+        if: ${{ !env.ACT }}
         uses: actions/upload-pages-artifact@v3
 
   deploy:
@@ -36,5 +37,6 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
+        if: ${{ !env.ACT }}
         id: deployment
         uses: actions/deploy-pages@v4

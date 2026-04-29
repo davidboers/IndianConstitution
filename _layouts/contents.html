@@ -2,10 +2,92 @@
 layout: default
 ---
 
+{% assign placeholder = site.data.languages[page.lang] %}
+{% assign tree = site.data.tree[page.lang] | where_exp: "post", "page.path contains post.path_part or page.all-contents" %}
+
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/contents.css">
 
 <div id="container" class="page-margin">
-    <table id="main-con"></table>
+    <table id="main-con">
+        {% if page.all-contents %}
+        {% assign preamble = tree | where_exp: "part", "part.preamble" %}
+        <tr>
+            <td></td>
+            <td id="preamble-link"><a href="{{ preamble.path_part }}">{{ preamble.header }}</a></td>
+        </tr>
+        {% endif %}
+
+        {% for part in tree %}
+        <tbody class="contents" id="{{ part.path_part | downcase }}">
+            <tr>
+                <th class="part-num" colspan="2">{{ part.marker }}</th>
+            </tr>
+            {% if part.header %}
+            <tr>
+                <th class="part-header" colspan="2">{{ part.header }}</th>
+            </tr>
+            {% endif %}
+            {% if part.refs %}
+            <tr>
+                <th class="part-header" colspan="2">{{ part.refs }}</th>
+            </tr>
+            {% endif %}
+            {% if part.note %}
+            <tr>
+                <td colspan="2"><i>Note: </i>{{ part.note }}</td>
+            </tr>
+            {% endif %}
+
+            {% if part.has_chapters %}
+                {% assign chapters = part.chapters | where_exp: "chapter", "page.path contains chapter.path_part or page.all-contents" %}
+                {% for chapter in chapters %}
+                    <tbody class="contents" id="{{ chapter.path_part | downcase }}">
+                        <tr>
+                            <th class="part-header" colspan="2">{{ chapter.header }}</th>
+                        </tr>
+                    </tbody>
+                    {% assign articles = site.pages | where_exp: "article", "article.path contains chapter.path_part and article.path contains part.path_part and article.name == 'index.html'" | sort: "path" %}
+                    {% for article in articles %}
+                        {% assign num = article.dir | split: "/" | remove_last | last %}
+                        {% if part.subheadings and part.subheadings[num] %}
+                        <tr>
+                            <th class="subheading" colspan="2">{{ chapter.subheadings[num] }}</th>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td style="width: 5em;">{{ num }}.</td>
+                            <td>
+                                <a href="{{ site.baseurl }}{{ article.dir }}">{{ article | margin_text: num }}</a>
+                                {% if article.article-omitted %}
+                                <i>({{ placeholder.omitted }})</i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            {% else %}
+                {% assign articles = site.pages | where_exp: "article", "article.path contains part.path_part and article.name == 'index.html'" | sort: "path" %}
+                {% for article in articles %}
+                    {% assign num = article.dir | split: "/" | remove_last | last %}
+                    {% if part.subheadings and part.subheadings[num] %}
+                    <tr>
+                        <th class="subheading" colspan="2">{{ part.subheadings[num] }}</th>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td style="width: 5em;">{{ num }}.</td>
+                        <td>
+                            <a href="{{ site.baseurl }}{{ article.dir }}">{{ article | margin_text: num }}</a>
+                            {% if article.article-omitted %}
+                            <i>({{ placeholder.omitted }})</i>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+        {% endfor %}
+    </table>
 </div>
 
 {{ content }}

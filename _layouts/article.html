@@ -2,17 +2,17 @@
 layout: default
 ---
 
+{% assign placeholder = site.data.languages[page.lang] %}
+
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/timelines.css">
 <script src="{{ site.baseurl }}/static/src/timeline.js" type="module"></script>
 <script src="{{ site.baseurl }}/static/src/nav-box.js" type="module"></script>
 
-{% if page.article-omitted %}
-<span id="omitted-indicator"></span>
-{% endif %}
-
 <div id="container" class="flex-container">
     <div id="art-info">
-        <div class="art-holder" data-version="{{ page.current-version }}" name="{{ page.current-version }}"></div>
+        <div class="art-holder" data-version="{{ page.current-version }}" name="{{ page.current-version }}">
+            {% include_relative {{ page.current-version }} %}
+        </div>
         <div id="timeline"></div>
     </div>
 

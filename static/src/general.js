@@ -67,6 +67,7 @@ export function formatArticleText($div) {
 
 if ($('.art-holder').length) {
     $('.art-holder').each(function () {
+        if ($(this).children().length) formatArticleText($(this));
         $(this).load($(this).attr('name'), () => formatArticleText($(this)));
     });
 }

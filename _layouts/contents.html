@@ -55,7 +55,7 @@ layout: default
                         </tr>
                         {% endif %}
                         <tr>
-                            <td style="width: 5em;">{{ num }}.</td>
+                            <td style="width: 5em;">{% unless article.path contains 'Schedules/' %} {{ num }}. {% endunless %}</td>
                             <td>
                                 <a href="{{ site.baseurl }}{{ article.dir }}">{{ article | margin_text: num }}</a>
                                 {% if article.article-omitted %}
@@ -75,7 +75,7 @@ layout: default
                     </tr>
                     {% endif %}
                     <tr>
-                        <td style="width: 5em;">{{ num }}.</td>
+                        <td style="width: 5em;">{% unless article.path contains 'Schedules/' %} {{ num }}. {% endunless %}</td>
                         <td>
                             <a href="{{ site.baseurl }}{{ article.dir }}">{{ article | margin_text: num }}</a>
                             {% if article.article-omitted %}

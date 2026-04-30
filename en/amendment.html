@@ -1,51 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title-begin: Amendment
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/assets/amendment.css">
-    <script src="https://code.jquery.com/jquery-4.0.0.js" type="module"></script>
-    <script src="https://unpkg.com/topojson-client@3" type="module"></script>
-    <script src="/static/src/general.js" type="module"></script>
-    <script src="/static/src/amendment.js" type="module"></script>
-    <title>Amendment — Constitution of India</title>
-</head>
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/amendment.css">
+<script src="https://unpkg.com/topojson-client@3" type="module"></script>
+<script src="{{ site.baseurl }}/static/src/amendment.js" type="module"></script>
 
-<body>
-    <header></header>
-    <div id="main-nav"></div>
-
-    <div id="container" class="page-margin">
-        <div id="dashboard">
-            <form>
-                <label for="amendment">Select Amendment:</label>
-                <select name="amendment" id="amendment"></select>
-            </form>
-            <div class="stats" style="display: none;">
-                Added <span id="words-added"></span> words<br>
-                Deleted <span id="words-deleted"></span> words
-            </div>
-            <div class="stats" style="display: none;">
-                Added <span id="articles-added"></span> articles<br>
-                Deleted <span id="articles-deleted"></span> articles
-            </div>
-            <button id="open-map" style="display: none;"><i class="fa-solid fa-map"></i></button>
+<div id="container" class="page-margin">
+    <div id="dashboard">
+        <form>
+            <label for="amendment">Select Amendment:</label>
+            <select name="amendment" id="amendment"></select>
+        </form>
+        <div class="stats" style="display: none;">
+            Added <span id="words-added"></span> words<br>
+            Deleted <span id="words-deleted"></span> words
         </div>
-        <div id="articles"></div>
-    </div>
-
-    <div id="map" style="display: none;">
-        <div style="display: flex; flex-direction: row;">
-            <h2>Map of ratifying states</h2>
-            <button id="close-map"><i class="fa-solid fa-x"></i></button>
+        <div class="stats" style="display: none;">
+            Added <span id="articles-added"></span> articles<br>
+            Deleted <span id="articles-deleted"></span> articles
         </div>
-        <svg width="500px" height="500px"></svg>
+        <button id="open-map" style="display: none;"><i class="fa-solid fa-map"></i></button>
     </div>
+    <div id="articles"></div>
+</div>
 
-    <footer></footer>
-</body>
-
-</html>
+<div id="map" style="display: none;">
+    <div style="display: flex; flex-direction: row;">
+        <h2>Map of ratifying states</h2>
+        <button id="close-map"><i class="fa-solid fa-x"></i></button>
+    </div>
+    <svg width="500px" height="500px"></svg>
+</div>

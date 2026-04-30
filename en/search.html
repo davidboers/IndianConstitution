@@ -1,35 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title-begin: Search
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/assets/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/assets/search.css">
-    <script src="https://code.jquery.com/jquery-4.0.0.js" type="module"></script>
-    <script src="/static/src/general.js" type="module"></script>
-    <script src="/static/src/search.js" type="module"></script>
-    <title>Search — Constitution of India</title>
-</head>
+{% assign placeholder = site.data.languages[page.lang] %}
 
-<body>
-    <header></header>
-    <div id="main-nav"></div>
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/search.css">
+<script src="{{ site.baseurl }}/static/src/search.js" type="module"></script>
 
-    <div id="container" class="page-margin">
-        <form>
-            <input type="text" id="query" name="query">
-            <button>Search</button>
-        </form>
+<div id="container" class="page-margin">
+    <form>
+        <input type="text" id="query" name="query">
+        <button>{{ placeholder.search }}</button>
+    </form>
 
-        <h3>Results</h3>
+    <h3>{{ placeholder.results }}</h3>
 
-        <div id="hits">
-            <p id="no-results">No results found.</p>
-        </div>
+    <div id="hits">
+        <p id="no-results">{{ placeholder.no-results-found }}</p>
     </div>
-
-    <footer></footer>
-</body>
-
-</html>
+</div>

@@ -8,6 +8,9 @@
   "table-of-contents-nav": "Table of contents",
   "changes-by-amendment-nav": "Changes by amendment",
   "search-nav": "Search",
+  "search": "Search",
+  "results": "Results",
+  "no-results-found": "No results found.",
   "influences-header": "Influences from other constitutions:",
   "github-ref": "Inquiries and Source Repository",
   "omitted": "Omitted."

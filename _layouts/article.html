@@ -19,6 +19,10 @@ layout: default
     </div>
 
     <div id="nav">
+        {% if page.article-note %}
+        <p>{{ page.article-note }}</p>
+        {% endif %}
+
         {% if page.influences %}
         <div id="influence">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"

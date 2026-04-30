@@ -73,6 +73,5 @@ Tested on Bundle version 4.0.10.
 
 # Todo
 
-## Quality and Usability
-
 * 404
+* Omitteds in version files

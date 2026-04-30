@@ -19,11 +19,3 @@ defaults:
 
 exclude:
   - README.md
-
-plugins:
-  - article_numbers
-  - extract_margin
-
-whitelist:
-  - article_numbers
-  - extract_margin

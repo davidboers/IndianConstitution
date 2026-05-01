@@ -36,15 +36,14 @@ module Jekyll
 
     def normalize_margin(node)
       clone = node.dup
-      clone.children.remove
+      clone.children.each { |child| child.remove if child.element? }
 
-      if clone.inner_html.strip.empty?
-        node.inner_html = node.text
-      else
+      unless clone.inner_text.strip.empty?
         node.css("del, .del").remove
+        
       end
 
-      node.inner_html
+      node.inner_text
     end
   end
 end

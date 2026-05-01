@@ -19,3 +19,5 @@ defaults:
 
 exclude:
   - README.md
+  - scripts
+  - static/data/reference_finder.py

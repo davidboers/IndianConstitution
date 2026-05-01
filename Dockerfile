@@ -5,21 +5,7 @@ COPY Gemfile* .
 RUN bundle install
 COPY . .
 
-#COPY en as
-#COPY en bn
-#COPY en gu
-#COPY en hi
-#COPY en kn
-#COPY en ks
-#COPY en ml
-#COPY en mr
-#COPY en ne
-#COPY en or
-#COPY en pa
-#COPY en sd
-#COPY en ta
-#COPY en te
-#COPY en ur
+RUN ruby scripts/merge_lang_tree.rb
 
 EXPOSE 4000
 CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]

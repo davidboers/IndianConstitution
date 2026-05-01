@@ -32,7 +32,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build
-        run: bundle exec jekyll build
+        run: |
+          ruby scripts/merge_lang_tree.rb
+          bundle exec jekyll build
         env:
           JEKYLL_ENV: production
           

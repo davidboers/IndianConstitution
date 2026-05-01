@@ -1,6 +1,6 @@
-import { flatParts, indexDirs } from "./contents.js";
+import { flatParts } from "./contents.js";
 import { formatArticleText } from "./general.js";
-import { baseurl } from "./utils.js";
+import { baseurl, getLangIndex } from "./utils.js";
 
 const ratification_data = await fetch(`${baseurl}/static/data/ratification.json`).then(r => r.json());
 
@@ -46,89 +46,80 @@ async function updatedSelectedAmendment(selected_version) {
         }
     });
 
-    function makeArticle(dir) {
-        var path = `${dir}version/a${selected_version}.html`;
+    function makeArticle(article) {
+        var path = article.url;
 
         var $article_box = $('<div class="art-holder"></div>');
 
         var $jump_to = $('<a>Jump to</a>');
-        $jump_to.attr('href', dir);
+        $jump_to.attr('href', article.article);
         $jump_to.appendTo($article_box);
 
-        var $container = $('<div></div>');
-        $container.load(path, (_, status, xhr) => {
+        var $container = $(`<div>${article.content}</div>`);
 
-            if (status === 'error' && xhr.status === 404) {
-                progressProxy.articles_completed += 1;
-                return;
+        $container.appendTo($article_box);
+        $article_box.appendTo($articles_box);
+        formatArticleText($container);
+        document.dispatchEvent(new Event('markChanges'));
+
+        // Stats
+
+        function hasBeenEntirely(obj, s) {
+            if (obj.find(s).length === 0) return;
+            return obj.clone().find(s).remove().end().html().trim().length === 0;
+        }
+
+        $container.find('ins, .ins').each(function () {
+            if ($(this).text().trim().length) { 
+                stats.words_added += $(this).text().match(/\S+/gm).length;
             }
-
-            const $toggleButton = $container.find("#toggleButton");
-            if ($toggleButton.length) {
-                $toggleButton.hide();
-            }
-            $container.find('script').attr('type', 'module');
-            $container.appendTo($article_box);
-            $article_box.appendTo($articles_box);
-            formatArticleText($container);
-            document.dispatchEvent(new Event('markChanges'));
-
-            // Stats
-
-            function hasBeenEntirely(obj, s) {
-                return obj.clone().find(s).remove().end().html().trim().length === 0;
-            }
-
-            $container.find('ins, .ins').each(function () {
-                if ($(this).text().trim().length) { 
-                    stats.words_added += $(this).text().match(/\S+/gm).length;
-                }
-            });
-
-            $container.find('del, .del').each(function () {
-                if ($(this).text().trim().length) { 
-                    stats.words_deleted += $(this).text().match(/\S+/gm).length;
-                }
-            });
-
-            $container.find('li.renum').each(function () {
-                // For new/old numbers
-
-                if (hasBeenEntirely($(this), 'ins, .ins')) {
-                    stats.words_added += 1;
-
-                } else if (hasBeenEntirely($(this), 'del, .del, i:contains("Omitted")')) {
-                    stats.words_deleted += 1;
-
-                } else {
-                    stats.words_added += 1;
-                    stats.words_deleted += 1;
-                }
-            });
-
-            if (!dir.includes('Schedules')) {
-                const $margin = $container.find('.art');
-
-                if (hasBeenEntirely($margin, 'ins, .ins')) {
-                    stats.articles_added += 1;
-                }
-
-                if (hasBeenEntirely($margin, 'del, .del')) {
-                    stats.articles_deleted += 1;
-                }
-            }
-
-            progressProxy.articles_completed += 1;
         });
+
+        $container.find('del, .del').each(function () {
+            if ($(this).text().trim().length) { 
+                stats.words_deleted += $(this).text().match(/\S+/gm).length;
+            }
+        });
+
+        $container.find('li.renum').each(function () {
+            // For new/old numbers
+
+            if (hasBeenEntirely($(this), 'ins, .ins')) {
+                stats.words_added += 1;
+
+            } else if (hasBeenEntirely($(this), 'del, .del, i:contains("Omitted")')) {
+                stats.words_deleted += 1;
+
+            } else {
+                stats.words_added += 1;
+                stats.words_deleted += 1;
+            }
+        });
+
+        if (!path.includes('Schedules')) {
+            const $margin = $container.find('.art');
+
+            if (hasBeenEntirely($margin, 'ins, .ins')) {
+                stats.articles_added += 1;
+            }
+
+            if (hasBeenEntirely($margin, 'del, .del')) {
+                stats.articles_deleted += 1;
+            }
+        }
+
+        progressProxy.articles_completed += 1;
 
     }
 
-    let flat;
+    let index;
     try {
-        flat = await flatParts();
+        index = await getLangIndex();
+
     } catch (buildFailed) {
         $articles_box.replaceWith(buildFailed);
         return;
+
     }
 
     if (ratification_data[selected_version] && !ratification_data[selected_version].disabled) {
@@ -139,13 +130,9 @@ async function updatedSelectedAmendment(selected_version) {
         $('#map').hide();
     }
 
-    flat.map((part) => {
-        let dir = part.dir;
-        indexDirs(`Failed to index ${dir}`, (dir = dir)).then((articles) => {
-            total_articles += articles.length;
-            articles.map((article) => makeArticle(dir + article));
-        });
-    });
+    let articles = index.filter((version) => version.slug === `a${selected_version}`);
+    total_articles += articles.length;
+    articles.map((article) => makeArticle(article));
 }
 
 

@@ -1,67 +1,69 @@
 
-import { parseHTMLDoc, getIndexedLinks } from './utils.js';
+import { parseHTMLDoc, getLangIndex, langurl } from './utils.js';
 
-async function searchArticleVersion(path, query, articlePath) {
-    return fetch(path)
-        .then(response => response.text())
-        .then(html => {
-            const doc = parseHTMLDoc(html);
-            const body = doc.querySelector('body');
-            body.querySelectorAll('.word-count').forEach(word_count => word_count.remove());
-            const text = body.innerText.replace(/\s{2,}/g, ' ');
-            let matches = [];
-            const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(escapedQuery, 'gi');
-            let match;
-            while ((match = regex.exec(text)) !== null) {
-                matches.push(match.index);
-            }
-            return { matches: matches, text: text, path: articlePath, query: regex };
-        })
-        .catch(error => console.error('Error searching article version:', error));
+function searchArticleVersion(html, query, articlePath) {
+    const doc = parseHTMLDoc(html);
+    const body = doc.querySelector('body');
+    body.querySelectorAll('.word-count').forEach(word_count => word_count.remove());
+    const text = body.innerText.replace(/\s{2,}/g, ' ');
+    let matches = [];
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escapedQuery, 'gi');
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+        matches.push(match.index);
+
+    }
+
+    return { matches: matches, text: text, path: articlePath, query: regex };
 }
 
-async function searchArticle(path, query) {
-    const currentVersion = await fetch(path)
-        .then(response => response.text())
-        .then(html => {
-            const doc = parseHTMLDoc(html);
-            return doc.querySelector('.art-holder').getAttribute('name');
-        })
-        .catch(error => console.error('Error finding current version of article:', error));
-    const resultsCurrent = await searchArticleVersion(path + currentVersion, query, path);
-    if (resultsCurrent.matches.length > 0) {
-        return resultsCurrent;
+function searchArticle(article, query) {
+    for (let version of article) {
+        const hits = searchArticleVersion(version.content, query, version.article);
+
+        if (hits.matches.length > 0) return hits;
+
     }
-    const versions = await fetch(path + 'version/')
-        .then(response => response.text())
-        .then(html => getIndexedLinks(html, path).filter(link => link !== currentVersion))
-        .catch(error => console.error('Error finding article version list:', error));
-    const hits = await Promise.all(versions.map(version => searchArticleVersion(path + 'version/' + version, query, path)))
-        .then(hits => hits.filter(result => result.matches.length > 0));
-    if (hits.length === 0) {
-        return null;
-    }
-    return hits.pop();
+
+    return null;
 }
 
-async function searchArticles(paths, query) {
-    const hits = await Promise.all(paths.map(path => searchArticle(path, query)))
-        .then(hits => hits.filter(hit => hit != null));
-    const $container = $('#hits');
+function searchArticles(index, query) {
+    // Fold index by article
+    let articles = index.reduce((acc, entry) => {
+        const key = entry.article;
+        (acc[key] ||= []).push(entry);
+        return acc;
+
+    }, {});
+
+    const hits = Object.values(articles)
+        .map(article => searchArticle(article, query))
+        .filter(hits => hits !== null);
+
+    const $results = $('#hits');
+    $results.find('#loading').hide();
+    const $no_results = $results.find('#no-results');
+    const $article_list = $results.find('#article-list');
+    $article_list.empty();
+
     if (hits.length === 0) {
-        $container.html('<p id="no-results">No results found.</p>');
-        return;
+        $no_results.show();
+
+    } else {
+        $no_results.hide();
+        hits.map(hit => makeHitEntry(hit, query))
+            .forEach(hit => $article_list.append(hit));
+
     }
-    $container.empty();
-    hits.map(hit => makeHitEntry(hit, query))
-        .forEach(hit => $container.append(hit));
 }
 
 function makeHitEntry(hit, query) {
     const $entry = $('<div class="hit"></div>');
 
-    const link_text = hit.path.split('/').map(seg => seg.replace('_', ' ')).filter(seg => seg.length > 0).join(' > ');
+    const link_text = hit.path.replace(langurl, '').split('/').map(seg => seg.replace('_', ' ')).filter(seg => seg.length > 0).join(' > ');
     $entry.append(`<a href="${hit.path}" class="hit-link">${link_text}</a>`);
 
     for (let match of hit.matches) {
@@ -92,31 +94,6 @@ function makeHitEntry(hit, query) {
     return $entry;
 }
 
-// Article lists
-
-async function getArticleListRecursive(path, list) {
-    const html = await fetch(path)
-        .then(response => response.text())
-        .catch(error => console.error('Failed to index articles:', error));
-
-    const doc = parseHTMLDoc(html);
-    if (doc.querySelector('.art-holder') !== null) {
-        list.push(path);
-        return list;
-    }
-
-    const links = getIndexedLinks(html);
-    return Promise.all(links.filter(link => link.endsWith('/'))
-        .map(link => (path === './') ? link : path + link)
-        .map(link => getArticleListRecursive(link, list)))
-        .then(() => { return list });
-}
-
-function getArticleList(root = './') {
-    let list = [];
-    return getArticleListRecursive(root, list);
-}
-
 // Run
 
 void function () {
@@ -133,10 +110,11 @@ void function () {
                     query = decodeURIComponent(query).replaceAll('+', ' ');
                 } catch (e) {
                     query = query.replaceAll('+', ' ');
-                }                
+                }
                 $('#query').val(query);
-                $('#hits').html(`<p id="loading">Loading...</p>`);
-                getArticleList().then(articles => searchArticles(articles, query));
+                $('#no-results').hide();
+                $('#loading').show();
+                getLangIndex().then(index => searchArticles(index, query));
             } else {
                 localStorage.removeItem('query');
             }

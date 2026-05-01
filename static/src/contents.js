@@ -1,5 +1,5 @@
 
-import { parseHTMLDoc, getIndexedLinks, composeQueryDir, normalizeDirName, getTree, toc_link_attr } from './utils.js';
+import { getIndexedLinks, composeQueryDir, getTree } from './utils.js';
 
 async function getTreeWithError() {
 

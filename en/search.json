@@ -1,0 +1,14 @@
+---
+---
+
+[
+{% assign pages = site.pages | where_exp: "page", "page.dir contains 'version/'" | filter_lang_pages: page.lang %}
+{% for page in pages %}
+  {
+    "slug": {{ page.url | slug | jsonify }},
+    "article": {{ page.url | relative_url | split: "version/" | first | jsonify }},
+    "url": {{ page.url | relative_url | jsonify }},
+    "content": {{ page.content | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

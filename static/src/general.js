@@ -1,8 +1,3 @@
-import { lang } from './utils.js';
-
-if ($('header').children().length === 0) $('header').load(`/${lang}/header.html`);
-if ($('#main-nav').children().length === 0) $('#main-nav').load(`/${lang}/main-nav.html`);
-if ($('footer').children().length === 0) $('footer').load(`/${lang}/footer.html`);
 
 const pattern = /(?<=>|^|\s|"|—)\(([a-z]+|[A-Z]+)\)/g;
 
@@ -63,11 +58,4 @@ function setupLimitedApplication($div) {
 export function formatArticleText($div) {
     formatRefs($div);
     setupLimitedApplication($div);
-}
-
-if ($('.art-holder').length) {
-    $('.art-holder').each(function () {
-        if ($(this).children().length) formatArticleText($(this));
-        $(this).load($(this).attr('name'), () => formatArticleText($(this)));
-    });
 }

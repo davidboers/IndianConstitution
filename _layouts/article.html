@@ -12,7 +12,7 @@ layout: default
 
 <div id="container" class="flex-container">
     <div id="art-info">
-        <div class="art-holder" data-version="{{ page.current-version }}" name="{{ page.current-version }}">
+        <div class="art-holder" data-version="{{ page.current-version | slug }}">
             {% include_relative {{ page.current-version }} %}
         </div>
         <div id="timeline"></div>

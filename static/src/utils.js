@@ -70,3 +70,9 @@ export function composeQueryDir(path, dir = undefined) {
     query_dir = `${query_dir}/${path}/`;
     return query_dir;
 }
+
+
+
+export async function getLangIndex() {
+    return (await fetch(`${langurl}/search.json`)).json();
+}

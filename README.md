@@ -75,4 +75,6 @@ Tested on Bundle version 4.0.10.
 
 * 404
 * Omitteds in version files
-* Timelines indexing
+* Contributing
+* Access perms
+* `nav-box.js`

@@ -9,6 +9,8 @@ layout: default
     {% assign tree = site.data.tree[page.lang] | where_exp: "part", "page.path contains part.path_part" %}
 {% endif %}
 
+{% assign lang_pages = site.pages | filter_lang_pages: page.lang %}
+
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/contents.css">
 
 <div id="container" class="page-margin">
@@ -55,7 +57,7 @@ layout: default
                         </tr>
                     </tbody>
                     {% assign chapter_full_path_part = part.path_part | append: chapter.path_part %}
-                    {% assign articles = site.pages | where_exp: "article", "article.path contains chapter_full_path_part" | where_exp: "article", "article.name == 'index.html'" %}
+                    {% assign articles = lang_pages | where_exp: "article", "article.path contains chapter_full_path_part" | where_exp: "article", "article.name == 'index.html'" %}
                     {% assign articles_sorted = articles | sort_articles %}
                     {% for article in articles_sorted %}
                         {% assign num = article.dir | article_num %}
@@ -76,7 +78,7 @@ layout: default
                     {% endfor %}
                 {% endfor %}
             {% else %}
-                {% assign articles = site.pages | where_exp: "article", "article.path contains part.path_part" | where_exp: "article", "article.name == 'index.html'" %}
+                {% assign articles = lang_pages | where_exp: "article", "article.path contains part.path_part" | where_exp: "article", "article.name == 'index.html'" %}
                 {% assign articles_sorted = articles | sort_articles %}
                 {% for article in articles_sorted %}
                     {% assign num = article.dir | article_num %}

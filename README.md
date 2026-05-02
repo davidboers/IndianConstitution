@@ -73,7 +73,6 @@ Tested on Bundle version 4.0.10.
 
 # Todo
 
-* Part contents
 * Omitteds in version files
 * 404
 * Access perms

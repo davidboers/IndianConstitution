@@ -32,7 +32,15 @@ module Jekyll
 
     end
   end
+
+  module StringFilter
+    def endswith(text, query)
+      text.end_with? query
+    
+    end
+  end
 end
 
 Liquid::Template.register_filter(Jekyll::LangPages)
 Liquid::Template.register_filter(Jekyll::Refs)
+Liquid::Template.register_filter(Jekyll::StringFilter)

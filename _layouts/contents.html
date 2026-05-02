@@ -45,7 +45,8 @@ layout: default
             {% endif %}
 
             {% if part.has_chapters %}
-                {% if page.all-contents %}
+                {% assign is_part_contents = page.dir | endswith: part.path_part %}
+                {% if page.all-contents or is_part_contents %}
                     {% assign chapters = part.chapters %}
                 {% else %}
                     {% assign chapters = part.chapters | where_exp: "chapter", "page.path contains chapter.path_part" %}

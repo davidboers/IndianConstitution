@@ -219,6 +219,34 @@ li.changes.renum::marker, li.changes.renum::before {
     text-align: center;
 }
 
+/* Diamond lists */
+
+.fa-diamond {
+    color: seagreen;
+}
+
+/* Language */
+
+#lang-nav {
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.lang {
+    display: inline-block;
+    background-color: seagreen;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    color: white;
+    vertical-align: top;
+    padding: 0.5em;
+    margin: 0.1em;
+    border-radius: 1ch;
+    text-decoration: none;
+}
+
 /* Constitutional influences */
 
 #influence li {
@@ -226,7 +254,8 @@ li.changes.renum::marker, li.changes.renum::before {
 }
 
 .fi {
-    border-radius: 0.25em;
+    top: 0.1em;
+    position: absolute;
 }
 
 .fi-ca-his { /* Canada (1921-1957) */

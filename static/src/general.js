@@ -59,3 +59,10 @@ export function formatArticleText($div) {
     formatRefs($div);
     setupLimitedApplication($div);
 }
+
+
+// Special diamond lists on article pages
+
+$('ul.fa-ul-da li').each(function () {
+    $(this).prepend('<span class="fa-li"><i class="fa-solid fa-diamond"></i></span>');
+});

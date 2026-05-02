@@ -73,8 +73,8 @@ Tested on Bundle version 4.0.10.
 
 # Todo
 
-* 404
+* Part contents
 * Omitteds in version files
-* Contributing
+* 404
 * Access perms
-* `nav-box.js`
+* Contributing

@@ -57,7 +57,7 @@ layout: default
                         </tr>
                     </tbody>
                     {% assign chapter_full_path_part = part.path_part | append: chapter.path_part %}
-                    {% assign articles = lang_pages | where_exp: "article", "article.path contains chapter_full_path_part" | where_exp: "article", "article.name == 'index.html'" %}
+                    {% assign articles = lang_pages | where_exp: "article", "article.path contains chapter_full_path_part" | filter_articles %}
                     {% assign articles_sorted = articles | sort_articles %}
                     {% for article in articles_sorted %}
                         {% assign num = article.dir | article_num %}
@@ -78,7 +78,7 @@ layout: default
                     {% endfor %}
                 {% endfor %}
             {% else %}
-                {% assign articles = lang_pages | where_exp: "article", "article.path contains part.path_part" | where_exp: "article", "article.name == 'index.html'" %}
+                {% assign articles = lang_pages | where_exp: "article", "article.path contains part.path_part" | filter_articles %}
                 {% assign articles_sorted = articles | sort_articles %}
                 {% for article in articles_sorted %}
                     {% assign num = article.dir | article_num %}

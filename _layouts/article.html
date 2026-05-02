@@ -3,10 +3,16 @@ layout: default
 ---
 
 {% assign placeholder = site.data.languages[page.lang] %}
+{% assign tree = site.data.tree[page.lang] %}
+{% assign langbase = site.baseurl | append: "/" | append: page.lang %}
+{% assign lang_pages = site.pages | filter_lang_pages: page.lang %}
+{% assign lang_articles = lang_pages | filter_articles %}
+{% assign neighboring_articles = lang_pages | where_exp: "article", "article.path contains part.path_part" | sort_articles %}
+{% assign next_article = neighboring_articles | next_article: page %}
+{% assign prev_article = neighboring_articles | prev_article: page %}
 
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/timelines.css">
 <script src="{{ site.baseurl }}/static/src/timeline.js" type="module"></script>
-<script src="{{ site.baseurl }}/static/src/nav-box.js" type="module"></script>
 
 {{ content }}
 
@@ -23,44 +29,131 @@ layout: default
         <p>{{ page.article-note }}</p>
         {% endif %}
 
-        {% if page.influences %}
-        <div id="influence">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
-                integrity="8olrmTcwXL3OYMeB+2ok8jx9/U/FZxeLnoRWdu1Pyi+lakrkqoI7hfysfQF5Q1Xx" crossorigin="anonymous" />
-            <p class="nav-sec">{{ placeholder.influences-header }}</p>
-            <ul>
-                {% if page.influences.uk %}
-                <li><span class="fi fi-gb"></span> {{ page.influences.uk }}</li>
+        <div style="padding: 5px; text-align: center;">
+            <p>
+                <a id="prev-art"
+                {% if prev_article %}
+                    href="{{ prev_article.url }}"
                 {% endif %}
-                {% if page.influences.fr %}
-                <li><span class="fi fi-fr"></span> {{ page.influences.fr }}</li>
+                >{{ placeholder.prev-art }}</a> 
+                <i class="fa-solid fa-diamond"></i>
+                <a href="{{ langbase }}/contents.html">{{ placeholder.table-of-contents }}</a>
+                <i class="fa-solid fa-diamond"></i>
+                <a id="next-art"
+                {% if next_article %}
+                    href="{{ next_article.url }}"
                 {% endif %}
-                {% if page.influences.us %}
-                <li><span class="fi fi-us"></span> {{ page.influences.us }}</li>
-                {% endif %}
-                {% if page.influences.ca %}
-                <li><span class="fi fi-ca-his"></span> {{ page.influences.ca }}</li>
-                {% endif %}
-                {% if page.influences.au %}
-                <li><span class="fi fi-au"></span> {{ page.influences.au }}</li>
-                {% endif %}
-                {% if page.influences.za %}
-                <li><span class="fi fi-za-his"></span> {{ page.influences.za }}</li>
-                {% endif %}
-                {% if page.influences.de %}
-                <li><span class="fi fi-de"></span> {{ page.influences.de }}</li>
-                {% endif %}
-                {% if page.influences.su %}
-                <li><span class="fi fi-su"></span> {{ page.influences.su }}</li>
-                {% endif %}
-                {% if page.influences.ie %}
-                <li><span class="fi fi-ie"></span> {{ page.influences.ie }}</li>
-                {% endif %}
-                {% if page.influences.jp %}
-                <li><span class="fi fi-ie"></span> {{ page.influences.jp }}</li>
-                {% endif %}
-            </ul>
+                >{{ placeholder.next-art }}</a>
+            </p>
+
+            <form action="{{ langbase }}/search.html" id="search-form">
+                <input type="text" id="query" name="query"></input>
+                <button>{{ placeholder.search }}</button>
+            </form>
         </div>
+        <ul class="fa-ul fa-ul-da" id="parent-nav">
+            {% assign part = tree | where_exp: "part", "page.url contains part.path_part" | first %}
+            {% unless part.preamble %}
+                <li><a href="{{ langbase }}/{{ part.path_part }}contents.html">{{ part.marker }}.—{{ part.header }}</a></li>
+                {% if part.has_chapters %}
+                    {% assign chapter = part.chapters | where_exp: "chapter", "page.url contains chapter.path_part" | first %}
+                    {% if chapter %}
+                        <li><a href="{{ langbase }}/{{ part.path_part }}/{{ chapter.path_part }}contents.html">{{ chapter.header }}</a></li>
+                    {% endif %}
+                {% endif %}
+            {% endunless %}
+        </ul>
+
+        {% assign see_also = site.data.see-also | filter_ref_entries: page.path, page.lang %}
+
+        {% unless see_also.size == 0 %}
+        <p class="nav-sec" id="see-also">{{ placeholder.see-also }}</p>
+        <ul class="fa-ul fa-ul-da">
+            {% for ref in see_also %}
+                {% unless page.url contains ref.path %}
+                    {% if ref.path contains "https://" %}
+                        <li><a href="{{ ref.path }}">{{ ref.name }}</a></li>
+                    {% else %}
+                        {% assign ref_path = langbase | append: "/" | append: ref.path %}
+                        <li><a href="{{ ref_path }}">{{ ref.name }}</a></li>
+                    {% endif %}
+                {% endunless %}
+            {% endfor %}
+        </ul>
+        {% endunless %}
+
+        {% assign cross_reference = site.data.cross-reference | filter_ref_entries: page.path, page.lang %}
+
+        {% unless cross_reference.size == 0 %}
+        <p class="nav-sec" id="cross-reference">{{ placeholder.cross-reference }}</p>
+        <ul class="fa-ul fa-ul-da">
+            {% for ref in cross_reference %}
+                {% unless page.url contains ref.path %}
+                    {% if ref.path contains "https://" %}
+                        <li><a href="{{ ref.path }}">{{ ref.name }}</a></li>
+                    {% else %}
+                        {% assign ref_path = langbase | append: "/" | append: ref.path %}
+                        <li><a href="{{ ref_path }}">{{ ref.name }}</a></li>
+                    {% endif %}
+                {% endunless %}
+            {% endfor %}
+        </ul>
+        {% endunless %}
+
+        {% if page.influences %}
+        <p class="nav-sec" id="influences-header">{{ placeholder.influences-header }}</p>
+        <ul class="fa-ul" id="influence">
+            {% if page.influences.uk %}
+            <li><span class="fa-li fi fi-gb"></span> {{ page.influences.uk }}</li>
+            {% endif %}
+            {% if page.influences.fr %}
+            <li><span class="fa-li fi fi-fr"></span> {{ page.influences.fr }}</li>
+            {% endif %}
+            {% if page.influences.us %}
+            <li><span class="fa-li fi fi-us"></span> {{ page.influences.us }}</li>
+            {% endif %}
+            {% if page.influences.ca %}
+            <li><span class="fa-li fi fi-ca-his"></span> {{ page.influences.ca }}</li>
+            {% endif %}
+            {% if page.influences.au %}
+            <li><span class="fa-li fi fi-au"></span> {{ page.influences.au }}</li>
+            {% endif %}
+            {% if page.influences.za %}
+            <li><span class="fa-li fi fi-za-his"></span> {{ page.influences.za }}</li>
+            {% endif %}
+            {% if page.influences.de %}
+            <li><span class="fa-li fi fi-de"></span> {{ page.influences.de }}</li>
+            {% endif %}
+            {% if page.influences.su %}
+            <li><span class="fa-li fi fi-su"></span> {{ page.influences.su }}</li>
+            {% endif %}
+            {% if page.influences.ie %}
+            <li><span class="fa-li fi fi-ie"></span> {{ page.influences.ie }}</li>
+            {% endif %}
+            {% if page.influences.jp %}
+            <li><span class="fa-li fi fi-ie"></span> {{ page.influences.jp }}</li>
+            {% endif %}
+        </ul>
         {% endif %}
+
+        <p class="nav-sec" id="lang-select">{{ placeholder.lang-select }}</p>
+        <div id="lang-nav">
+            <a class="lang" href="{{ site.baseurl }}{{ page.url | get_lang_url: "en", page.lang }}" id="en" title="English">E</a>
+            <!--<a class="lang" id="as" title="অসমীয়া">অ</a>
+            <a class="lang" id="bn" title="বাংলা">বা</a>
+            <a class="lang" id="gu" title="ગુજરાતી">ગુ</a>-->
+            <a class="lang"  href="{{ site.baseurl }}{{ page.url | get_lang_url: "hi", page.lang }}" id="hi" title="हिन्दी">हि</a>
+            <!--<a class="lang" id="kn" title="ಕನ್ನಡ">ಕ</a>
+            <a class="lang" id="ks" title="کٲشُر">ک</a>
+            <a class="lang" id="ml" title="മലയാളം">മ</a>
+            <a class="lang" id="mr" title="मराठी">म</a>
+            <a class="lang" id="ne" title="नेपाली">ने</a>
+            <a class="lang" id="or" title="ଓଡ଼ିଆ">ଓ</a>
+            <a class="lang" id="pa" title="ਪੰਜਾਬੀ">ਪੰ</a>
+            <a class="lang" id="sd" title="سنڌي">س</a>
+            <a class="lang" id="ta" title="தமிழ்">த</a>
+            <a class="lang" id="te" title="తెలుగు">తె</a>
+            <a class="lang" id="ur" title="اردو">اُ</a>-->
+        </div>
     </div>
 </div>

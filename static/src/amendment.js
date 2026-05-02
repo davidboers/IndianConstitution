@@ -1,4 +1,3 @@
-import { flatParts } from "./contents.js";
 import { formatArticleText } from "./general.js";
 import { baseurl, getLangIndex } from "./utils.js";
 

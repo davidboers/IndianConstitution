@@ -8,10 +8,31 @@ module Jekyll
     end
 
     def slug(url)
-      File.basename(url, ".*")
+      File.basename(url, '.*')
       
+    end
+
+    def get_lang_url(path, lang, current_lang)
+      path.sub("/#{current_lang}/", "/#{lang}/")
+
+    end
+
+    def filter_articles(pages)
+      pages.filter { |page| page.name == 'index.html' }
+
+    end
+  end
+
+  module Refs
+    def filter_ref_entries(entries, path, lang)
+      path = path.sub("#{lang}/", '').sub('index.html', '')
+      groups = entries.filter { |group| group.any? { |link| link['path'] == path } }
+      entries = groups.flatten.uniq
+      entries.filter { |entry| !entry['path'].include?(path) }
+
     end
   end
 end
 
 Liquid::Template.register_filter(Jekyll::LangPages)
+Liquid::Template.register_filter(Jekyll::Refs)

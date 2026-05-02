@@ -12,7 +12,12 @@
   "results": "Results",
   "loading": "Loading...",
   "no-results-found": "No results found.",
-  "influences-header": "Influences from other constitutions:",
+  "prev-art": "Previous",
+  "next-art": "Next",
+  "see-also": "See also",
+  "cross-reference": "Cross reference",
+  "influences-header": "Influences from other constitutions",
+  "lang-select": "Select language",
   "github-ref": "Inquiries and Source Repository",
   "omitted": "Omitted."
 }

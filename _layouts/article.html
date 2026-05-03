@@ -7,7 +7,8 @@ layout: default
 {% assign langbase = site.baseurl | append: "/" | append: page.lang %}
 {% assign lang_pages = site.pages | filter_lang_pages: page.lang %}
 {% assign lang_articles = lang_pages | filter_articles %}
-{% assign neighboring_articles = lang_pages | where_exp: "article", "article.path contains part.path_part" | sort_articles %}
+{% assign part = tree | where_exp: "part", "page.url contains part.path_part" | first %}
+{% assign neighboring_articles = lang_articles | where_exp: "article", "article.path contains part.path_part" | sort_articles %}
 {% assign next_article = neighboring_articles | next_article: page %}
 {% assign prev_article = neighboring_articles | prev_article: page %}
 
@@ -33,7 +34,7 @@ layout: default
             <p>
                 <a id="prev-art"
                 {% if prev_article %}
-                    href="{{ prev_article.url }}"
+                    href="{{ site.baseurl }}/{{ prev_article.url }}"
                 {% endif %}
                 >{{ placeholder.prev-art }}</a> 
                 <i class="fa-solid fa-diamond"></i>
@@ -41,7 +42,7 @@ layout: default
                 <i class="fa-solid fa-diamond"></i>
                 <a id="next-art"
                 {% if next_article %}
-                    href="{{ next_article.url }}"
+                    href="{{ site.baseurl }}/{{ next_article.url }}"
                 {% endif %}
                 >{{ placeholder.next-art }}</a>
             </p>
@@ -52,9 +53,12 @@ layout: default
             </form>
         </div>
         <ul class="fa-ul fa-ul-da" id="parent-nav">
-            {% assign part = tree | where_exp: "part", "page.url contains part.path_part" | first %}
             {% unless part.preamble %}
-                <li><a href="{{ langbase }}/{{ part.path_part }}contents.html">{{ part.marker }}.—{{ part.header }}</a></li>
+                {% if part.header %}
+                    <li><a href="{{ langbase }}/{{ part.path_part }}contents.html">{{ part.marker }}.—{{ part.header }}</a></li>
+                {% elsif part.marker %}
+                    <li><a href="{{ langbase }}/{{ part.path_part }}contents.html">{{ part.marker }}</a></li>
+                {% endif %}
                 {% if part.has_chapters %}
                     {% assign chapter = part.chapters | where_exp: "chapter", "page.url contains chapter.path_part" | first %}
                     {% if chapter %}

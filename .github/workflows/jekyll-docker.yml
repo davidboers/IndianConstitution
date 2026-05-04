@@ -2,9 +2,9 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [ "wjekyll" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "wjekyll" ]
+    branches: [ "main" ]
 
 permissions:
   contents: read

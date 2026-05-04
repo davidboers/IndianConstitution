@@ -73,6 +73,17 @@ Tested on Bundle version 4.0.10.
 
 # Todo
 
+## Quality and usability
+
+* Effective dates
 * Italics in TOC (article 64)
 * Timelines
+
+## Features
+
+* Table of constitution orders
+* Links to interpretation articles
+
+## Dev
+
 * Contributing

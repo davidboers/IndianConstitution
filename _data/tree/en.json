@@ -196,16 +196,16 @@
                 "path_part": "Chapter_I/",
                 "marker": "Chapter I",
                 "header": "Chapter I.—Legislative Relations",
-                "subheadings": { "a245": "Distribution of Legislative Powers" }
+                "subheadings": { "245": "Distribution of Legislative Powers" }
             },
             {
                 "path_part": "Chapter_II/",
                 "marker": "Chapter II",
                 "header": "Chapter II.—Administrative Relations",
                 "subheadings": {
-                    "a256": "General",
-                    "a262": "Disputes relating to Waters",
-                    "a263": "Co-ordination between States"
+                    "256": "General",
+                    "262": "Disputes relating to Waters",
+                    "263": "Co-ordination between States"
                 }
             }
         ]
@@ -221,9 +221,9 @@
                 "marker": "Chapter I",
                 "header": "Chapter I.—Finance",
                 "subheadings": {
-                    "a264": "General",
-                    "a268": "Distribution of Revenues between the Union and the States",
-                    "a282": "Miscellaneous Financial Provisions"
+                    "264": "General",
+                    "268": "Distribution of Revenues between the Union and the States",
+                    "282": "Miscellaneous Financial Provisions"
                 }
             },
             {

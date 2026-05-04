@@ -8,17 +8,19 @@ title-begin: Search
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/search.css">
 <script src="{{ site.baseurl }}/static/src/search.js" type="module"></script>
 
-<div id="container" class="page-margin">
-    <form>
-        <input type="text" id="query" name="query">
-        <button>{{ placeholder.search }}</button>
-    </form>
+<div id="container" class="center-display">
+    <div style="background-color: var(--container-color); padding: var(--base-page-margin);">
+        <form>
+            <input type="text" id="query" name="query">
+            <button>{{ placeholder.search }}</button>
+        </form>
 
-    <h3>{{ placeholder.results }}</h3>
+        <h3>{{ placeholder.results }}</h3>
 
-    <div id="hits">
-        <p id="loading" style="display: none;">{{ placeholder.loading }}</p>
-        <p id="no-results">{{ placeholder.no-results-found }}</p>
-        <div id="article-list"></div>
+        <div id="hits">
+            <p id="loading" style="display: none;">{{ placeholder.loading }}</p>
+            <p id="no-results">{{ placeholder.no-results-found }}</p>
+            <div id="article-list"></div>
+        </div>
     </div>
 </div>

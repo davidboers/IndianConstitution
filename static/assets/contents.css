@@ -1,15 +1,29 @@
+#main-con {
+    background-color: var(--container-color);
+}
+
+.contents-num {
+    width: 5em;
+    text-align: right;
+} 
+
 th {
     text-align: center;
     text-transform: uppercase;
 }
 
-th.part-header {
+#main-con th.part-header {
     font-weight: normal;
 }
 
-th.subheading {
+#main-con th.subheading {
     font-weight: normal;
     text-transform: none;
     font-style: italic;
     padding-top: 1em;
+}
+
+#main-con a {
+    text-decoration: none;
+    color: black;
 }

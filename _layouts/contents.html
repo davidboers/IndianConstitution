@@ -13,10 +13,13 @@ layout: default
 
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/assets/contents.css">
 
-<div id="container" class="page-margin">
+<div id="container" class="center-display">
     <table id="main-con">
         {% if page.all-contents %}
-        {% assign preamble = tree | where_exp: "part", "part.preamble" %}
+        {% assign preamble = tree | where_exp: "part", "part.preamble" | first %}
+        <tr>
+            <th class="part-header" colspan="2">{{ preamble.header }}</th>
+        </tr>
         <tr>
             <td></td>
             <td id="preamble-link"><a href="{{ preamble.path_part }}">{{ preamble.header }}</a></td>
@@ -24,6 +27,7 @@ layout: default
         {% endif %}
 
         {% for part in tree %}
+        {% unless part.preamble %}
         <tbody class="contents" id="{{ part.path_part | downcase }}">
             <tr>
                 <th class="part-num" colspan="2">{{ part.marker }}</th>
@@ -68,7 +72,7 @@ layout: default
                         </tr>
                         {% endif %}
                         <tr>
-                            <td style="width: 5em;">{% unless article.path contains 'Schedules/' %} {{ num }}. {% endunless %}</td>
+                            <td class="contents-num">{% unless article.path contains 'Schedules/' %} {{ num }}. {% endunless %}</td>
                             <td>
                                 <a href="{{ site.baseurl }}{{ article.dir }}">{{ article | margin_text: num }}</a>
                                 {% if article.article-omitted %}
@@ -89,7 +93,7 @@ layout: default
                     </tr>
                     {% endif %}
                     <tr>
-                        <td style="width: 5em;">{% unless article.path contains 'Schedules/' %} {{ num }}. {% endunless %}</td>
+                        <td class="contents-num">{% unless article.path contains 'Schedules/' %} {{ num }}. {% endunless %}</td>
                         <td>
                             <a href="{{ site.baseurl }}{{ article.dir }}">{{ article | margin_text: num }}</a>
                             {% if article.article-omitted %}
@@ -100,6 +104,7 @@ layout: default
                 {% endfor %}
             {% endif %}
         </tbody>
+        {% endunless %}
         {% endfor %}
     </table>
 </div>

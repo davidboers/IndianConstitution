@@ -27,5 +27,7 @@
   "influences-header": "Influences from other constitutions",
   "lang-select": "Select language",
   "github-ref": "Inquiries and Source Repository",
-  "omitted": "Omitted."
+  "omitted": "Omitted.",
+  "error-404": "Error 404",
+  "error-404-msg": "The page you were looking for doesn't exist."
 }

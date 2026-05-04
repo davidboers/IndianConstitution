@@ -62,10 +62,6 @@ header {
     text-align: center;
 }
 
-#main-nav #home {
-    background-color: seagreen;
-}
-
 #main-nav a:hover {
     font-weight: bold;
 }

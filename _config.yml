@@ -16,6 +16,7 @@ defaults:
       path: "hi"
     values:
       lang: "hi"
+      title-begin: "विषय सूची"
 
 exclude:
   - README.md

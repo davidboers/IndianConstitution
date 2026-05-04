@@ -73,7 +73,6 @@ Tested on Bundle version 4.0.10.
 
 # Todo
 
-* Omitteds in version files
-* 404
-* Access perms
+* Italics in TOC (article 64)
+* Timelines
 * Contributing

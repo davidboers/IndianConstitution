@@ -2,6 +2,7 @@
     --base-font-size: 12px;
     --base-page-margin: 8px;
     --base-background: darkseagreen;
+    --container-color: floralwhite;
 }
 
 body {
@@ -61,6 +62,10 @@ header {
     text-align: center;
 }
 
+#main-nav #home {
+    background-color: seagreen;
+}
+
 #main-nav a:hover {
     font-weight: bold;
 }
@@ -88,6 +93,14 @@ footer {
     padding: var(--base-page-margin);
 }
 
+.center-display {
+    padding: 0 5%;
+}
+
+.center-display-tight {
+    padding: 0 20%;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -106,7 +119,7 @@ footer {
 .art-holder, #nav {
     border: 2px solid black;
     border-radius: 9pt;
-    background-color: floralwhite;
+    background-color: var(--container-color);
     overflow: auto;
 }
 

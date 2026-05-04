@@ -1,0 +1,113 @@
+---
+layout: default
+---
+
+{% assign placeholder = site.data.languages[page.lang] %}
+{% assign tree = site.data.tree[page.lang] %}
+{% assign lang_pages = site.pages | filter_lang_pages: page.lang %}
+
+<div id="container" class="center-display-tight">
+    <div style="background-color: var(--container-color); text-align: center; padding: 10px;">
+        <div style="padding-top: 10px">
+            {% include lang-nav.html %}
+            <h1 style="text-align: center;">
+                <i class="fa-solid fa-diamond"></i>
+                {{ placeholder.constitution-of-india }}
+                <i class="fa-solid fa-diamond"></i>
+            </h1>
+            <div>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/contents.html">{{ placeholder.table-of-contents-nav }}</a>
+                <i class="fa-solid fa-diamond"></i>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/amendment.html">{{ placeholder.changes-by-amendment-nav }}</a>
+            </div>
+            <div style="display: grid; place-items: center; margin-block: 0.67em;">
+                <form action="{{ site.baseurl }}/{{ page.lang }}/search.html" style="position: relative; width: min-content;">
+                    <input type="text" id="query" name="query" placeholder="{{ placeholder.search }}" style="padding: 0.5em; border-radius: 5em; border: none;"></input>
+                    <span style="position: absolute; right: 1px; padding: 0.5em;">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>{{ placeholder.go-to }}</h2>
+            <h3>{{ placeholder.go-to-parts }}</h3>
+
+            {% assign parts = tree | where_exp: "part", "part.marker contains placeholder.go-to-pt" %}
+            {% for part in parts %}
+                <a class="go-to-link" 
+                    href="{{ site.baseurl }}/{{ page.lang }}/{{ part.path_part }}contents.html"
+                    title="{{ part.header }}">
+                    {{ part.marker | quick_jump_marker: placeholder.go-to-pt }}
+                </a>
+                {% unless forloop.last %}<i class="fa-solid fa-diamond"></i>{% endunless %}
+            {% endfor %}
+
+            <h3>{{ placeholder.go-to-schedules }}</h3>
+
+            {% assign schedules = tree | where_exp: "part", "part.path_part contains 'Schedules/'" %}
+            {% for schedule in schedules %}
+                {% if schedule.header %}
+                    {% assign title = schedule.header %}
+                {% else %}
+                    {% assign title = schedule.marker %}
+                {% endif %}
+
+                {% if placeholder.go-to-schedule %}
+                    <a class="go-to-link" 
+                        href="{{ site.baseurl }}/{{ page.lang }}/{{ schedule.path_part }}contents.html"
+                        title="{{ title }}">
+                        {{ schedule.marker | quick_jump_marker: placeholder.go-to-schedule }}
+                    </a>
+                    {% unless forloop.last %}<i class="fa-solid fa-diamond"></i>{% endunless %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>{{ placeholder.quick-select }}</h2>
+
+            {% for article in site.data.quick-select %}
+                {% assign art_page = lang_pages | where_exp: "art", "art.path contains article" | first %}
+
+                {% if article contains "contents.html" %}
+                    {% assign tree_p = tree | where_exp: "sch", "article contains sch.path_part" | first %}
+                    {% if tree_p.header %}
+                        {% assign title = tree_p.header %}
+                    {% else %}
+                        {% assign title = tree_p.marker %}
+                    {% endif %}
+                    {% assign link_text = tree_p.marker %}
+
+                {% else %}
+                    {% assign title = art_page | margin_text %}
+                    {% assign link_text = article | article_num %}
+
+                {% endif %}
+
+                <a class="go-to-link" 
+                    href="{{ site.baseurl }}/{{ page.lang }}/{{ article }}"
+                    title="{{ title }}">
+                    {{ link_text }}
+                </a>
+                {% unless forloop.last %}<i class="fa-solid fa-diamond"></i>{% endunless %}
+
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <style>
+            .go-to-link {
+                text-decoration: none;
+                font-weight: bold;
+                color: #333;
+            }
+        </style>
+    </div>
+</div>

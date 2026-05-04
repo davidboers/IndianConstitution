@@ -2,7 +2,7 @@ require "nokogiri"
 
 module Jekyll
   module MarginFilter
-    def margin_text(article, num)
+    def margin_text(article, num = nil)
       site = @context.registers[:site]
 
       # Because Jekyll can sometimes be finicky when trying to access .content
@@ -16,7 +16,7 @@ module Jekyll
 
     private
 
-    def extract_margin_text(html, article = "", num = nil)
+    def extract_margin_text(html, article = "", num)
       doc = Nokogiri::HTML.fragment(html)
 
       art = doc.at_css(".art")

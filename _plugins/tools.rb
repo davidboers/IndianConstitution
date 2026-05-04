@@ -13,6 +13,10 @@ module Jekyll
     end
 
     def get_lang_url(path, lang, current_lang)
+      unless path.include? "/#{current_lang}/"
+        path = "/#{current_lang}#{path}"
+      end
+
       path.sub("/#{current_lang}/", "/#{lang}/")
 
     end
@@ -30,6 +34,14 @@ module Jekyll
       entries = groups.flatten.uniq
       entries.filter { |entry| !entry['path'].include?(path) }
 
+    end
+
+    def quick_jump_marker(marker, tp)
+      if marker.nil?
+        puts tp
+      end
+
+      marker.sub(tp, '').strip
     end
   end
 

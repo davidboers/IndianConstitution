@@ -2,7 +2,8 @@ import { formatArticleText } from "./general.js";
 import { getLangIndex, parseHTMLDoc } from "./utils.js";
 
 const begin = new Date(1949, 10, 26); // 10 = November (0 indexed)
-const end = new Date().setMonth(new Date().getMonth() + 1);
+const end = new Date();
+end.setMonth(new Date().getMonth() + 1);
 
 function getFrac(date) {
     return (date.getTime() - begin.getTime()) / (end.getTime() - begin.getTime());
